@@ -1,3 +1,4 @@
+
 export const serviceDetailsData = [
   {
     id: "renovation-interieure",
@@ -401,4 +402,6 @@ export const serviceDetailsData = [
     metaDescription: "Conception et réalisation de cuisines et salles de bains sur mesure à Paris. Design contemporain, matériaux premium et installation professionnelle pour des espaces fonctionnels et esthétiques.",
     keywords: ["cuisine sur mesure", "rénovation cuisine", "salle de bains", "aménagement cuisine", "meuble sur mesure", "plomberie", "Paris", "Île-de-France"],
     heroImage: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1080&auto=format&fit=crop",
-    presentationTitle: "Des espaces d'eau qui allient forme et fonction",
+    presentationTitle: "Des espaces d'eau qui allient forme et fonction"
+  }
+];
