@@ -2,21 +2,12 @@
 import React from "react";
 import FormInput from "@/components/form/FormInput";
 import FormSelect from "@/components/form/FormSelect";
-import { EstimationFormData, FormErrors, propertyTypeOptions } from "../types/estimationFormTypes";
+import { propertyTypeOptions } from "../types/estimationFormTypes";
+import { useEstimationFormContext } from "../context/EstimationFormContext";
 
-interface PropertyInfoSectionProps {
-  formData: EstimationFormData;
-  errors: FormErrors;
-  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  handleSelectChange: (name: string, value: string) => void;
-}
-
-const PropertyInfoSection: React.FC<PropertyInfoSectionProps> = ({
-  formData,
-  errors,
-  handleChange,
-  handleSelectChange
-}) => {
+const PropertyInfoSection: React.FC = () => {
+  const { formData, errors, handleChange, handleSelectChange } = useEstimationFormContext();
+  
   return (
     <>
       <FormInput

@@ -1,19 +1,11 @@
 
 import React from "react";
 import FormInput from "@/components/form/FormInput";
-import { EstimationFormData, FormErrors } from "../types/estimationFormTypes";
+import { useEstimationFormContext } from "../context/EstimationFormContext";
 
-interface PersonalInfoSectionProps {
-  formData: EstimationFormData;
-  errors: FormErrors;
-  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-}
-
-const PersonalInfoSection: React.FC<PersonalInfoSectionProps> = ({ 
-  formData, 
-  errors, 
-  handleChange 
-}) => {
+const PersonalInfoSection: React.FC = () => {
+  const { formData, errors, handleChange } = useEstimationFormContext();
+  
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       <FormInput

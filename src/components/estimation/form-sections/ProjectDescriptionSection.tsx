@@ -2,21 +2,11 @@
 import React from "react";
 import FormTextarea from "@/components/form/FormTextarea";
 import FormCheckbox from "@/components/form/FormCheckbox";
-import { EstimationFormData, FormErrors } from "../types/estimationFormTypes";
+import { useEstimationFormContext } from "../context/EstimationFormContext";
 
-interface ProjectDescriptionSectionProps {
-  formData: EstimationFormData;
-  errors: FormErrors;
-  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  handleCheckboxChange: (name: string, checked: boolean) => void;
-}
-
-const ProjectDescriptionSection: React.FC<ProjectDescriptionSectionProps> = ({
-  formData,
-  errors,
-  handleChange,
-  handleCheckboxChange
-}) => {
+const ProjectDescriptionSection: React.FC = () => {
+  const { formData, errors, handleChange, handleCheckboxChange } = useEstimationFormContext();
+  
   return (
     <>
       <FormTextarea
