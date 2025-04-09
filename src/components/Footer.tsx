@@ -9,18 +9,20 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <img 
-                src="/lovable-uploads/e02a151a-8159-4939-a4d2-8e859e5d6296.png" 
-                alt="rénovations logo" 
-                className="h-16" 
-              />
+              <Link to="/">
+                <img 
+                  src="/lovable-uploads/e02a151a-8159-4939-a4d2-8e859e5d6296.png" 
+                  alt="rénovations logo" 
+                  className="h-16" 
+                />
+              </Link>
             </div>
             <p className="text-warmBeige-200 mb-4">Votre partenaire de confiance pour tous vos projets de rénovation depuis 2016.</p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-warmBeige-200 transition-colors">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-warmBeige-200 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-white hover:text-warmBeige-200 transition-colors">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-warmBeige-200 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -30,14 +32,14 @@ const Footer = () => {
           <div>
             <h3 className="font-serif text-xl font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
-              <div className="flex items-start">
+              <a href="tel:0785010633" className="flex items-start hover:text-warmBeige-200 transition-colors">
                 <Phone className="w-5 h-5 mr-3 flex-shrink-0 mt-1" />
                 <span>07 85 01 06 33</span>
-              </div>
-              <div className="flex items-start">
+              </a>
+              <a href="mailto:qoob.sas@gmail.com" className="flex items-start hover:text-warmBeige-200 transition-colors">
                 <Mail className="w-5 h-5 mr-3 flex-shrink-0 mt-1" />
                 <span>qoob.sas@gmail.com</span>
-              </div>
+              </a>
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 mr-3 flex-shrink-0 mt-1" />
                 <span>15 Avenue des Artisans<br />75011 Paris, France</span>
@@ -67,6 +69,11 @@ const Footer = () => {
               <li>
                 <Link to="/#contact" className="text-warmBeige-200 hover:text-white transition-colors">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/demande-devis" className="text-warmBeige-200 hover:text-white transition-colors">
+                  Demander un Devis
                 </Link>
               </li>
             </ul>
@@ -101,13 +108,13 @@ const Footer = () => {
           <div className="mt-4 md:mt-0">
             <ul className="flex flex-wrap space-x-4 text-sm text-warmBeige-300">
               <li>
-                <Link to="/confidentialite" className="hover:text-white transition-colors">
-                  Politique de confidentialité
+                <Link to="/mentions-legales" className="hover:text-white transition-colors">
+                  Mentions légales
                 </Link>
               </li>
               <li>
-                <Link to="/mentions-legales" className="hover:text-white transition-colors">
-                  Mentions légales
+                <Link to="/confidentialite" className="hover:text-white transition-colors">
+                  Politique de confidentialité
                 </Link>
               </li>
               <li>

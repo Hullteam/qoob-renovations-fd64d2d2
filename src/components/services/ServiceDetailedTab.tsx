@@ -41,8 +41,10 @@ const ServiceDetailedTab = ({ service, serviceSlug }: ServiceDetailedTabProps) =
               En savoir plus <ArrowRight className="w-4 h-4" />
             </Link>
           </Button>
-          <Button className="flex items-center gap-2">
-            Demander un devis <ArrowRight className="w-4 h-4" />
+          <Button className="flex items-center gap-2" asChild>
+            <Link to="/demande-devis">
+              Demander un devis <ArrowRight className="w-4 h-4" />
+            </Link>
           </Button>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ServiceDetail from "./pages/ServiceDetail";
@@ -27,6 +27,9 @@ const App = () => (
           <Route path="/services/:serviceSlug" element={<ServiceDetail />} />
           <Route path="/services/:serviceSlug/metiers/:metierId" element={<MetierDetail />} />
           <Route path="/demande-devis" element={<DemandeDevis />} />
+          {/* Redirects pour gérer les anciennes URL potentielles */}
+          <Route path="/devis" element={<Navigate to="/demande-devis" replace />} />
+          <Route path="/service/:serviceSlug" element={<Navigate to="/services/:serviceSlug" replace />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -7,6 +7,18 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Helper function to handle navigation with anchor links
+  const handleAnchorClick = (anchor: string) => {
+    setIsMenuOpen(false);
+    // Si nous sommes déjà sur la page d'accueil, faites défiler jusqu'à l'ancre
+    if (window.location.pathname === '/') {
+      const element = document.getElementById(anchor);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <nav className="bg-white shadow-sm fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,16 +34,16 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/#services" className="text-gray-600 hover:text-primary transition-colors">
+            <Link to="/#services" className="text-gray-600 hover:text-primary transition-colors" onClick={() => handleAnchorClick('services')}>
               Nos Services
             </Link>
-            <Link to="/#testimonials" className="text-gray-600 hover:text-primary transition-colors">
+            <Link to="/#testimonials" className="text-gray-600 hover:text-primary transition-colors" onClick={() => handleAnchorClick('testimonials')}>
               Témoignages
             </Link>
-            <Link to="/#gallery" className="text-gray-600 hover:text-primary transition-colors">
+            <Link to="/#gallery" className="text-gray-600 hover:text-primary transition-colors" onClick={() => handleAnchorClick('gallery')}>
               Réalisations
             </Link>
-            <Link to="/#contact" className="text-gray-600 hover:text-primary transition-colors">
+            <Link to="/#contact" className="text-gray-600 hover:text-primary transition-colors" onClick={() => handleAnchorClick('contact')}>
               Contact
             </Link>
             <Button className="cta-button" asChild>
@@ -61,28 +73,28 @@ const Navbar = () => {
             <Link
               to="/#services"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleAnchorClick('services')}
             >
               Nos Services
             </Link>
             <Link
               to="/#testimonials"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleAnchorClick('testimonials')}
             >
               Témoignages
             </Link>
             <Link
               to="/#gallery"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleAnchorClick('gallery')}
             >
               Réalisations
             </Link>
             <Link
               to="/#contact"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleAnchorClick('contact')}
             >
               Contact
             </Link>
