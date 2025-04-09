@@ -1,111 +1,23 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Send } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import QuoteFormFields from './QuoteFormFields';
-import { FormErrors, QuoteFormData, validateQuoteForm } from '@/utils/formValidation';
-import { submitQuoteForm } from '@/utils/formSubmission';
+import { useQuoteForm } from '@/hooks/useQuoteForm';
 
 const QuoteForm = () => {
-  const [formData, setFormData] = useState<QuoteFormData>({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    address: "",
-    service: "",
-    budget: "",
-    description: "",
-    consent: false,
-    marketingConsent: false
-  });
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formError, setFormError] = useState<string | null>(null);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-    
-    // Clear error when field is modified
-    if (errors[name as keyof FormErrors]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: undefined
-      }));
-    }
-  };
-
-  const handleSelectChange = (name: string, value: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-    
-    // Clear error when field is modified
-    if (errors[name as keyof FormErrors]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: undefined
-      }));
-    }
-  };
-
-  const handleCheckboxChange = (name: string, checked: boolean) => {
-    setFormData((prev) => ({
-      ...prev,
-      [name]: checked,
-    }));
-    
-    // Clear error when field is modified
-    if (errors[name as keyof FormErrors]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: undefined
-      }));
-    }
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormError(null);
-    
-    // Validate form
-    const { isValid, errors: validationErrors } = validateQuoteForm(formData);
-    
-    if (!isValid) {
-      setErrors(validationErrors);
-      setFormError("Veuillez corriger les erreurs dans le formulaire");
-      return;
-    }
-    
-    setIsSubmitting(true);
-    
-    const success = await submitQuoteForm(formData);
-    
-    if (success) {
-      // Reset form
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        address: "",
-        service: "",
-        budget: "",
-        description: "",
-        consent: false,
-        marketingConsent: false
-      });
-    }
-    
-    setIsSubmitting(false);
-  };
+  const {
+    formData,
+    errors,
+    isSubmitting,
+    formError,
+    handleChange,
+    handleSelectChange,
+    handleCheckboxChange,
+    handleSubmit
+  } = useQuoteForm();
 
   return (
     <Card>
