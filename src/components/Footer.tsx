@@ -62,6 +62,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/metiers-renovation" className="text-warmBeige-200 hover:text-white transition-colors">
+                  Métiers de la Rénovation
+                </Link>
+              </li>
+              <li>
                 <Link to="/#testimonials" className="text-warmBeige-200 hover:text-white transition-colors">
                   Témoignages
                 </Link>
@@ -125,6 +130,11 @@ const Footer = () => {
               <li>
                 <Link to="/conditions-generales" className="hover:text-white transition-colors">
                   Conditions générales
+                </Link>
+              </li>
+              <li>
+                <Link to="/metiers-renovation" className="hover:text-white transition-colors">
+                  Métiers de la Rénovation
                 </Link>
               </li>
             </ul>

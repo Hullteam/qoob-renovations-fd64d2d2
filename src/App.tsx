@@ -10,6 +10,7 @@ import ServiceDetail from "./pages/ServiceDetail";
 import MetierDetail from "./pages/MetierDetail";
 import DemandeDevis from "./pages/DemandeDevis";
 import ZonesIntervention from "./pages/ZonesIntervention";
+import MetiersRenovation from "./pages/MetiersRenovation";
 import { Helmet } from "react-helmet";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/services/:serviceSlug/metiers/:metierId" element={<MetierDetail />} />
           <Route path="/demande-devis" element={<DemandeDevis />} />
           <Route path="/zones-intervention" element={<ZonesIntervention />} />
+          <Route path="/metiers-renovation" element={<MetiersRenovation />} />
           
           {/* Redirects for potential old URLs */}
           <Route path="/devis" element={<Navigate to="/demande-devis" replace />} />

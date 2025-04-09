@@ -55,6 +55,17 @@ const Services = () => {
             </div>
           ))}
         </div>
+        
+        <div className="text-center mt-12">
+          <p className="text-gray-600 mb-4">
+            Découvrez l'expertise de nos artisans dans chaque corps de métier
+          </p>
+          <Button variant="link" asChild>
+            <Link to="/metiers-renovation" className="text-primary hover:text-primary/80">
+              Voir tous les métiers de la rénovation →
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
