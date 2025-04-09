@@ -103,7 +103,7 @@ export const plombierSanitaireData = {
     },
     {
       question: "Quels sont les avantages d'une douche à l'italienne du point de vue de la plomberie ?",
-      description: "Une douche à l'italienne présente plusieurs avantages techniques : elle permet un écoulement optimal grâce à une pente maîtrisée vers un système d'évacuation performant (caniveau ou bonde), elle supprime les risques de fuite liés aux joints de cabine qui se détériorent avec le temps, et elle offre une plus grande flexibilité pour l'emplacement de la robinetterie. En revanche, son installation nécessite une maîtrise technique particulière pour l'étanchéité (création d'une forme de pente, pose d'un système d'étanchéité SPEC, raccordement adapté) et demande généralement plus de travaux qu'une douche traditionnelle.",
+      answer: "Une douche à l'italienne présente plusieurs avantages techniques : elle permet un écoulement optimal grâce à une pente maîtrisée vers un système d'évacuation performant (caniveau ou bonde), elle supprime les risques de fuite liés aux joints de cabine qui se détériorent avec le temps, et elle offre une plus grande flexibilité pour l'emplacement de la robinetterie. En revanche, son installation nécessite une maîtrise technique particulière pour l'étanchéité (création d'une forme de pente, pose d'un système d'étanchéité SPEC, raccordement adapté) et demande généralement plus de travaux qu'une douche traditionnelle."
     },
     {
       question: "Combien de temps dure une installation de plomberie bien réalisée ?",

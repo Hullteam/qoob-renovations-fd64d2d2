@@ -1,6 +1,6 @@
 
 // Import des données spécifiques à chaque métier
-import { cuisinierData } from './metiers/cuisinierData';
+import { cuisinesSurMesureData } from './metiers/cuisinesSurMesure';
 import { menuisierCuisinisteData } from './metiers/menuisierCuisiniste';
 import { plombierSanitaireData } from './metiers/plombierSanitaire';
 import { electricienData } from './metiers/electricien';
@@ -8,7 +8,6 @@ import { carreleurData } from './metiers/carreleur';
 import { ebenisteMeubleData } from './metiers/ebenisteMeuble';
 import { designerInteriorData } from './metiers/designerInterior';
 import { sallesDeBainsSpecialisteData } from './metiers/sallesDeBainsSpecialiste';
-import { cuisinesSurMesureData } from './metiers/cuisinesSurMesure';
 import { peintureData } from './metiers/peinture';
 import { solsData } from './metiers/sols';
 import { plafondsData } from './metiers/plafonds';
@@ -30,7 +29,6 @@ import { materiauxIsolantsData } from './metiers/materiauxIsolants';
 // Export combiné de tous les métiers
 export const metierDetailsData = [
   // Métiers de rénovation intérieure
-  cuisinierData,
   menuisierCuisinisteData,
   plombierSanitaireData,
   electricienData,
