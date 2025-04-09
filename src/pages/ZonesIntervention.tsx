@@ -1,3 +1,4 @@
+
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -13,6 +14,7 @@ import ZonesCityServices from "@/components/zones/ZonesCityServices";
 import { mainLocation, serviceRadius, departments, majorCities } from "@/data/zonesInterventionData";
 import { serviceDetailsData } from "@/data/serviceDetailsData";
 import { metierDetailsData } from "@/data/metierDetailsData";
+
 const ZonesIntervention = () => {
   // Generate a list of department names for SEO
   const departmentNames = departments.map(d => d.name).join(', ');
@@ -79,6 +81,7 @@ const ZonesIntervention = () => {
       }
     }
   } : null;
+  
   return <>
       <Helmet>
         <title>Zones d'Intervention | qoob rénovations</title>
@@ -118,8 +121,26 @@ const ZonesIntervention = () => {
                 {majorCities.filter(city => city.name !== "Agen").slice(0, 2).map(city => <ZonesCityServices key={`${city.name}-${city.postalCode}`} city={city} />)}
               </div>
               
-              {/* Highlighted Service-Métier Combination */}
-              {agenCity && renovationInterieure && electricien}
+              {/* Highlighted Service-Métier Combination - Fixed rendering issue here */}
+              {agenCity && renovationInterieure && electricien && (
+                <div className="mt-10 p-6 border bg-white rounded-lg shadow-sm">
+                  <h3 className="text-xl font-semibold mb-3">
+                    {electricien.title} pour {renovationInterieure.title} à {agenCity.name}
+                  </h3>
+                  <p className="text-warmBeige-700 mb-4">
+                    Profitez de l'expertise de nos {electricien.title.toLowerCase()} pour vos projets de {renovationInterieure.title.toLowerCase()} à {agenCity.name} et ses environs.
+                  </p>
+                  <Link 
+                    to={`/services/${electricien.serviceSlug}/metiers/${electricien.id}`}
+                    className="text-primary hover:underline flex items-center"
+                  >
+                    En savoir plus
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </Link>
+                </div>
+              )}
             </div>
           </section>
           
