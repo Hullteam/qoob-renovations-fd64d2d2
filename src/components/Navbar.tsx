@@ -1,3 +1,4 @@
+
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -13,7 +14,7 @@ const Navbar = () => {
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/6d22a9da-5065-4cd3-89e3-23d7b96f8307.png" 
+                src="/lovable-uploads/e02a151a-8159-4939-a4d2-8e859e5d6296.png" 
                 alt="rénovations logo" 
                 className="h-20" 
               />
