@@ -3,7 +3,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 interface FAQ {
   question: string;
-  answer: string;
+  answer?: string;  // Make answer optional
+  description?: string; // Add description as optional
 }
 
 interface ServiceFAQProps {
@@ -24,7 +25,7 @@ const ServiceFAQ = ({ faqs }: ServiceFAQProps) => {
               <AccordionItem key={index} value={`item-${index}`}>
                 <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
                 <AccordionContent>
-                  {faq.answer}
+                  {faq.answer || faq.description || ""}
                 </AccordionContent>
               </AccordionItem>
             ))}

@@ -1,3 +1,4 @@
+
 import { useParams, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -17,7 +18,8 @@ import { metierDetailsData } from "@/data/metierDetailsData";
 // Define the standard FAQ interface to match ServiceFAQ requirements
 interface FAQ {
   question: string;
-  answer: string;
+  answer?: string;
+  description?: string;
 }
 
 const MetierDetail = () => {
@@ -35,18 +37,8 @@ const MetierDetail = () => {
     );
   }
 
-  // Transform FAQs to ensure they match the required format
-  const standardizedFaqs: FAQ[] = metierData.faqs.map(faq => {
-    // If the FAQ has a description instead of an answer, use the description as the answer
-    if ('description' in faq && !('answer' in faq)) {
-      return {
-        question: faq.question,
-        answer: faq.description
-      };
-    }
-    // Otherwise, return the FAQ as is (it should have an answer)
-    return faq as FAQ;
-  });
+  // We no longer need to transform FAQs since ServiceFAQ now accepts both formats
+  const standardizedFaqs = metierData.faqs;
 
   return (
     <>
