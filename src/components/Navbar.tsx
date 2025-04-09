@@ -2,6 +2,7 @@
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,31 +12,33 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex-shrink-0 flex items-center">
-            <div className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2">
               <img 
                 src="/lovable-uploads/e485f733-4f74-4a8f-b947-4a3ae077586b.png" 
                 alt="qoob rénovations logo" 
                 className="h-9" 
               />
               <span className="text-primary font-serif text-2xl font-bold">qoob rénovations</span>
-            </div>
+            </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-gray-600 hover:text-primary transition-colors">
+            <Link to="/#services" className="text-gray-600 hover:text-primary transition-colors">
               Nos Services
-            </a>
-            <a href="#testimonials" className="text-gray-600 hover:text-primary transition-colors">
+            </Link>
+            <Link to="/#testimonials" className="text-gray-600 hover:text-primary transition-colors">
               Témoignages
-            </a>
-            <a href="#gallery" className="text-gray-600 hover:text-primary transition-colors">
+            </Link>
+            <Link to="/#gallery" className="text-gray-600 hover:text-primary transition-colors">
               Réalisations
-            </a>
-            <a href="#contact" className="text-gray-600 hover:text-primary transition-colors">
+            </Link>
+            <Link to="/#contact" className="text-gray-600 hover:text-primary transition-colors">
               Contact
-            </a>
-            <Button className="cta-button">
-              Demander un Devis
+            </Link>
+            <Button className="cta-button" asChild>
+              <Link to="/demande-devis">
+                Demander un Devis
+              </Link>
             </Button>
           </div>
           
@@ -56,37 +59,39 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg absolute w-full z-20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a
-              href="#services"
+            <Link
+              to="/#services"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50"
               onClick={() => setIsMenuOpen(false)}
             >
               Nos Services
-            </a>
-            <a
-              href="#testimonials"
+            </Link>
+            <Link
+              to="/#testimonials"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50"
               onClick={() => setIsMenuOpen(false)}
             >
               Témoignages
-            </a>
-            <a
-              href="#gallery"
+            </Link>
+            <Link
+              to="/#gallery"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50"
               onClick={() => setIsMenuOpen(false)}
             >
               Réalisations
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="/#contact"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
-            </a>
+            </Link>
             <div className="px-3 py-2">
-              <Button className="cta-button w-full">
-                Demander un Devis
+              <Button className="cta-button w-full" asChild>
+                <Link to="/demande-devis" onClick={() => setIsMenuOpen(false)}>
+                  Demander un Devis
+                </Link>
               </Button>
             </div>
           </div>

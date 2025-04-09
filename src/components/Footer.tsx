@@ -1,5 +1,7 @@
 
 import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return <footer className="bg-warmBeige-800 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
@@ -42,24 +44,24 @@ const Footer = () => {
             <h3 className="font-serif text-xl font-semibold mb-4">Liens Rapides</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#services" className="text-warmBeige-200 hover:text-white transition-colors">
+                <Link to="/#services" className="text-warmBeige-200 hover:text-white transition-colors">
                   Nos Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#testimonials" className="text-warmBeige-200 hover:text-white transition-colors">
+                <Link to="/#testimonials" className="text-warmBeige-200 hover:text-white transition-colors">
                   Témoignages
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#gallery" className="text-warmBeige-200 hover:text-white transition-colors">
+                <Link to="/#gallery" className="text-warmBeige-200 hover:text-white transition-colors">
                   Réalisations
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-warmBeige-200 hover:text-white transition-colors">
+                <Link to="/#contact" className="text-warmBeige-200 hover:text-white transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -93,19 +95,19 @@ const Footer = () => {
           <div className="mt-4 md:mt-0">
             <ul className="flex flex-wrap space-x-4 text-sm text-warmBeige-300">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link to="/confidentialite" className="hover:text-white transition-colors">
                   Politique de confidentialité
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link to="/mentions-legales" className="hover:text-white transition-colors">
                   Mentions légales
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link to="/conditions-generales" className="hover:text-white transition-colors">
                   Conditions générales
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
