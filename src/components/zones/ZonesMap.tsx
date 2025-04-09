@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { mainLocation, serviceRadius } from "@/data/zonesInterventionData";
 import GoogleMap from "./GoogleMap";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const ZonesMap = () => {
   const [apiKey, setApiKey] = useState<string>("");
@@ -52,11 +53,14 @@ const ZonesMap = () => {
                   <p className="text-warmBeige-700">
                     Vous ne trouvez pas votre ville ? Contactez-nous pour vérifier si nous pouvons intervenir dans votre zone.
                   </p>
-                  <Button className="cta-button mt-4" asChild>
-                    <Link to="/demande-devis">
-                      Demander un Devis
-                    </Link>
-                  </Button>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <Button className="cta-button" asChild>
+                      <Link to="/demande-devis">
+                        Demander un Devis
+                      </Link>
+                    </Button>
+                    <WhatsAppButton phoneNumber="0785010633" size="default" />
+                  </div>
                 </div>
               </div>
             </div>

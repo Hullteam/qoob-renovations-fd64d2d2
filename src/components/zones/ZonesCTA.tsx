@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { majorCities } from "@/data/zonesInterventionData";
 import { scrollToElement } from "@/utils/scrollUtils";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const ZonesCTA = () => {
   // Get top cities to highlight in CTA
@@ -34,6 +35,12 @@ const ZonesCTA = () => {
           <Button variant="outline" className="border-white text-white hover:bg-white/10" size="lg" onClick={handleScrollToForm}>
             Nous Contacter
           </Button>
+          <WhatsAppButton 
+            phoneNumber="0785010633" 
+            variant="outline" 
+            className="border-white text-white hover:bg-white/10 bg-transparent" 
+            size="lg"
+          />
         </div>
       </div>
     </section>
@@ -41,4 +48,3 @@ const ZonesCTA = () => {
 };
 
 export default ZonesCTA;
-

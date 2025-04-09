@@ -1,6 +1,7 @@
 
 import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "./WhatsAppButton";
 
 const Footer = () => {
   return <footer className="bg-warmBeige-800 text-white">
@@ -25,6 +26,13 @@ const Footer = () => {
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-warmBeige-200 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
+              <WhatsAppButton 
+                phoneNumber="0785010633" 
+                variant="ghost" 
+                size="icon" 
+                className="bg-transparent hover:bg-white/10 text-white p-0" 
+                showText={false} 
+              />
             </div>
           </div>
 
@@ -36,6 +44,14 @@ const Footer = () => {
                 <Phone className="w-5 h-5 mr-3 flex-shrink-0 mt-1" />
                 <span>07 85 01 06 33</span>
               </a>
+              <div className="flex items-start hover:text-warmBeige-200 transition-colors ml-8">
+                <WhatsAppButton 
+                  phoneNumber="0785010633" 
+                  variant="ghost" 
+                  size="sm" 
+                  className="bg-transparent hover:bg-white/10 text-white p-0 h-auto" 
+                />
+              </div>
               <a href="mailto:qoob.sas@gmail.com" className="flex items-start hover:text-warmBeige-200 transition-colors">
                 <Mail className="w-5 h-5 mr-3 flex-shrink-0 mt-1" />
                 <span>qoob.sas@gmail.com</span>

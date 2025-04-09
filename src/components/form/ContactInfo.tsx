@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Phone, Mail } from 'lucide-react';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const ContactInfo = () => {
   return (
@@ -17,6 +18,9 @@ const ContactInfo = () => {
             <p className="font-medium">Par téléphone</p>
             <p className="text-gray-600">07 85 01 06 33</p>
             <p className="text-sm text-gray-500">Lun-Ven: 8h30-19h00, Sam: 9h00-17h00</p>
+            <div className="mt-2">
+              <WhatsAppButton phoneNumber="0785010633" size="sm" />
+            </div>
           </div>
         </div>
         
