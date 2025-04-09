@@ -1,13 +1,16 @@
+
 import { useState } from "react";
 import { MapPin, Navigation, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { mainLocation, serviceRadius } from "@/data/zonesInterventionData";
 import GoogleMap from "./GoogleMap";
+
 const ZonesMap = () => {
   const [apiKey, setApiKey] = useState<string>("");
   const [showApiInput, setShowApiInput] = useState<boolean>(true);
   const [mapLoaded, setMapLoaded] = useState<boolean>(false);
+
   const handleApiSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (apiKey.trim()) {
@@ -17,6 +20,7 @@ const ZonesMap = () => {
       localStorage.setItem("google_maps_api_key", apiKey);
     }
   };
+
   const storedApiKey = localStorage.getItem("google_maps_api_key");
 
   // Si une clé API est déjà stockée, l'utiliser directement
@@ -25,6 +29,7 @@ const ZonesMap = () => {
     setShowApiInput(false);
     setMapLoaded(true);
   }
+
   return <section className="py-12 md:py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -35,17 +40,7 @@ const ZonesMap = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Zones d'intervention</h3>
                   <p className="text-warmBeige-700">
-                    {mainLocation.address}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 mb-6">
-                <Navigation className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Rayon d'intervention</h3>
-                  <p className="text-warmBeige-700">
-                    {serviceRadius} km autour de {mainLocation.name} ({mainLocation.postalCode})
+                    Lot et Garonne et départements limitrophes
                   </p>
                 </div>
               </div>
@@ -99,4 +94,5 @@ const ZonesMap = () => {
       </div>
     </section>;
 };
+
 export default ZonesMap;
