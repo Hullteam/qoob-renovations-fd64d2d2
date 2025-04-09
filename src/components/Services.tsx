@@ -32,7 +32,7 @@ const serviceItems = [
     title: "Gestion de Projet",
     description: "Bénéficiez d'un suivi complet avec notre service de conducteur de travaux, OPC et coordination des corps de métier.",
     icon: <ClipboardCheck className="w-12 h-12 text-primary mb-4" />,
-    slug: "metiers-renovation"
+    slug: "gestion-projet"
   },
 ];
 

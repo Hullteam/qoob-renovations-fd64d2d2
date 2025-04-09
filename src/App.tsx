@@ -14,6 +14,7 @@ import MetiersRenovation from "./pages/MetiersRenovation";
 import Confidentialite from "./pages/Confidentialite";
 import MentionsLegales from "./pages/MentionsLegales";
 import ConditionsGenerales from "./pages/ConditionsGenerales";
+import GestionProjet from "./pages/GestionProjet";
 import { Helmet } from "react-helmet";
 import CookieConsent from "./components/CookieConsent";
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/services/:serviceSlug" element={<ServiceDetail />} />
           <Route path="/services/:serviceSlug/metiers/:metierId" element={<MetierDetail />} />
+          <Route path="/services/gestion-projet" element={<GestionProjet />} />
           <Route path="/demande-devis" element={<DemandeDevis />} />
           <Route path="/zones-intervention" element={<ZonesIntervention />} />
           <Route path="/metiers-renovation" element={<MetiersRenovation />} />
