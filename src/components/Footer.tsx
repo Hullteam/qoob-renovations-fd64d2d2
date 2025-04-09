@@ -12,7 +12,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/e62cac83-ef2c-4b65-8846-3148efaaa70a.png" 
                 alt="qoob rénovations logo" 
-                className="h-12" 
+                className="h-16" 
               />
             </div>
             <p className="text-warmBeige-200 mb-4">Votre partenaire de confiance pour tous vos projets de rénovation depuis 2016.</p>

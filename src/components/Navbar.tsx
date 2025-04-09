@@ -16,7 +16,7 @@ const Navbar = () => {
               <img 
                 src="/lovable-uploads/e62cac83-ef2c-4b65-8846-3148efaaa70a.png" 
                 alt="qoob rénovations logo" 
-                className="h-12" 
+                className="h-16" 
               />
             </Link>
           </div>
