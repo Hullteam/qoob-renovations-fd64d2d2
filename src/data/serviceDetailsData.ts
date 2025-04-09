@@ -1,4 +1,3 @@
-
 export const serviceDetailsData = [
   {
     id: "renovation-interieure",
@@ -131,267 +130,275 @@ export const serviceDetailsData = [
       }
     ]
   },
-  // Ajouter d'autres services principaux ici...
+  // Ajouter les données de rénovation extérieure
   {
-    id: "peinture",
-    slug: "peinture",
-    title: "Peinture Intérieure",
-    subtitle: "Sublimez votre intérieur avec nos services de peinture professionnelle",
-    metaDescription: "Services de peinture intérieure professionnelle à Paris. Techniques modernes, finitions impeccables et conseils personnalisés pour transformer votre intérieur. Devis gratuit.",
-    keywords: ["peinture intérieure", "décoration murale", "peinture écologique", "peinture appartement", "papier peint", "Paris", "Île-de-France"],
-    heroImage: "https://images.unsplash.com/photo-1562259949-e8e7689d7a0e?q=80&w=1080&auto=format&fit=crop",
-    presentationTitle: "L'art de la couleur pour transformer votre habitat",
+    id: "renovation-exterieure",
+    slug: "renovation-exterieure",
+    title: "Rénovation Extérieure",
+    subtitle: "Transformez l'apparence et la durabilité de votre habitat avec nos services complets de rénovation extérieure",
+    metaDescription: "Experts en rénovation extérieure à Paris. Transformez votre façade, toiture, terrasse et jardin avec nos services professionnels. Valorisez votre bien immobilier. Devis gratuit.",
+    keywords: ["rénovation extérieure", "façade maison", "ravalement", "toiture", "terrasse", "jardin", "isolation extérieure", "Paris"],
+    heroImage: "https://images.unsplash.com/photo-1513880989635-6eb491ce7f5b?q=80&w=1080&auto=format&fit=crop",
+    presentationTitle: "Valorisez votre habitat par l'extérieur",
     presentationText: [
-      "La peinture est bien plus qu'une simple couche de couleur – c'est l'élément qui définit l'atmosphère et le caractère de votre intérieur. Chez qoob rénovations, nos peintres professionnels maîtrisent parfaitement l'art de la couleur et des finitions pour sublimer chaque espace de votre habitat.",
-      "Notre approche combine expertise technique et sensibilité esthétique. Nous prenons le temps de comprendre votre vision et vos préférences pour vous proposer les solutions les mieux adaptées à votre style de vie et à l'architecture de votre intérieur."
+      "La rénovation extérieure est un investissement essentiel qui apporte une double valeur à votre propriété : esthétique et fonctionnelle. Chez qoob rénovations, nous concevons et réalisons des projets de rénovation extérieure qui transforment radicalement l'apparence de votre habitat tout en renforçant sa protection contre les éléments.",
+      "Notre expertise couvre tous les aspects de l'enveloppe extérieure de votre bâtiment, de la façade à la toiture, en passant par les terrasses et les aménagements paysagers. Nous utilisons des matériaux durables et des techniques éprouvées pour garantir des résultats qui résistent à l'épreuve du temps et des intempéries."
     ],
-    presentationImage: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1080&auto=format&fit=crop",
+    presentationImage: "https://images.unsplash.com/photo-1604769319166-010643ace337?q=80&w=1080&auto=format&fit=crop",
     benefits: [
-      "Préparation minutieuse des surfaces pour une finition parfaite",
-      "Utilisation de peintures premium et respectueuses de l'environnement",
-      "Conseil en colorimétrie personnalisé selon votre espace et luminosité",
-      "Techniques décoratives spéciales et effets texturés sur demande",
-      "Équipe de peintres qualifiés et minutieux"
+      "Valorisation immédiate de votre patrimoine immobilier",
+      "Protection renforcée contre les intempéries et l'usure",
+      "Amélioration significative de l'efficacité énergétique",
+      "Solutions durables avec des matériaux de qualité supérieure",
+      "Coordination complète des différents corps de métier extérieurs"
     ],
-    averageDuration: "3 à 10 jours selon la superficie",
+    averageDuration: "2 à 6 semaines selon l'ampleur du projet",
     detailedServices: [
       {
-        id: "peinture-classique",
-        name: "Peinture Classique",
+        id: "facades",
+        name: "Façades & Ravalement",
         description: [
-          "Notre service de peinture classique comprend une préparation rigoureuse des surfaces et l'application experte de peintures de qualité. Nous réalisons des travaux de peinture dans toutes les pièces de votre habitat, du salon aux chambres en passant par les couloirs.",
-          "Nos peintres qualifiés assurent des finitions impeccables et une application uniforme pour un résultat durable et esthétique."
+          "Le ravalement de façade est bien plus qu'une simple opération esthétique – c'est un traitement complet qui redonne vie à l'enveloppe extérieure de votre bâtiment tout en le protégeant durablement. Chez qoob rénovations, nous réalisons des ravalements de façade qui combinent qualité technique et sens esthétique.",
+          "Notre approche comprend un diagnostic approfondi de l'état de votre façade, suivi d'un traitement adapté aux matériaux existants et aux contraintes architecturales. Nous proposons différentes finitions pour valoriser le caractère de votre habitat tout en respectant son style originel ou en lui donnant une nouvelle identité."
         ],
         features: [
-          "Préparation complète des surfaces (lessivage, rebouchage, ponçage)",
-          "Application de sous-couche adaptée au support",
-          "Peintures de qualité professionnelle avec large choix de teintes",
-          "Finitions soignées autour des plinthes, encadrements et angles",
-          "Protection minutieuse de vos meubles et sols pendant les travaux"
+          "Nettoyage en profondeur (hydrogommage, sablage)",
+          "Traitement des fissures et réparation des maçonneries",
+          "Application d'enduits décoratifs et de peintures façade haute durabilité",
+          "Pose de bardage (bois, composite, métallique) pour une nouvelle esthétique",
+          "Solutions d'isolation thermique par l'extérieur (ITE)"
         ],
-        image: "https://images.unsplash.com/photo-1595665593673-bf1ad72905c0?q=80&w=1080&auto=format&fit=crop",
-        price: "À partir de 25€/m² fourniture et main d'œuvre incluses"
+        image: "https://images.unsplash.com/photo-1578775887804-699de7086ff9?q=80&w=1080&auto=format&fit=crop",
+        price: "À partir de 70€/m² selon le traitement nécessaire"
       },
       {
-        id: "techniques-decoratives",
-        name: "Techniques Décoratives",
+        id: "toitures",
+        name: "Toitures & Couverture",
         description: [
-          "Nos techniques décoratives permettent de créer des effets uniques et personnalisés pour vos murs. De la patine italienne au stuc vénitien, en passant par les effets béton ciré ou métal, nos artisans maîtrisent un large éventail de finitions spéciales.",
-          "Ces techniques apportent texture, profondeur et caractère à votre intérieur, transformant vos murs en véritables éléments décoratifs."
+          "La toiture est l'élément de protection principal de votre habitat. Sa rénovation assure non seulement l'étanchéité de votre maison mais contribue significativement à son isolation thermique et à son apparence générale. Notre équipe de couvreurs qualifiés maîtrise toutes les techniques et matériaux de couverture.",
+          "Nous intervenons sur tous types de toits (en pente ou plats) avec une expertise particulière dans la rénovation respectueuse du caractère architectural des bâtiments. De la simple réparation au remplacement complet, nos solutions de toiture sont conçues pour durer et résister aux conditions climatiques les plus exigeantes."
         ],
         features: [
-          "Effets béton ciré pour un style industriel contemporain",
-          "Patines et glacis pour une finition subtile et élégante",
-          "Stuc vénitien et tadelakt pour un rendu luxueux",
-          "Effets métallisés et pailletés pour des accents sophistiqués",
-          "Création d'effets vieillis, craquelés ou texturés"
+          "Réparation ponctuelle (tuiles cassées, fuites, solins)",
+          "Réfection complète de couverture (tuiles, ardoises, zinc)",
+          "Traitement et protection des charpentes",
+          "Installation de toitures plates avec étanchéité moderne",
+          "Aménagement de combles et fenêtres de toit"
         ],
-        image: "https://images.unsplash.com/photo-1532323544230-7191fd51bc1b?q=80&w=1080&auto=format&fit=crop",
-        price: "À partir de 45€/m² selon la technique choisie"
+        image: "https://images.unsplash.com/photo-1632759145355-8b8f3d364562?q=80&w=1080&auto=format&fit=crop",
+        price: "À partir de 150€/m² pour une réfection complète"
       },
       {
-        id: "papiers-peints",
-        name: "Papiers Peints & Revêtements Muraux",
+        id: "terrasses",
+        name: "Terrasses & Balcons",
         description: [
-          "Le papier peint et les revêtements muraux modernes offrent des possibilités infinies pour personnaliser votre intérieur. Notre expertise en pose de papier peint garantit un résultat parfait, même avec les motifs les plus complexes ou les matériaux spéciaux.",
-          "Nous travaillons avec les meilleures collections de papiers peints et revêtements muraux pour vous proposer les dernières tendances et innovations."
+          "Les terrasses et balcons constituent un espace de vie extérieur précieux, véritable prolongement de votre intérieur. Leur rénovation permet non seulement d'embellir votre extérieur mais aussi de créer un espace fonctionnel adapté à vos besoins de détente ou de réception.",
+          "Notre expertise couvre tous les aspects de la rénovation de terrasses, de l'étanchéité à la finition décorative, en passant par la structure porteuse. Nous créons des espaces extérieurs durables, esthétiques et parfaitement intégrés à l'architecture de votre maison."
         ],
         features: [
-          "Pose précise de papiers peints classiques et intissés",
-          "Installation de papiers peints panoramiques et murales XXL",
-          "Revêtements spéciaux : textile, vinyle, fibres naturelles",
-          "Préparation rigoureuse des supports pour une adhérence parfaite",
-          "Conseil en sélection de motifs adaptés à votre espace"
+          "Traitement de l'étanchéité et évacuation des eaux",
+          "Installation de terrasses en bois, composite ou carrelage",
+          "Création de structures sur mesure (pergolas, auvents)",
+          "Aménagement d'espaces extérieurs complets avec mobilier intégré",
+          "Solutions d'éclairage extérieur pour valoriser votre terrasse"
         ],
-        image: "https://images.unsplash.com/photo-1628523120342-76ef01eb206b?q=80&w=1080&auto=format&fit=crop",
-        price: "À partir de 35€/m² pose seule, hors fourniture"
+        image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=1080&auto=format&fit=crop",
+        price: "À partir de 180€/m² pour une rénovation complète"
       },
       {
-        id: "solutions-ecologiques",
-        name: "Solutions Écologiques",
+        id: "amenagements-exterieurs",
+        name: "Aménagements Extérieurs",
         description: [
-          "Notre gamme de solutions écologiques répond aux préoccupations environnementales et de santé. Nous proposons des peintures naturelles sans COV (Composés Organiques Volatils) et des enduits écologiques qui préservent la qualité de l'air intérieur.",
-          "Ces solutions sont particulièrement recommandées pour les chambres d'enfants, les personnes sensibles ou allergiques, et tous ceux qui souhaitent un habitat plus sain."
+          "L'aménagement extérieur crée un cadre harmonieux qui valorise votre propriété et enrichit votre cadre de vie. De l'allée d'accès au jardin en passant par les clôtures, chaque élément contribue à l'identité et à la fonctionnalité de votre espace extérieur.",
+          "Chez qoob rénovations, nous concevons des aménagements extérieurs qui allient esthétique, praticité et durabilité. Notre approche globale prend en compte l'architecture de votre maison, la topographie du terrain et vos habitudes de vie pour créer un environnement extérieur cohérent et personnalisé."
         ],
         features: [
-          "Peintures minérales et à base d'ingrédients naturels",
-          "Enduits à la chaux et à l'argile pour une régulation naturelle de l'humidité",
-          "Peintures sans COV, sans solvants et hypoallergéniques",
-          "Produits labellisés Écolabel ou NF Environnement",
-          "Conseil en matériaux écologiques adaptés à votre projet"
+          "Création d'allées et voies d'accès en pavés, graviers ou béton décoratif",
+          "Installation de clôtures et portails sur mesure",
+          "Aménagement paysager et plantations adaptées au climat local",
+          "Solutions d'éclairage extérieur architectural et sécuritaire",
+          "Construction de structures extérieures (pool house, abris, cuisine d'été)"
         ],
-        image: "https://images.unsplash.com/photo-1591696018422-222979874905?q=80&w=1080&auto=format&fit=crop",
-        price: "À partir de 30€/m² fourniture et main d'œuvre incluses"
+        image: "https://images.unsplash.com/photo-1598977123118-4e575a1c64fb?q=80&w=1080&auto=format&fit=crop",
+        price: "Sur devis selon projet et superficie"
       }
     ],
     faqs: [
       {
-        question: "Quelle est la durée de vie moyenne d'une peinture intérieure ?",
-        answer: "Une peinture intérieure de qualité professionnelle dure généralement entre 5 et 10 ans selon la pièce et l'exposition. Les pièces à fort passage comme les couloirs peuvent nécessiter une rafraîchissement plus fréquent, tandis que les chambres conservent leur aspect plus longtemps. L'utilisation de peintures premium et une préparation soignée des surfaces prolongent considérablement la durée de vie."
+        question: "Quelles sont les périodes idéales pour réaliser des travaux de rénovation extérieure ?",
+        answer: "Les périodes les plus favorables sont généralement le printemps et l'automne, car les conditions météorologiques sont modérées. Pour les ravalements de façade et applications d'enduits, il est important d'éviter les périodes de gel ou de forte chaleur. Les travaux de toiture sont idéalement réalisés en dehors des périodes de fortes pluies. Cependant, avec les techniques modernes et notre organisation, nous pouvons travailler presque toute l'année en adaptant notre planning et nos méthodes aux conditions climatiques."
       },
       {
-        question: "Puis-je habiter mon logement pendant les travaux de peinture ?",
-        answer: "Oui, c'est généralement possible, surtout avec nos peintures à faible odeur et séchage rapide. Nous travaillons par zones pour limiter les désagréments. Pour les grandes surfaces ou en cas d'utilisation de produits spécifiques, une absence temporaire peut être recommandée pendant l'application et le temps de séchage principal (24-48h)."
+        question: "Dois-je obtenir des autorisations pour rénover l'extérieur de ma maison ?",
+        answer: "Oui, la plupart des travaux de rénovation extérieure nécessitent des autorisations administratives. En fonction de l'ampleur du projet, il peut s'agir d'une simple déclaration préalable de travaux ou d'un permis de construire pour des modifications substantielles. Les règles varient selon les communes et les zones (notamment dans les secteurs protégés ou classés). Notre équipe vous accompagne dans toutes ces démarches administratives et peut préparer les documents nécessaires."
       },
       {
-        question: "Comment choisir les bonnes couleurs pour mon intérieur ?",
-        answer: "Le choix des couleurs dépend de plusieurs facteurs : l'exposition et la luminosité de la pièce, son usage, l'ambiance souhaitée et vos goûts personnels. Notre service de conseil en colorimétrie vous aide à créer une palette harmonieuse qui valorise votre espace. Nous pouvons réaliser des échantillons sur place pour vous aider à visualiser le résultat final."
+        question: "Quelle est la durée de vie d'un ravalement de façade ?",
+        answer: "La durabilité d'un ravalement dépend de plusieurs facteurs : la qualité des matériaux utilisés, la technique d'application, l'exposition de la façade et l'environnement du bâtiment. En moyenne, un ravalement de qualité a une durée de vie de 10 à 15 ans. Les façades très exposées aux intempéries ou à la pollution peuvent nécessiter un entretien plus fréquent. Nous utilisons des produits de haute qualité qui offrent une résistance optimale aux UV et aux intempéries, maximisant ainsi la durée de vie de votre façade."
       },
       {
-        question: "Quelle peinture choisir pour une cuisine ou une salle de bain ?",
-        answer: "Pour les pièces humides comme la cuisine ou la salle de bain, nous recommandons des peintures spécifiques résistantes à l'humidité et lavables. Les finitions satinées ou semi-brillantes sont idéales car elles résistent mieux aux projections d'eau et sont faciles à nettoyer. Nos peintures pour pièces humides contiennent également des fongicides qui préviennent la formation de moisissures."
+        question: "Est-il possible de combiner une rénovation extérieure avec une isolation thermique ?",
+        answer: "Absolument, et c'est même fortement recommandé ! L'isolation thermique par l'extérieur (ITE) est une solution très efficace qui permet d'améliorer significativement la performance énergétique de votre habitat tout en rénovant son apparence. Cette technique consiste à envelopper le bâtiment d'une couche isolante puis d'un revêtement de finition. Non seulement vous réduisez vos factures d'énergie, mais vous bénéficiez également de divers dispositifs d'aide financière pour ce type de travaux, que nous pouvons vous aider à obtenir."
       }
     ],
     testimonials: [
       {
-        author: "Florence Martin",
-        location: "Appartement à Neuilly-sur-Seine",
+        author: "Michel et Catherine Dubois",
+        location: "Maison à Saint-Germain-en-Laye",
         rating: 5,
-        text: "L'équipe de qoob a repeint l'ensemble de notre appartement avec une précision et un soin remarquables. La préparation des murs, qui étaient en mauvais état, a été impeccable. Le résultat final est absolument parfait et la propreté du chantier était exemplaire."
+        text: "qoob rénovations a complètement transformé l'extérieur de notre maison des années 70. Le ravalement avec isolation par l'extérieur a non seulement modernisé l'apparence de notre villa mais a aussi considérablement amélioré notre confort thermique. Le chantier a été parfaitement géré, propre et dans les délais annoncés."
       },
       {
-        author: "Thomas Leclerc",
-        location: "Loft à Paris 10ème",
+        author: "Antoine Leroux",
+        location: "Appartement avec terrasse à Paris 16ème",
         rating: 5,
-        text: "J'ai fait réaliser une peinture effet béton ciré dans mon loft et le rendu est spectaculaire ! Les artisans de qoob maîtrisent parfaitement cette technique difficile. Le conseil en couleur a également été très pertinent pour mon espace atypique."
+        text: "Nous avons fait appel à qoob pour la rénovation complète de notre terrasse de 40m². Le résultat est spectaculaire ! L'équipe a résolu d'anciens problèmes d'infiltration et a créé un véritable espace de vie extérieur avec un plancher en bois exotique et un éclairage intégré. Très professionnel du début à la fin."
       },
       {
-        author: "Nathalie Petit",
-        location: "Maison à Versailles",
+        author: "Famille Martin",
+        location: "Pavillon à Rueil-Malmaison",
         rating: 4,
-        text: "Très bonne prestation pour la pose de papier peint dans notre salon et notre entrée. Le raccord des motifs est parfait et le conseil pour le choix des modèles nous a beaucoup aidés. Service professionnel et équipe à l'écoute de nos besoins."
+        text: "Très satisfaits de la réfection de notre toiture et de la création d'une nouvelle entrée avec allée pavée. qoob a su coordonner efficacement les différents artisans et respecter notre budget. Seul petit bémol, quelques jours de retard sur le planning initial, mais le résultat final est à la hauteur de nos attentes."
       }
     ]
   },
   {
-    id: "sols",
-    slug: "sols",
-    title: "Revêtements de Sol",
-    subtitle: "Des sols durables et esthétiques pour sublimer chaque pièce de votre habitat",
-    metaDescription: "Installation professionnelle de revêtements de sol à Paris. Parquet, carrelage, moquette, vinyle et solutions écologiques pour un intérieur durable et esthétique. Devis gratuit.",
-    keywords: ["revêtement sol", "parquet", "carrelage", "sol vinyle", "pose sol", "sol stratifié", "Paris", "Île-de-France"],
-    heroImage: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=1080&auto=format&fit=crop",
-    presentationTitle: "Des fondations solides pour votre intérieur",
+    id: "isolation",
+    slug: "isolation",
+    title: "Isolation",
+    subtitle: "Améliorez le confort et l'efficacité énergétique de votre habitat avec nos solutions d'isolation performantes",
+    metaDescription: "Services d'isolation thermique et acoustique à Paris. Solutions performantes pour murs, combles, planchers. Économies d'énergie garanties et confort optimal. Certification RGE.",
+    keywords: ["isolation thermique", "isolation acoustique", "isolation murs", "isolation combles", "économie énergie", "rénovation énergétique", "Paris", "Île-de-France"],
+    heroImage: "https://images.unsplash.com/photo-1629804222897-caf61087df99?q=80&w=1080&auto=format&fit=crop",
+    presentationTitle: "L'isolation, clé du confort et des économies d'énergie",
     presentationText: [
-      "Le revêtement de sol est l'un des éléments les plus importants de votre intérieur, tant sur le plan esthétique que fonctionnel. Il influence l'acoustique, le confort thermique et l'atmosphère générale de votre espace de vie.",
-      "Chez qoob rénovations, nos experts en revêtements de sol vous accompagnent dans le choix des matériaux adaptés à chaque pièce et à votre style de vie. Notre équipe assure une installation parfaite, quel que soit le type de revêtement, pour un résultat durable et impeccable."
+      "L'isolation est un investissement essentiel qui transforme profondément le confort de votre habitat tout en réduisant significativement votre empreinte écologique et vos factures énergétiques. Chez qoob rénovations, nous proposons des solutions d'isolation sur mesure, adaptées à chaque configuration et à vos objectifs spécifiques.",
+      "Notre équipe certifiée RGE (Reconnu Garant de l'Environnement) maîtrise les techniques d'isolation les plus performantes et les matériaux les plus innovants. Nous traitons tous les points sensibles de votre habitat pour éliminer les ponts thermiques et créer une enveloppe parfaitement isolée, été comme hiver."
     ],
-    presentationImage: "https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?q=80&w=1080&auto=format&fit=crop",
+    presentationImage: "https://images.unsplash.com/photo-1571936773936-b71e9e0dc900?q=80&w=1080&auto=format&fit=crop",
     benefits: [
-      "Préparation minutieuse des supports pour une durabilité maximale",
-      "Large choix de matériaux adaptés à chaque pièce et usage",
-      "Installation par des poseurs expérimentés et qualifiés",
-      "Conseils personnalisés pour le choix des revêtements",
-      "Solutions techniques pour les supports difficiles ou irréguliers"
+      "Réduction significative des factures de chauffage et climatisation",
+      "Amélioration du confort thermique en toute saison",
+      "Valorisation durable de votre patrimoine immobilier",
+      "Contribution à la réduction des émissions de CO2",
+      "Éligibilité aux aides financières et crédits d'impôt"
     ],
-    averageDuration: "3 jours à 2 semaines selon la superficie et le type de revêtement",
+    averageDuration: "1 à 3 semaines selon la superficie et les techniques utilisées",
     detailedServices: [
       {
-        id: "parquet",
-        name: "Parquet & Planchers Bois",
+        id: "isolation-thermique",
+        name: "Isolation Thermique",
         description: [
-          "Le parquet apporte chaleur, noblesse et caractère à votre intérieur. Nous proposons différentes essences de bois, formats et finitions pour créer l'ambiance que vous recherchez.",
-          "Notre expertise couvre l'installation de parquets massifs, contrecollés et stratifiés, ainsi que la rénovation et le traitement de parquets anciens pour leur redonner leur splendeur d'antan."
+          "L'isolation thermique crée une barrière efficace contre les variations de température, maintenant votre intérieur frais en été et chaleureux en hiver. Notre approche globale cible tous les points de déperdition énergétique pour maximiser l'efficacité de votre habitat.",
+          "En fonction de la configuration de votre logement et de vos contraintes, nous déterminons les techniques d'isolation les plus appropriées, qu'il s'agisse d'isoler par l'intérieur, par l'extérieur ou d'intervenir sur des zones spécifiques comme les combles ou les planchers."
         ],
         features: [
-          "Pose de parquet massif traditionnel cloué ou collé",
-          "Installation de parquet contrecollé et sols stratifiés flottants",
-          "Motifs spéciaux : point de Hongrie, bâtons rompus, chevrons",
-          "Rénovation par ponçage et application de finitions (huile, vernis)",
-          "Solutions adaptées pour plancher chauffant"
+          "Isolation des murs par l'intérieur (ITI) ou par l'extérieur (ITE)",
+          "Isolation des combles perdus ou aménageables",
+          "Traitement des planchers bas et vides sanitaires",
+          "Solutions pour plafonds de sous-sols et garages",
+          "Élimination des ponts thermiques et infiltrations d'air"
         ],
-        image: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?q=80&w=1080&auto=format&fit=crop",
-        price: "À partir de 60€/m² fourniture et pose pour un parquet contrecollé"
+        image: "https://images.unsplash.com/photo-1607400201889-565b1ee75f8e?q=80&w=1080&auto=format&fit=crop",
+        price: "À partir de 60€/m² selon la technique et les matériaux"
       },
       {
-        id: "carrelage",
-        name: "Carrelage & Pierre Naturelle",
+        id: "isolation-acoustique",
+        name: "Isolation Acoustique",
         description: [
-          "Le carrelage et la pierre naturelle offrent durabilité et facilité d'entretien, particulièrement adaptés aux cuisines, salles de bains et entrées. Notre savoir-faire technique garantit une pose précise et durable, même pour les formats complexes.",
-          "Nous travaillons aussi bien avec les carrelages contemporains que les matériaux classiques comme le marbre, le travertin ou la pierre calcaire pour créer des sols intemporels et résistants."
+          "L'isolation acoustique est essentielle pour créer un environnement intérieur serein, protégé des nuisances sonores extérieures et limitant la propagation des bruits entre les pièces. Nos solutions acoustiques sont particulièrement adaptées aux environnements urbains et aux habitats mitoyens.",
+          "Notre expertise nous permet d'identifier les sources de nuisances sonores et de proposer des traitements ciblés pour chaque problématique, qu'il s'agisse de bruits aériens, d'impacts ou de réverbérations excessives."
         ],
         features: [
-          "Pose de tous formats de carreaux, des petits formats aux XXL",
-          "Installation de pierre naturelle (marbre, granit, travertin)",
-          "Mosaïques et motifs complexes pour des designs personnalisés",
-          "Joints époxy pour pièces humides et sanitaires",
-          "Solutions techniques: douche à l'italienne, sols chauffants"
+          "Isolation acoustique des murs mitoyens et cloisons",
+          "Traitement acoustique des planchers et plafonds",
+          "Installation de fenêtres à haute performance acoustique",
+          "Solutions pour conduits et gaines techniques",
+          "Traitement acoustique décoratif pour espaces spécifiques"
         ],
-        image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=1080&auto=format&fit=crop",
-        price: "À partir de 70€/m² fourniture et pose pour du carrelage standard"
+        image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?q=80&w=1080&auto=format&fit=crop",
+        price: "À partir de 80€/m² selon complexité et performance visée"
       },
       {
-        id: "sols-souples",
-        name: "Sols Souples & Vinyles",
+        id: "materiaux-isolants",
+        name: "Matériaux Isolants",
         description: [
-          "Les revêtements souples comme le vinyle, le linoléum et le PVC offrent d'excellentes alternatives économiques et pratiques. Modernes et polyvalents, ils conviennent à tous les espaces et sont particulièrement adaptés aux pièces à fort trafic.",
-          "Notre expertise inclut l'installation de sols souples de dernière génération, alliant esthétique, résistance et confort acoustique, pour un résultat impeccable et durable."
+          "Le choix du matériau isolant est déterminant pour la performance et la durabilité de votre isolation. Nous proposons une large gamme de solutions, des matériaux conventionnels éprouvés aux alternatives écologiques innovantes, pour répondre à vos exigences techniques et environnementales.",
+          "Notre équipe vous conseille sur les caractéristiques de chaque matériau isolant (conductivité thermique, résistance au feu, impact environnemental) pour vous permettre de faire un choix éclairé, adapté à vos priorités et à votre budget."
         ],
         features: [
-          "Installation de lames vinyles LVT haut de gamme",
-          "Pose de linoléum naturel et écologique",
-          "Revêtements PVC en lés ou en dalles pour professionnels",
-          "Solutions acoustiques pour réduction des bruits d'impact",
-          "Préparation spécifique des supports pour une surface parfaitement plane"
+          "Laines minérales (verre, roche) pour leurs performances polyvalentes",
+          "Isolants synthétiques (polystyrène, polyuréthane) pour leur efficacité",
+          "Solutions biosourcées (fibre de bois, chanvre, ouate de cellulose)",
+          "Isolants minces réflecteurs pour les espaces restreints",
+          "Matériaux haute performance pour projets à forte exigence énergétique"
         ],
-        image: "https://images.unsplash.com/photo-1576698483491-8c43f0862543?q=80&w=1080&auto=format&fit=crop",
-        price: "À partir de 35€/m² fourniture et pose pour du vinyle en lames"
+        image: "https://images.unsplash.com/photo-1604705528124-77dbaa89106a?q=80&w=1080&auto=format&fit=crop",
+        price: "Variable selon le type de matériau et performances"
       },
       {
-        id: "solutions-speciales",
-        name: "Solutions Spéciales & Écologiques",
+        id: "renovation-energetique",
+        name: "Rénovation Énergétique Globale",
         description: [
-          "Nos solutions spéciales et écologiques répondent aux exigences particulières et aux préoccupations environnementales. Du béton ciré aux sols en matériaux recyclés, nous proposons des alternatives innovantes et durables.",
-          "Ces revêtements sont idéaux pour créer des ambiances uniques ou répondre à des contraintes spécifiques comme l'allergie, l'entretien facilité ou l'impact environnemental réduit."
+          "La rénovation énergétique globale est une approche holistique qui combine isolation optimale et systèmes énergétiques performants pour transformer radicalement l'efficacité de votre habitat. Cette démarche complète permet d'atteindre les standards des bâtiments basse consommation (BBC).",
+          "En coordination avec nos partenaires spécialisés dans les systèmes de chauffage et ventilation, nous concevons un projet global qui maximise les économies d'énergie tout en améliorant significativement le confort et la qualité de l'air intérieur."
         ],
         features: [
-          "Application de béton ciré pour un style contemporain",
-          "Installation de sols en liège naturel isolant et confortable",
-          "Revêtements en bambou durable et résistant",
-          "Moquettes écologiques en fibres recyclées",
-          "Résines époxy pour sols techniques et décoratifs"
+          "Audit énergétique complet pour identifier les priorités d'intervention",
+          "Isolation renforcée de l'ensemble de l'enveloppe du bâtiment",
+          "Installation de systèmes de ventilation performants (VMC double flux)",
+          "Remplacement des menuiseries pour une étanchéité parfaite",
+          "Éligibilité aux aides financières MaPrimeRénov' et éco-prêt à taux zéro"
         ],
-        image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1080&auto=format&fit=crop",
-        price: "Sur devis selon matériaux et complexité"
+        image: "https://images.unsplash.com/photo-1556438549-9327b8fe2047?q=80&w=1080&auto=format&fit=crop",
+        price: "Sur devis selon l'ampleur du projet"
       }
     ],
     faqs: [
       {
-        question: "Quel revêtement de sol choisir pour ma cuisine ?",
-        answer: "Pour une cuisine, nous recommandons des revêtements résistants à l'humidité et faciles à entretenir comme le carrelage, le vinyle de qualité ou le stratifié hydrofuge. Le carrelage offre durabilité et facilité d'entretien, tandis que les sols vinyles modernes allient confort et résistance avec des designs très réalistes imitant le bois ou la pierre. Le choix dépend aussi de votre style de cuisine et de votre budget."
+        question: "Quelle économie d'énergie puis-je espérer après des travaux d'isolation ?",
+        answer: "Les économies d'énergie dépendent de l'état initial de votre habitat et de l'ampleur des travaux réalisés. En moyenne, une isolation complète (murs, combles, fenêtres) peut réduire la consommation énergétique de 40 à 60%. Une isolation des combles seule, qui représente jusqu'à 30% des pertes thermiques, peut générer 15 à 20% d'économies. Nous réalisons systématiquement une estimation personnalisée des économies potentielles lors de notre évaluation initiale."
       },
       {
-        question: "Est-il possible d'installer du parquet sur un ancien carrelage ?",
-        answer: "Oui, c'est techniquement possible avec certaines précautions. La méthode privilégiée est l'installation d'un parquet flottant ou contrecollé avec une sous-couche adaptée. Pour un parquet massif, nous recommandons généralement de retirer l'ancien carrelage pour assurer une base solide. Nos techniciens évaluent chaque cas pour vous proposer la solution la plus adaptée à votre configuration."
+        question: "Est-il préférable d'isoler par l'intérieur ou par l'extérieur ?",
+        answer: "Chaque méthode présente des avantages spécifiques. L'isolation par l'extérieur (ITE) offre une meilleure performance thermique en éliminant les ponts thermiques et n'empiète pas sur la surface habitable, mais elle modifie l'aspect extérieur et peut être plus coûteuse. L'isolation par l'intérieur (ITI) est généralement moins onéreuse et plus adaptée aux bâtiments dont la façade ne peut être modifiée, mais réduit la surface habitable et traite moins efficacement les ponts thermiques. Notre recommandation dépendra de votre bâtiment, vos contraintes et vos objectifs."
       },
       {
-        question: "Combien de temps faut-il prévoir pour remplacer le sol d'un appartement ?",
-        answer: "Pour un appartement standard de 70m², comptez environ 1 à 2 semaines selon le type de revêtement et l'état du support. La dépose de l'ancien revêtement et la préparation du support (ragréage, nivellement) peuvent prendre 2-3 jours, puis l'installation elle-même 3-5 jours selon le matériau choisi. Un délai supplémentaire peut être nécessaire pour les finitions (ponçage de parquet, joints de carrelage)."
+        question: "Quelles aides financières existent pour les travaux d'isolation ?",
+        answer: "De nombreuses aides sont disponibles : MaPrimeRénov', Certificats d'Économies d'Énergie (CEE), TVA à taux réduit (5,5%), éco-prêt à taux zéro, aides de l'Anah et des collectivités locales. Les montants varient selon vos revenus, le type de travaux et les performances atteintes. En tant qu'entreprise certifiée RGE, nous vous accompagnons dans l'identification et l'obtention de toutes les aides auxquelles vous êtes éligible pour optimiser votre financement."
       },
       {
-        question: "Quels sont les revêtements de sol les plus écologiques ?",
-        answer: "Les options les plus écologiques incluent le liège naturel, le linoléum véritable (à base d'huile de lin), le bois certifié FSC ou PEFC, et les matériaux recyclés. Le bambou est également excellent car c'est une ressource rapidement renouvelable. Pour les moquettes, recherchez celles fabriquées à partir de fibres recyclées ou naturelles. Nous pouvons vous présenter toute notre gamme de revêtements écologiques lors de notre première consultation."
+        question: "Comment choisir entre les différents matériaux isolants ?",
+        answer: "Le choix dépend de plusieurs critères : la zone à isoler, vos priorités (performance thermique, acoustique, résistance au feu, impact environnemental), les contraintes techniques de votre habitat et votre budget. Les laines minérales offrent un bon rapport qualité/prix et une bonne performance acoustique. Les isolants synthétiques sont très performants pour une faible épaisseur. Les matériaux biosourcés combinent bonnes performances et faible impact environnemental. Nous analysons votre situation spécifique pour vous recommander les matériaux les plus adaptés à votre projet."
       }
     ],
     testimonials: [
       {
-        author: "Laurent et Céline Dupont",
-        location: "Appartement à Paris 16ème",
+        author: "Famille Dupont",
+        location: "Maison à Meudon",
         rating: 5,
-        text: "Nous avons fait installer un magnifique parquet point de Hongrie dans notre salon et notre entrée. Le résultat est à couper le souffle et la qualité de pose irréprochable. Merci à toute l'équipe de qoob pour leur professionnalisme et leur souci du détail."
+        text: "Nous avons fait réaliser une isolation par l'extérieur avec qoob rénovations et les résultats dépassent nos attentes. Notre maison des années 60 mal isolée s'est transformée en un habitat vraiment confortable, été comme hiver. Nos factures de chauffage ont été réduites de plus de moitié ! L'équipe a été à l'écoute et très professionnelle tout au long du projet."
       },
       {
-        author: "Julien Moreau",
-        location: "Maison à Saint-Cloud",
+        author: "Sylvie Moreau",
+        location: "Appartement à Paris 15ème",
         rating: 5,
-        text: "Très satisfait du carrelage imitation bois posé dans notre maison. L'équipe a su gérer parfaitement la transition entre les différentes pièces et le rendu est bluffant. Un grand merci pour vos conseils qui nous ont aidés à faire le bon choix de matériau."
+        text: "L'isolation acoustique réalisée par qoob dans mon appartement a complètement changé ma qualité de vie. Les bruits de la rue et des voisins qui me gênaient constamment sont maintenant à peine perceptibles. Le travail a été fait proprement et rapidement, avec un vrai souci de minimiser les désagréments pendant les travaux."
       },
       {
-        author: "Sandrine Legrand",
-        location: "Loft à Paris 11ème",
+        author: "Jean-Pierre Lambert",
+        location: "Loft à Montreuil",
         rating: 4,
-        text: "J'ai opté pour un sol en béton ciré dans mon loft et je ne regrette absolument pas. Le rendu est moderne et chaleureux à la fois. L'application a demandé du temps mais le résultat en vaut vraiment la peine. Un travail d'artisan de grande qualité."
+        text: "J'ai fait isoler les combles de mon loft avec des matériaux écologiques. Le chantier s'est bien déroulé et j'apprécie les conseils reçus sur le choix des matériaux. La différence de température est notable, surtout en été où mon espace sous toiture restait auparavant surchauffé. Un bon investissement qui se ressent déjà sur ma consommation énergétique."
       }
     ]
-  }
-];
+  },
+  {
+    id: "cuisines-salles-de-bains",
+    slug: "cuisines-salles-de-bains",
+    title: "Aménagement Cuisines & Salles de Bains",
+    subtitle: "Créez des espaces fonctionnels et élégants qui subliment votre quotidien",
+    metaDescription: "Conception et réalisation de cuisines et salles de bains sur mesure à Paris. Design contemporain, matériaux premium et installation professionnelle pour des espaces fonctionnels et esthétiques.",
+    keywords: ["cuisine sur mesure", "rénovation cuisine", "salle de bains", "aménagement cuisine", "meuble sur mesure", "plomberie", "Paris", "Île-de-France"],
+    heroImage: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1080&auto=format&fit=crop",
+    presentationTitle: "Des espaces d'eau qui allient forme et fonction",
