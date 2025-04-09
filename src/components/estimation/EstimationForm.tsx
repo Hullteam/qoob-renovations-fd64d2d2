@@ -1,14 +1,14 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Send } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import FormInput from "@/components/form/FormInput";
 import FormSelect from "@/components/form/FormSelect";
 import FormTextarea from "@/components/form/FormTextarea";
 import FormCheckbox from "@/components/form/FormCheckbox";
+import { submitEstimationForm } from "@/utils/formSubmission";
 
 type PropertyType = "apartment" | "house" | "land" | "commercial" | "other";
 
@@ -68,7 +68,6 @@ const EstimationForm = () => {
       [name]: value
     }));
     
-    // Clear error when field is modified
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -83,7 +82,6 @@ const EstimationForm = () => {
       [name]: value
     }));
     
-    // Clear error when field is modified
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -98,7 +96,6 @@ const EstimationForm = () => {
       [name]: checked
     }));
     
-    // Clear error when field is modified
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -170,31 +167,27 @@ const EstimationForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Simulating form submission
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const success = await submitEstimationForm(formData);
       
-      toast({
-        title: "Demande envoyée !",
-        description: "Nous vous contacterons très rapidement pour organiser l'estimation de votre bien.",
-      });
-      
-      // Reset form
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        propertyAddress: "",
-        propertyType: "",
-        propertySize: "",
-        propertyYear: "",
-        visitDate: "",
-        projectDescription: "",
-        budget: "",
-        consent: false
-      });
+      if (success) {
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          propertyAddress: "",
+          propertyType: "",
+          propertySize: "",
+          propertyYear: "",
+          visitDate: "",
+          projectDescription: "",
+          budget: "",
+          consent: false
+        });
+      }
     } catch (error) {
       setFormError("Une erreur est survenue. Veuillez réessayer.");
+      console.error("Form submission error:", error);
     } finally {
       setIsSubmitting(false);
     }
