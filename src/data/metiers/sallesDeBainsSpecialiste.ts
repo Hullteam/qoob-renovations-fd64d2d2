@@ -4,114 +4,109 @@ export const sallesDeBainsSpecialisteData = {
   serviceSlug: "cuisines-salles-de-bains",
   serviceName: "Aménagement Cuisines & Salles de Bains",
   title: "Salles de Bains Modernes",
-  subtitle: "Conception et réalisation complète de salles de bains contemporaines alliant esthétique et fonctionnalité",
-  metaDescription: "Création et rénovation complète de salles de bains modernes à Paris. De la conception à la réalisation, nos experts transforment votre salle d'eau en un espace de bien-être fonctionnel et design.",
-  keywords: ["salle de bains moderne", "rénovation salle de bains", "salle de bains design", "douche à l'italienne", "salle de bains contemporaine", "aménagement salle d'eau", "Paris", "Île-de-France"],
+  subtitle: "Conception et réalisation de salles de bains fonctionnelles et esthétiques par nos experts",
+  metaDescription: "Experts en conception et rénovation de salles de bains modernes à Paris. Solutions sur mesure, matériaux premium et finitions impeccables pour créer votre espace bien-être idéal.",
+  keywords: ["salle de bains moderne", "rénovation salle de bains", "salle de bains design", "douche à l'italienne", "salle d'eau", "salle de bains sur mesure", "Paris", "Île-de-France"],
   heroImage: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=1080&auto=format&fit=crop",
   presentationTitle: "L'art de créer des espaces de bien-être personnalisés",
   presentationText: [
-    "La salle de bains moderne est bien plus qu'un simple espace fonctionnel - c'est un véritable lieu de détente et de bien-être qui reflète votre style de vie et votre personnalité. Chez qoob rénovations, nous concevons et réalisons des salles de bains qui transforment ce moment quotidien en une expérience ressourçante et revitalisante.",
-    "Notre approche intègre les dernières tendances en matière de design et les innovations techniques pour créer des espaces à la fois esthétiques, pratiques et durables. De la douche à l'italienne aux solutions d'éclairage intelligentes, en passant par les matériaux nobles et les rangements optimisés, nous maîtrisons tous les aspects qui font une salle de bains réussie.",
-    "Chaque projet est unique et commence par une analyse approfondie de vos besoins, de vos habitudes et de l'espace disponible. Nos concepteurs élaborent ensuite des propositions sur mesure, visualisables en 3D, pour vous permettre de vous projeter dans votre future salle de bains avant même le début des travaux."
+    "La salle de bains moderne n'est plus un simple espace fonctionnel, mais un véritable lieu de détente et de ressourcement dans votre habitat. Chez qoob rénovations, nous concevons des salles de bains qui allient esthétique contemporaine, confort optimal et fonctionnalités innovantes.",
+    "Notre approche de conception commence par une compréhension approfondie de vos besoins quotidiens, de vos préférences esthétiques et des contraintes de votre espace. Nous utilisons des outils de modélisation 3D pour vous permettre de visualiser votre future salle de bains avant même le début des travaux.",
+    "De la sélection des matériaux à l'installation des équipements, en passant par la gestion des aspects techniques comme l'étanchéité et la ventilation, nos équipes spécialisées assurent une réalisation parfaite de votre projet, dans le respect des normes en vigueur et avec un souci constant du détail."
   ],
-  presentationImage: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1080&auto=format&fit=crop",
+  presentationImage: "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?q=80&w=1080&auto=format&fit=crop",
   keyPoints: [
-    "Conception personnalisée selon vos besoins et habitudes",
-    "Solutions innovantes pour optimiser chaque espace",
-    "Expertise en douches à l'italienne et baignoires design",
-    "Matériaux premium résistants à l'humidité",
-    "Installation par des artisans spécialisés",
+    "Design contemporain adapté à vos goûts et besoins",
+    "Solutions optimisées pour tous types d'espaces",
+    "Matériaux durables et faciles d'entretien",
+    "Étanchéité parfaite et systèmes de ventilation efficaces",
+    "Installation précise par des artisans spécialisés",
     "Coordination complète de tous les corps de métier"
   ],
   expertises: [
     {
       title: "Douches à l'italienne",
-      description: "Conception et réalisation de douches à l'italienne élégantes et fonctionnelles, avec solutions d'étanchéité et écoulement parfaitement maîtrisés.",
-      features: ["Receveurs extra-plats", "Écoulement linéaire", "Parois en verre sur mesure", "Revêtements antidérapants", "Robinetterie encastrée"]
+      description: "Conception et réalisation de douches à l'italienne élégantes et accessibles, avec systèmes d'étanchéité performants et écoulements optimisés.",
+      features: ["Receveurs extra-plats ou à fleur de sol", "Systèmes d'étanchéité SPEC", "Évacuations linéaires discrètes", "Parois en verre sur mesure", "Solutions antidérapantes"]
     },
     {
       title: "Salles de bains complètes",
-      description: "Création d'espaces de bains complets intégrant douche et/ou baignoire, vasque et rangements dans une harmonie visuelle et fonctionnelle.",
-      features: ["Agencement optimisé", "Combinaisons douche-baignoire", "Doubles vasques", "Rangements intégrés", "Cohérence esthétique globale"]
+      description: "Aménagement complet de salles de bains intégrant tous les équipements nécessaires dans une harmonie parfaite.",
+      features: ["Baignoires et douches", "Meubles vasques sur mesure", "Rangements optimisés", "Sanitaires suspendus", "Éclairages fonctionnels et d'ambiance"]
     },
     {
       title: "Petits espaces",
-      description: "Solutions ingénieuses pour maximiser l'espace dans les petites salles de bains ou salles d'eau compactes.",
-      features: ["Mobilier sur mesure", "Équipements gain de place", "Rangements verticaux", "Douches compactes", "Illusions d'optique"]
+      description: "Solutions ingénieuses pour maximiser l'espace dans les petites salles de bains ou salles d'eau.",
+      features: ["Douches compactes", "Meubles gain de place", "WC suspendus", "Rangements verticaux", "Astuces visuelles d'agrandissement"]
     },
     {
       title: "Salles de bains PMR",
-      description: "Conception de salles de bains accessibles et sécurisées pour les personnes à mobilité réduite ou en prévision du vieillissement.",
-      features: ["Douches sans seuil", "Barres de maintien", "Hauteurs adaptées", "Revêtements sécurisés", "Espace de manœuvre optimisé"]
+      description: "Conception de salles de bains adaptées aux personnes à mobilité réduite, alliant accessibilité et esthétique.",
+      features: ["Douches sans seuil", "Barres de maintien intégrées", "Espaces de circulation optimisés", "Mobilier adapté", "Robinetterie ergonomique"]
     },
     {
-      title: "Wellness et spa",
-      description: "Intégration d'équipements de bien-être pour transformer votre salle de bains en véritable espace spa à domicile.",
-      features: ["Douches multijets", "Balnéothérapie", "Hammams compacts", "Chromothérapie", "Systèmes audio intégrés"]
+      title: "Salles de bains luxe",
+      description: "Création d'espaces de bien-être haut de gamme avec matériaux nobles et équipements premium.",
+      features: ["Marbres et pierres naturelles", "Balnéothérapie", "Hammam et sauna", "Robinetterie design", "Systèmes domotiques"]
     }
   ],
   workProcess: [
     {
       title: "Consultation et analyse des besoins",
-      description: "Rencontre pour comprendre vos attentes, analyser vos habitudes, étudier l'espace existant et définir les grandes lignes du projet.",
-      duration: "1-2 heures"
+      description: "Nous échangeons sur vos attentes, analysons l'espace existant et identifions les contraintes techniques pour définir les contours de votre projet.",
+      duration: "1 jour"
     },
     {
-      title: "Conception et proposition",
-      description: "Élaboration de plans d'aménagement, sélection des équipements et matériaux, création de visuels 3D pour vous permettre de vous projeter dans le projet.",
+      title: "Conception et visualisation",
+      description: "Nos designers élaborent plusieurs propositions d'aménagement avec plans 2D et visualisations 3D pour vous permettre de vous projeter dans votre future salle de bains.",
       duration: "1-2 semaines"
     },
     {
-      title: "Validation et planification",
-      description: "Finalisation des choix techniques et esthétiques, établissement d'un planning détaillé et coordination des différents corps de métier.",
+      title: "Sélection des matériaux et équipements",
+      description: "Nous vous guidons dans le choix des revêtements, sanitaires et accessoires, en tenant compte de vos préférences esthétiques et de votre budget.",
       duration: "1 semaine"
     },
     {
-      title: "Dépose et travaux préparatoires",
-      description: "Démontage des équipements existants, préparation des surfaces, mise à niveau des réseaux d'eau et d'électricité selon les normes en vigueur.",
+      title: "Planification technique",
+      description: "Nous établissons les plans techniques détaillés pour l'électricité, la plomberie et la ventilation, en coordination avec les différents corps de métier.",
+      duration: "1 semaine"
+    },
+    {
+      title: "Travaux préparatoires",
+      description: "Dépose des équipements existants, préparation des supports et mise en place des systèmes d'étanchéité pour garantir une base solide.",
       duration: "2-3 jours"
     },
     {
-      title: "Plomberie et électricité",
-      description: "Installation des réseaux d'alimentation et d'évacuation d'eau, mise en place du réseau électrique conforme aux normes des pièces humides.",
-      duration: "2-3 jours"
+      title: "Installation et finitions",
+      description: "Pose des revêtements, installation des équipements sanitaires, réalisation des raccordements et finitions pour un résultat impeccable.",
+      duration: "1-2 semaines"
     },
     {
-      title: "Étanchéité et revêtements",
-      description: "Réalisation de l'étanchéité, particulièrement pour les douches à l'italienne, puis pose des carrelages, faïences et autres revêtements muraux et sols.",
-      duration: "3-5 jours"
-    },
-    {
-      title: "Installation sanitaires et mobilier",
-      description: "Pose des équipements sanitaires (douche, baignoire, WC, vasque), montage des meubles et installation des accessoires.",
-      duration: "2-3 jours"
-    },
-    {
-      title: "Finitions et nettoyage",
-      description: "Réalisation des joints silicone, installation des miroirs et accessoires, vérifications finales et nettoyage complet avant livraison.",
-      duration: "1-2 jours"
+      title: "Contrôle qualité et livraison",
+      description: "Vérification minutieuse de tous les aspects fonctionnels et esthétiques avant la livraison de votre nouvelle salle de bains.",
+      duration: "1 jour"
     }
   ],
   faqs: [
     {
-      question: "Quel budget prévoir pour la rénovation complète d'une salle de bains ?",
-      answer: "Le budget pour une rénovation complète de salle de bains varie considérablement selon la taille, les matériaux et équipements choisis. À Paris et en Île-de-France, pour une salle de bains de 5-6m², comptez environ : 6 000€ à 8 000€ pour une rénovation standard (matériaux milieu de gamme, douche classique), 8 000€ à 12 000€ pour une rénovation de qualité supérieure (matériaux haut de gamme, douche à l'italienne), et 12 000€ à 20 000€ ou plus pour une rénovation premium (matériaux luxueux, équipements spa, mobilier sur mesure). Ces montants incluent main d'œuvre et matériaux, mais peuvent varier selon les contraintes spécifiques (déplacement de plomberie, consolidation de plancher pour douche à l'italienne, etc.)."
+      question: "Quel est le budget moyen pour une rénovation complète de salle de bains ?",
+      answer: "Le budget pour une rénovation complète de salle de bains varie généralement entre 5 000€ et 15 000€ selon la taille, les matériaux choisis et les équipements installés. Une salle de bains standard de 5-6m² avec des matériaux de qualité moyenne coûte environ 7 000-9 000€. Pour une salle de bains haut de gamme avec matériaux premium et équipements luxueux, comptez 12 000-20 000€. Ces estimations incluent la main d'œuvre, les matériaux et les équipements. Nous établissons toujours un devis détaillé adapté à votre projet spécifique."
     },
     {
-      question: "Quelle est la durée moyenne des travaux pour une salle de bains complète ?",
-      answer: "La durée standard pour une rénovation complète de salle de bains de taille moyenne (5-6m²) est de 2 à 3 semaines de travaux effectifs. Ce délai se décompose approximativement ainsi : 2-3 jours pour la démolition et préparation, 2-3 jours pour les travaux de plomberie et électricité, 3-5 jours pour l'étanchéité et la pose des revêtements, 2-3 jours pour l'installation des équipements sanitaires et du mobilier, et 1-2 jours pour les finitions. Des facteurs peuvent allonger ce délai : configuration complexe, accès difficile, découverte de problèmes cachés (canalisations vétustes, humidité structurelle), ou coordination entre différents artisans. Nous établissons toujours un planning détaillé en début de projet et vous informons immédiatement de tout ajustement nécessaire."
+      question: "Combien de temps dure la rénovation d'une salle de bains ?",
+      answer: "La durée moyenne d'une rénovation complète de salle de bains est de 2 à 3 semaines de travaux effectifs. Ce délai se décompose comme suit : 2-3 jours pour la démolition et préparation, 2-3 jours pour la plomberie, 1-2 jours pour l'électricité, 3-5 jours pour le carrelage et l'étanchéité, 2-3 jours pour l'installation des équipements, et 1-2 jours pour les finitions. La durée totale du projet, incluant les phases de conception, commande des matériaux et planification, s'étend généralement sur 1 à 2 mois."
     },
     {
-      question: "Quels sont les avantages et inconvénients d'une douche à l'italienne ?",
-      answer: "Les avantages de la douche à l'italienne sont nombreux : esthétique épurée et contemporaine, accessibilité facilitée (idéale PMR), sensation d'espace agrandie, nettoyage simplifié sans recoins, et valorisation immobilière du bien. Cependant, elle présente aussi quelques contraintes : coût plus élevé qu'une douche standard (25-50% de plus), travaux plus complexes nécessitant une véritable expertise (création de pentes, étanchéité parfaite), hauteur sous plafond requise pour intégrer le système d'écoulement (minimum 10cm de réserve sous le niveau du sol fini), et éventuellement nécessité de renforcer le plancher dans les constructions anciennes. Pour les petits espaces, une paroi fixe peut être préférable à une porte pour maximiser l'ouverture, mais cela implique d'accepter quelques projections d'eau."
+      question: "Quels sont les revêtements les plus adaptés pour une salle de bains ?",
+      answer: "Pour les sols, le carrelage en grès cérame reste la référence en termes de durabilité, résistance à l'eau et facilité d'entretien. Les formats 60x60cm ou 30x60cm sont très appréciés. Pour les murs, la faïence traditionnelle ou le grès cérame en grand format créent un effet contemporain. Les alternatives modernes incluent le béton ciré (avec traitement hydrofuge), les panneaux muraux composites étanches (type Wedi), ou les revêtements vinyles spécial salle de bains. Pour un look luxueux, la pierre naturelle (marbre, travertin) apporte élégance et caractère, mais nécessite un entretien spécifique et un traitement hydrofuge."
     },
     {
-      question: "Comment choisir les bons matériaux pour une salle de bains durable ?",
-      answer: "Pour une salle de bains durable, privilégiez des matériaux résistants à l'humidité et faciles d'entretien. Pour les sols, le grès cérame est excellent (imperméable, résistant, nombreux designs) ; optez pour des formats antidérapants dans la douche. Au mur, la faïence reste une valeur sûre, complétée par des zones en peinture spéciale pièces humides (glycéro ou acrylique hydrofuge). Pour les plans de vasque, le quartz reconstitué offre un excellent rapport durabilité/esthétique, tandis que la céramique sanitaire reste inégalée pour les vasques. Côté mobilier, choisissez des panneaux hydrofuges avec stratification complète et quincaillerie inoxydable. Pour la robinetterie, l'investissement dans des marques reconnues se justifie par la durabilité des mécanismes et des cartouches céramiques. N'hésitez pas à nous consulter pour des recommandations spécifiques adaptées à votre usage."
+      question: "Comment bien ventiler une salle de bains sans fenêtre ?",
+      answer: "Une ventilation efficace est essentielle dans une salle de bains sans fenêtre. Nous recommandons l'installation d'une VMC (Ventilation Mécanique Contrôlée) simple flux hygro B au minimum, qui adapte son débit d'extraction en fonction de l'humidité ambiante. Pour plus de confort, une VMC double flux permet de récupérer la chaleur de l'air extrait. Dans les deux cas, l'extraction doit être correctement dimensionnée (débit minimum de 30m³/h pour une salle d'eau et 45m³/h pour une salle de bains avec WC). Nous veillons également à prévoir une entrée d'air suffisante sous la porte (détalonnage de 1 à 2 cm) pour permettre le renouvellement de l'air."
     },
     {
-      question: "Est-il possible de rénover une salle de bains sans faire de gros travaux ?",
-      answer: "Oui, le relooking de salle de bains sans gros œuvre est tout à fait possible et offre un excellent rapport résultat/investissement. Plusieurs solutions existent : recouvrement de carrelage par des systèmes décoratifs spécifiques (panneaux composite type Decofast ou Baucryl), peinture spéciale carrelage après préparation appropriée, recouvrement de baignoire par un système de coque adaptée ou transformation en douche, pose de revêtements PVC ou stratifiés spécial salle de bains par-dessus l'ancien sol (si la hauteur le permet), ou encore remplacement des façades de meubles en conservant les caissons. Le changement de robinetterie et d'accessoires complète efficacement cette transformation. Cette approche permet généralement de diviser le budget par 2 ou 3 et de réduire les travaux à 3-7 jours, mais nécessite une analyse préalable pour s'assurer que l'infrastructure existante (plomberie, électricité) est en bon état et aux normes."
+      question: "Quelles sont les normes électriques à respecter dans une salle de bains ?",
+      answer: "La norme NF C 15-100 définit des volumes de sécurité dans les salles de bains: volume 0 (intérieur baignoire/douche), volume 1 (au-dessus jusque 2,25m), volume 2 (60cm autour du volume 1) et volume 3 (reste de la pièce). Chaque volume impose des restrictions: seuls les appareils TBTS 12V sont autorisés dans le volume 0, les appareils IPX4 minimum dans les volumes 1 et 2. Les prises doivent être à 60cm minimum des points d'eau et équipées de protection différentielle 30mA. Tous nos travaux respectent scrupuleusement ces normes, avec vérification systématique des installations par un électricien qualifié."
     }
   ],
   relatedMetiers: [
@@ -124,12 +119,12 @@ export const sallesDeBainsSpecialisteData = {
       name: "Carreleur"
     },
     {
-      id: "electricien",
-      name: "Électricien"
-    },
-    {
       id: "designer-interior",
       name: "Designer d'Intérieur"
+    },
+    {
+      id: "electricien",
+      name: "Électricien"
     }
   ]
 };

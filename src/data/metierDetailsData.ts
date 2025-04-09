@@ -13,6 +13,7 @@ import { peintureData } from './metiers/peinture';
 import { solsData } from './metiers/sols';
 import { plafondsData } from './metiers/plafonds';
 import { cloisonsData } from './metiers/cloisons';
+import { meublesSurMesureData } from './metiers/meublesSurMesure';
 
 // Import des données des métiers de rénovation extérieure
 import { facadesData } from './metiers/facades';
@@ -38,6 +39,7 @@ export const metierDetailsData = [
   designerInteriorData,
   sallesDeBainsSpecialisteData,
   cuisinesSurMesureData,
+  meublesSurMesureData,
   peintureData,
   solsData,
   plafondsData,
