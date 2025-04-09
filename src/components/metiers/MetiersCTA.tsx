@@ -13,7 +13,7 @@ const MetiersCTA = () => {
           Que vous ayez besoin d'un corps de métier spécifique ou d'une équipe complète pour votre rénovation, 
           qoob rénovations vous assure qualité et professionnalisme à chaque étape.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
           <Button variant="secondary" size="lg" asChild>
             <Link to="/demande-devis">
               Demander un devis gratuit
@@ -25,6 +25,10 @@ const MetiersCTA = () => {
             </Link>
           </Button>
         </div>
+        <p className="text-sm text-warmBeige-200 mt-4">
+          En nous contactant, vous acceptez notre <Link to="/confidentialite" className="underline hover:text-white">politique de confidentialité</Link>.
+          Nous respectons vos données personnelles conformément au RGPD.
+        </p>
       </div>
     </section>
   );

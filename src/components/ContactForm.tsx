@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Link } from "react-router-dom";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -13,6 +15,7 @@ const ContactForm = () => {
     email: "",
     phone: "",
     message: "",
+    consent: false,
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,8 +28,25 @@ const ContactForm = () => {
     }));
   };
 
+  const handleCheckboxChange = (checked: boolean) => {
+    setFormData((prev) => ({
+      ...prev,
+      consent: checked,
+    }));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!formData.consent) {
+      toast({
+        title: "Consentement requis",
+        description: "Veuillez accepter notre politique de confidentialité pour envoyer le formulaire.",
+        variant: "destructive"
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
     
     // Simulate form submission
@@ -42,6 +62,7 @@ const ContactForm = () => {
         email: "",
         phone: "",
         message: "",
+        consent: false,
       });
     }, 1000);
   };
@@ -127,12 +148,22 @@ const ContactForm = () => {
                 className="w-full min-h-[120px]"
               />
             </div>
+            <div className="md:col-span-2 flex items-start space-x-2">
+              <Checkbox 
+                id="consent" 
+                checked={formData.consent}
+                onCheckedChange={handleCheckboxChange}
+              />
+              <label htmlFor="consent" className="text-sm text-gray-600 cursor-pointer">
+                J'accepte que mes données soient traitées conformément à la <Link to="/confidentialite" className="text-primary hover:underline">politique de confidentialité</Link> de qoob rénovations. *
+              </label>
+            </div>
             <div className="md:col-span-2">
               <Button type="submit" className="cta-button-secondary w-full" disabled={isSubmitting}>
                 {isSubmitting ? "Envoi en cours..." : "Envoyer ma demande"}
               </Button>
               <p className="text-xs text-gray-500 mt-2 text-center">
-                * Champs obligatoires. En soumettant ce formulaire, vous acceptez d'être contacté au sujet de votre projet.
+                * Champs obligatoires. Vous pouvez exercer vos droits d'accès, de rectification et de suppression en nous contactant.
               </p>
             </div>
           </form>

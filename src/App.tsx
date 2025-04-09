@@ -11,7 +11,11 @@ import MetierDetail from "./pages/MetierDetail";
 import DemandeDevis from "./pages/DemandeDevis";
 import ZonesIntervention from "./pages/ZonesIntervention";
 import MetiersRenovation from "./pages/MetiersRenovation";
+import Confidentialite from "./pages/Confidentialite";
+import MentionsLegales from "./pages/MentionsLegales";
+import ConditionsGenerales from "./pages/ConditionsGenerales";
 import { Helmet } from "react-helmet";
+import CookieConsent from "./components/CookieConsent";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +28,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <CookieConsent />
         <Routes>
           {/* Main routes */}
           <Route path="/" element={<Index />} />
@@ -32,6 +37,11 @@ const App = () => (
           <Route path="/demande-devis" element={<DemandeDevis />} />
           <Route path="/zones-intervention" element={<ZonesIntervention />} />
           <Route path="/metiers-renovation" element={<MetiersRenovation />} />
+          
+          {/* RGPD pages */}
+          <Route path="/confidentialite" element={<Confidentialite />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/conditions-generales" element={<ConditionsGenerales />} />
           
           {/* Redirects for potential old URLs */}
           <Route path="/devis" element={<Navigate to="/demande-devis" replace />} />

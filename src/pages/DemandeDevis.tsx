@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -10,11 +10,83 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Phone, Mail, Send } from 'lucide-react';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Link } from 'react-router-dom';
+import { useToast } from '@/components/ui/use-toast';
 
 const DemandeDevis = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    address: "",
+    service: "",
+    budget: "",
+    description: "",
+    consent: false,
+    marketingConsent: false
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleCheckboxChange = (name: string, checked: boolean) => {
+    setFormData((prev) => ({
+      ...prev,
+      [name]: checked,
+    }));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Traitement du formulaire ici
+    
+    if (!formData.consent) {
+      toast({
+        title: "Consentement requis",
+        description: "Veuillez accepter notre politique de confidentialité pour envoyer le formulaire.",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      toast({
+        title: "Demande de devis envoyée !",
+        description: "Nous vous contacterons dans les plus brefs délais pour discuter de votre projet.",
+      });
+      setIsSubmitting(false);
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        address: "",
+        service: "",
+        budget: "",
+        description: "",
+        consent: false,
+        marketingConsent: false
+      });
+    }, 1000);
   };
 
   return (
@@ -49,34 +121,72 @@ const DemandeDevis = () => {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <Label htmlFor="firstName">Prénom</Label>
-                          <Input id="firstName" placeholder="Votre prénom" required />
+                          <Label htmlFor="firstName">Prénom *</Label>
+                          <Input 
+                            id="firstName" 
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleChange}
+                            placeholder="Votre prénom" 
+                            required 
+                          />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="lastName">Nom</Label>
-                          <Input id="lastName" placeholder="Votre nom" required />
+                          <Label htmlFor="lastName">Nom *</Label>
+                          <Input 
+                            id="lastName" 
+                            name="lastName"
+                            value={formData.lastName}
+                            onChange={handleChange}
+                            placeholder="Votre nom" 
+                            required 
+                          />
                         </div>
                       </div>
                       
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <Label htmlFor="email">Email</Label>
-                          <Input id="email" type="email" placeholder="votre@email.com" required />
+                          <Label htmlFor="email">Email *</Label>
+                          <Input 
+                            id="email" 
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            type="email" 
+                            placeholder="votre@email.com" 
+                            required 
+                          />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="phone">Téléphone</Label>
-                          <Input id="phone" placeholder="Votre numéro de téléphone" required />
+                          <Label htmlFor="phone">Téléphone *</Label>
+                          <Input 
+                            id="phone" 
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="Votre numéro de téléphone" 
+                            required 
+                          />
                         </div>
                       </div>
                       
                       <div className="space-y-2">
                         <Label htmlFor="address">Adresse du projet</Label>
-                        <Input id="address" placeholder="Adresse complète" />
+                        <Input 
+                          id="address" 
+                          name="address"
+                          value={formData.address}
+                          onChange={handleChange}
+                          placeholder="Adresse complète" 
+                        />
                       </div>
                       
                       <div className="space-y-2">
-                        <Label htmlFor="service">Type de service</Label>
-                        <Select>
+                        <Label htmlFor="service">Type de service *</Label>
+                        <Select 
+                          value={formData.service}
+                          onValueChange={(value) => handleSelectChange("service", value)}
+                        >
                           <SelectTrigger>
                             <SelectValue placeholder="Choisissez un service" />
                           </SelectTrigger>
@@ -91,7 +201,10 @@ const DemandeDevis = () => {
                       
                       <div className="space-y-2">
                         <Label htmlFor="budget">Budget approximatif (€)</Label>
-                        <Select>
+                        <Select
+                          value={formData.budget}
+                          onValueChange={(value) => handleSelectChange("budget", value)}
+                        >
                           <SelectTrigger>
                             <SelectValue placeholder="Choisissez une fourchette budgétaire" />
                           </SelectTrigger>
@@ -106,21 +219,48 @@ const DemandeDevis = () => {
                       </div>
                       
                       <div className="space-y-2">
-                        <Label htmlFor="description">Description du projet</Label>
+                        <Label htmlFor="description">Description du projet *</Label>
                         <Textarea 
                           id="description" 
+                          name="description"
+                          value={formData.description}
+                          onChange={handleChange}
                           placeholder="Décrivez votre projet en détail (travaux souhaités, superficie, contraintes particulières...)" 
                           rows={5} 
                           required 
                         />
                       </div>
                       
-                      <Button type="submit" className="w-full" size="lg">
-                        <Send className="mr-2 h-5 w-5" /> Envoyer ma demande de devis
+                      <div className="space-y-4">
+                        <div className="flex items-start space-x-2">
+                          <Checkbox 
+                            id="consent" 
+                            checked={formData.consent}
+                            onCheckedChange={(checked) => handleCheckboxChange("consent", checked === true)}
+                          />
+                          <Label htmlFor="consent" className="text-sm text-gray-600 font-normal cursor-pointer">
+                            J'accepte que mes données soient traitées conformément à la <Link to="/confidentialite" className="text-primary hover:underline">politique de confidentialité</Link> de qoob rénovations. *
+                          </Label>
+                        </div>
+                        
+                        <div className="flex items-start space-x-2">
+                          <Checkbox 
+                            id="marketingConsent" 
+                            checked={formData.marketingConsent}
+                            onCheckedChange={(checked) => handleCheckboxChange("marketingConsent", checked === true)}
+                          />
+                          <Label htmlFor="marketingConsent" className="text-sm text-gray-600 font-normal cursor-pointer">
+                            J'accepte de recevoir des informations commerciales de la part de qoob rénovations.
+                          </Label>
+                        </div>
+                      </div>
+                      
+                      <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                        <Send className="mr-2 h-5 w-5" /> {isSubmitting ? "Envoi en cours..." : "Envoyer ma demande de devis"}
                       </Button>
                       
-                      <p className="text-sm text-gray-500 text-center mt-4">
-                        En soumettant ce formulaire, vous acceptez notre politique de confidentialité et de traitement des données.
+                      <p className="text-xs text-gray-500 text-center mt-4">
+                        * Champs obligatoires. Vous pouvez exercer vos droits d'accès, de rectification et de suppression en nous contactant.
                       </p>
                     </form>
                   </CardContent>
