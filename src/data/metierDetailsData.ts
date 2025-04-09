@@ -22,6 +22,9 @@ import { amenagementsExterieursData } from './metiers/amenagements-exterieurs';
 
 // Import des données des métiers de rénovation énergétique
 import { systemesChauffageData } from './metiers/systemesChauffe';
+import { isolationThermiqueData } from './metiers/isolationThermique';
+import { isolationAcoustiqueData } from './metiers/isolationAcoustique';
+import { materiauxIsolantsData } from './metiers/materiauxIsolants';
 
 // Export combiné de tous les métiers
 export const metierDetailsData = [
@@ -47,5 +50,8 @@ export const metierDetailsData = [
   amenagementsExterieursData,
   
   // Métiers de rénovation énergétique
-  systemesChauffageData
+  systemesChauffageData,
+  isolationThermiqueData,
+  isolationAcoustiqueData,
+  materiauxIsolantsData
 ];
