@@ -1,8 +1,27 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  const handleServicesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    
+    // Si nous sommes déjà sur la page d'accueil, faisons défiler jusqu'à la section des services
+    if (location.pathname === '/') {
+      const servicesSection = document.getElementById('services');
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Si nous sommes sur une autre page, naviguons vers la page d'accueil avec l'ancre #services
+      navigate('/#services');
+    }
+  };
+
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Hero background image */}
@@ -29,8 +48,15 @@ const Hero = () => {
                 Obtenir mon Devis Gratuit
               </Link>
             </Button>
-            <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg font-medium py-3 px-6 rounded-md transition-colors duration-300" asChild>
-              <Link to="/#services">
+            <Button 
+              variant="outline" 
+              className="bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg font-medium py-3 px-6 rounded-md transition-colors duration-300" 
+              asChild
+            >
+              <Link 
+                to="/#services" 
+                onClick={handleServicesClick}
+              >
                 Découvrir nos Services
               </Link>
             </Button>
