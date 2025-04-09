@@ -8,7 +8,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="font-serif text-xl font-semibold mb-4">qoob rénovations</h3>
+            <div className="mb-4">
+              <img 
+                src="/lovable-uploads/e62cac83-ef2c-4b65-8846-3148efaaa70a.png" 
+                alt="qoob rénovations logo" 
+                className="h-12" 
+              />
+            </div>
             <p className="text-warmBeige-200 mb-4">Votre partenaire de confiance pour tous vos projets de rénovation depuis 2016.</p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-warmBeige-200 transition-colors">
