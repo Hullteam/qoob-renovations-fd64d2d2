@@ -1,3 +1,4 @@
+
 import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
 const Footer = () => {
   return <footer className="bg-warmBeige-800 text-white">
@@ -5,7 +6,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="font-serif text-xl font-semibold mb-4">Maison Accueillante</h3>
+            <h3 className="font-serif text-xl font-semibold mb-4">qoob rénovations</h3>
             <p className="text-warmBeige-200 mb-4">Votre partenaire de confiance pour tous vos projets de rénovation depuis 2016.</p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-warmBeige-200 transition-colors">
@@ -87,7 +88,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-warmBeige-300">
-            © {new Date().getFullYear()} Maison Accueillante. Tous droits réservés.
+            © {new Date().getFullYear()} qoob rénovations. Tous droits réservés.
           </p>
           <div className="mt-4 md:mt-0">
             <ul className="flex flex-wrap space-x-4 text-sm text-warmBeige-300">
