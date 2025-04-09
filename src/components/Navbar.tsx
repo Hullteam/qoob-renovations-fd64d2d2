@@ -86,7 +86,7 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            <Button className="cta-button" asChild>
+            <Button className="cta-button cta-pulse" asChild>
               <Link to="/demande-devis">
                 Demander un Devis
               </Link>
@@ -151,7 +151,7 @@ const Navbar = () => {
               Contact
             </Link>
             <div className="px-3 py-2">
-              <Button className="cta-button w-full" asChild>
+              <Button className="cta-button cta-pulse w-full" asChild>
                 <Link to="/demande-devis">
                   Demander un Devis
                 </Link>

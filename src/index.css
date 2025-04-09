@@ -79,3 +79,8 @@
 .section-subtitle {
   @apply text-lg text-muted-foreground mb-10 max-w-3xl mx-auto;
 }
+
+.cta-pulse {
+  @apply animate-slow-pulse relative z-10 font-semibold;
+  transform: translateZ(0);
+}

@@ -101,11 +101,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'slow-pulse': {
+					'0%, 100%': {
+						opacity: '1',
+						boxShadow: '0 0 0 rgba(192, 140, 88, 0)'
+					},
+					'50%': {
+						opacity: '0.85',
+						boxShadow: '0 0 15px rgba(192, 140, 88, 0.5)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'slow-pulse': 'slow-pulse 3s ease-in-out infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
