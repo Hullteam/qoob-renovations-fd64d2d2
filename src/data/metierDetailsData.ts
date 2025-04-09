@@ -9,6 +9,10 @@ import { ebenisteMeubleData } from './metiers/ebenisteMeuble';
 import { designerInteriorData } from './metiers/designerInterior';
 import { sallesDeBainsSpecialisteData } from './metiers/sallesDeBainsSpecialiste';
 import { cuisinesSurMesureData } from './metiers/cuisinesSurMesure';
+import { peintureData } from './metiers/peinture';
+import { solsData } from './metiers/sols';
+import { plafondsData } from './metiers/plafonds';
+import { cloisonsData } from './metiers/cloisons';
 
 // Export combiné de tous les métiers
 export const metierDetailsData = [
@@ -20,5 +24,9 @@ export const metierDetailsData = [
   ebenisteMeubleData,
   designerInteriorData,
   sallesDeBainsSpecialisteData,
-  cuisinesSurMesureData
+  cuisinesSurMesureData,
+  peintureData,
+  solsData,
+  plafondsData,
+  cloisonsData
 ];
