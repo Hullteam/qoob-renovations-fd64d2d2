@@ -28,6 +28,7 @@ const Navbar = () => {
 
   // Determine if the current path is a service or métier page
   const isServicePage = location.pathname.includes('/services/');
+  const isZonesPage = location.pathname.includes('/zones-intervention');
 
   return (
     <nav className="bg-white shadow-sm fixed w-full z-50">
@@ -50,6 +51,12 @@ const Navbar = () => {
               onClick={() => handleAnchorClick('services')}
             >
               Nos Services
+            </Link>
+            <Link
+              to="/zones-intervention"
+              className={`${isZonesPage ? 'text-primary' : 'text-gray-600'} hover:text-primary transition-colors`}
+            >
+              Zones d'Intervention
             </Link>
             <Link 
               to="/#testimonials" 
@@ -102,6 +109,12 @@ const Navbar = () => {
               onClick={() => handleAnchorClick('services')}
             >
               Nos Services
+            </Link>
+            <Link
+              to="/zones-intervention"
+              className={`block px-3 py-2 rounded-md text-base font-medium ${isZonesPage ? 'text-primary' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
+            >
+              Zones d'Intervention
             </Link>
             <Link
               to="/#testimonials"

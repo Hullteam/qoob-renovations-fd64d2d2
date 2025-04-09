@@ -42,7 +42,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 mr-3 flex-shrink-0 mt-1" />
-                <span>15 Avenue des Artisans<br />75011 Paris, France</span>
+                <span>987 route du Bladet<br />47800 Lavergne, France</span>
               </div>
             </div>
           </div>
@@ -54,6 +54,11 @@ const Footer = () => {
               <li>
                 <Link to="/#services" className="text-warmBeige-200 hover:text-white transition-colors">
                   Nos Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/zones-intervention" className="text-warmBeige-200 hover:text-white transition-colors">
+                  Zones d'Intervention
                 </Link>
               </li>
               <li>
