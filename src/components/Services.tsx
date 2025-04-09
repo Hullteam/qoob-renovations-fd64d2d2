@@ -1,5 +1,5 @@
 
-import { Home, Paintbrush, Wrench, Bath, ClipboardCheck } from "lucide-react";
+import { Home, Paintbrush, Wrench, Bath, ClipboardCheck, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -60,6 +60,24 @@ const Services = () => {
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center mt-16 bg-gray-50 p-8 rounded-lg border border-gray-200">
+          <div className="flex justify-center mb-4">
+            <Search className="w-12 h-12 text-primary" />
+          </div>
+          <h3 className="text-xl font-serif font-semibold text-warmBeige-800 mb-3">
+            Vous recherchez un bien à acheter ?
+          </h3>
+          <p className="text-gray-600 mb-5 max-w-2xl mx-auto">
+            Avant de finaliser votre achat, estimez le coût des travaux nécessaires avec notre service d'estimation avant achat. 
+            Évitez les mauvaises surprises et planifiez votre budget total.
+          </p>
+          <Button asChild>
+            <Link to="/estimation-avant-achat">
+              Demander une estimation avant achat
+            </Link>
+          </Button>
         </div>
         
         <div className="text-center mt-12">

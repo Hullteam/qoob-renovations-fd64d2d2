@@ -15,6 +15,7 @@ import Confidentialite from "./pages/Confidentialite";
 import MentionsLegales from "./pages/MentionsLegales";
 import ConditionsGenerales from "./pages/ConditionsGenerales";
 import GestionProjet from "./pages/GestionProjet";
+import EstimationAvantAchat from "./pages/EstimationAvantAchat";
 import { Helmet } from "react-helmet";
 import CookieConsent from "./components/CookieConsent";
 
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/demande-devis" element={<DemandeDevis />} />
           <Route path="/zones-intervention" element={<ZonesIntervention />} />
           <Route path="/metiers-renovation" element={<MetiersRenovation />} />
+          <Route path="/estimation-avant-achat" element={<EstimationAvantAchat />} />
           
           {/* RGPD pages */}
           <Route path="/confidentialite" element={<Confidentialite />} />
