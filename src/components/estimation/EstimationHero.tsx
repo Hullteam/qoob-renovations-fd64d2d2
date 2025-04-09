@@ -18,7 +18,7 @@ const EstimationHero = () => {
     >
       <div className="max-w-7xl mx-auto text-center">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">
-          Estimation Gratuite de Travaux Avant Achat
+          Estimation de Travaux Avant Achat
         </h1>
         <p className="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto">
           Évitez les mauvaises surprises et budgétisez vos travaux avant même d'acheter. Nos experts analysent votre futur bien et vous fournissent une estimation détaillée.
@@ -29,7 +29,7 @@ const EstimationHero = () => {
             onClick={handleScrollToForm}
             className="bg-primary hover:bg-primary/90"
           >
-            Demander une estimation gratuite <ArrowRight className="ml-2 h-5 w-5" />
+            Demander une estimation <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
           <Button 
             size="lg" 
@@ -39,6 +39,9 @@ const EstimationHero = () => {
           >
             Comment ça marche ?
           </Button>
+        </div>
+        <div className="mt-6 text-white text-sm bg-black/30 inline-block px-4 py-2 rounded-md">
+          Tarifs à partir de 3€/m² - Déductibles si vous nous confiez vos travaux
         </div>
       </div>
     </section>

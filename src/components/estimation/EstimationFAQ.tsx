@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqItems = [
   {
     question: "Combien coûte une estimation avant achat ?",
-    answer: "Notre première consultation et estimation préliminaire est gratuite. Pour une estimation détaillée nécessitant une visite technique approfondie, nos tarifs varient en fonction de la superficie et de la complexité du bien. Ce montant est déductible si vous nous confiez ensuite vos travaux de rénovation."
+    answer: "Notre service d'estimation avant achat est facturé à partir de 3€/m², selon la superficie et la complexité du bien. Ce montant est déductible si vous nous confiez ensuite vos travaux de rénovation."
   },
   {
     question: "Dans quels délais pouvez-vous réaliser une estimation ?",
@@ -24,7 +24,7 @@ const faqItems = [
   },
   {
     question: "Est-ce que vous réalisez ensuite les travaux estimés ?",
-    answer: "Oui, nous pouvons prendre en charge la réalisation des travaux suite à notre estimation. Cela assure une cohérence entre l'estimation et la réalisation. Si vous nous confiez les travaux, le coût de l'estimation détaillée est déduit du montant total."
+    answer: "Oui, nous pouvons prendre en charge la réalisation des travaux suite à notre estimation. Cela assure une cohérence entre l'estimation et la réalisation. Si vous nous confiez les travaux, le coût de l'estimation est déduit du montant total."
   }
 ];
 

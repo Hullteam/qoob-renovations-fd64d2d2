@@ -70,7 +70,7 @@ const Services = () => {
             Vous recherchez un bien à acheter ?
           </h3>
           <p className="text-gray-600 mb-5 max-w-2xl mx-auto">
-            Avant de finaliser votre achat, estimez le coût des travaux nécessaires avec notre service d'estimation avant achat. 
+            Avant de finaliser votre achat, estimez le coût des travaux nécessaires avec notre service d'estimation avant achat (à partir de 3€/m²). 
             Évitez les mauvaises surprises et planifiez votre budget total.
           </p>
           <Button asChild>

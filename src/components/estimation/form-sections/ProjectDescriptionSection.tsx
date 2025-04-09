@@ -20,6 +20,13 @@ const ProjectDescriptionSection: React.FC = () => {
         error={errors.projectDescription}
       />
       
+      <div className="mb-4 p-4 bg-amber-50 border border-amber-200 rounded-md">
+        <p className="text-sm text-amber-800">
+          Notre service d'estimation avant achat est facturé à partir de 3€/m². 
+          Ce montant sera déduit de votre facture si vous nous confiez la réalisation des travaux.
+        </p>
+      </div>
+      
       <FormCheckbox
         id="consent"
         name="consent"
