@@ -23,14 +23,19 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          {/* Main routes */}
           <Route path="/" element={<Index />} />
           <Route path="/services/:serviceSlug" element={<ServiceDetail />} />
           <Route path="/services/:serviceSlug/metiers/:metierId" element={<MetierDetail />} />
           <Route path="/demande-devis" element={<DemandeDevis />} />
-          {/* Redirects pour gérer les anciennes URL potentielles */}
+          
+          {/* Redirects for potential old URLs */}
           <Route path="/devis" element={<Navigate to="/demande-devis" replace />} />
           <Route path="/service/:serviceSlug" element={<Navigate to="/services/:serviceSlug" replace />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/metier/:metierId" element={<Navigate to="/services" replace />} />
+          <Route path="/metiers/:metierId" element={<Navigate to="/services" replace />} />
+          
+          {/* 404 catch-all route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

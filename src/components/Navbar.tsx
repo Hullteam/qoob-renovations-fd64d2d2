@@ -1,23 +1,33 @@
 
 import { Menu } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
-  // Helper function to handle navigation with anchor links
+  // Handle scroll to anchor if on homepage
   const handleAnchorClick = (anchor: string) => {
     setIsMenuOpen(false);
-    // Si nous sommes déjà sur la page d'accueil, faites défiler jusqu'à l'ancre
-    if (window.location.pathname === '/') {
+    
+    // If we're on the homepage, scroll to the anchor
+    if (location.pathname === '/') {
       const element = document.getElementById(anchor);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
   };
+
+  // Close mobile menu when changing routes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
+  // Determine if the current path is a service or métier page
+  const isServicePage = location.pathname.includes('/services/');
 
   return (
     <nav className="bg-white shadow-sm fixed w-full z-50">
@@ -34,16 +44,32 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/#services" className="text-gray-600 hover:text-primary transition-colors" onClick={() => handleAnchorClick('services')}>
+            <Link 
+              to="/#services" 
+              className={`${isServicePage ? 'text-primary' : 'text-gray-600'} hover:text-primary transition-colors`}
+              onClick={() => handleAnchorClick('services')}
+            >
               Nos Services
             </Link>
-            <Link to="/#testimonials" className="text-gray-600 hover:text-primary transition-colors" onClick={() => handleAnchorClick('testimonials')}>
+            <Link 
+              to="/#testimonials" 
+              className="text-gray-600 hover:text-primary transition-colors" 
+              onClick={() => handleAnchorClick('testimonials')}
+            >
               Témoignages
             </Link>
-            <Link to="/#gallery" className="text-gray-600 hover:text-primary transition-colors" onClick={() => handleAnchorClick('gallery')}>
+            <Link 
+              to="/#gallery" 
+              className="text-gray-600 hover:text-primary transition-colors" 
+              onClick={() => handleAnchorClick('gallery')}
+            >
               Réalisations
             </Link>
-            <Link to="/#contact" className="text-gray-600 hover:text-primary transition-colors" onClick={() => handleAnchorClick('contact')}>
+            <Link 
+              to="/#contact" 
+              className="text-gray-600 hover:text-primary transition-colors" 
+              onClick={() => handleAnchorClick('contact')}
+            >
               Contact
             </Link>
             <Button className="cta-button" asChild>
@@ -57,7 +83,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 focus:outline-none"
-              aria-expanded="false"
+              aria-expanded={isMenuOpen ? "true" : "false"}
             >
               <span className="sr-only">Ouvrir le menu</span>
               <Menu className="block h-6 w-6" aria-hidden="true" />
@@ -72,7 +98,7 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               to="/#services"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50"
+              className={`block px-3 py-2 rounded-md text-base font-medium ${isServicePage ? 'text-primary' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
               onClick={() => handleAnchorClick('services')}
             >
               Nos Services
@@ -100,7 +126,7 @@ const Navbar = () => {
             </Link>
             <div className="px-3 py-2">
               <Button className="cta-button w-full" asChild>
-                <Link to="/demande-devis" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/demande-devis">
                   Demander un Devis
                 </Link>
               </Button>
