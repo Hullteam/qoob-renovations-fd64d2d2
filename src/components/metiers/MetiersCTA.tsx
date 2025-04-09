@@ -16,12 +16,12 @@ const MetiersCTA = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
           <Button variant="secondary" size="lg" asChild>
             <Link to="/demande-devis">
-              Demander un devis gratuit
+              Obtenir un devis détaillé
             </Link>
           </Button>
           <Button variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-warmBeige-800" size="lg" asChild>
-            <Link to="/zones-intervention">
-              Voir nos zones d'intervention
+            <Link to="/#contact">
+              Remplir le formulaire rapide
             </Link>
           </Button>
         </div>
