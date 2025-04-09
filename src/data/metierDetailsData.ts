@@ -1,6 +1,6 @@
 
 // Import des données spécifiques à chaque métier
-import { cuisinierData } from './metiers/cuisinier';
+import { cuisinierData } from './metiers/cuisinierData';
 import { menuisierCuisinisteData } from './metiers/menuisierCuisiniste';
 import { plombierSanitaireData } from './metiers/plombierSanitaire';
 import { electricienData } from './metiers/electricien';
