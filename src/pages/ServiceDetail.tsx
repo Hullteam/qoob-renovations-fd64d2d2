@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -139,14 +138,11 @@ const ServiceDetail = () => {
                             </li>
                           ))}
                         </ul>
-                        {/* Ajout du lien vers la page détaillée du corps de métier */}
-                        {serviceSlug === "cuisines-salles-de-bains" && (
-                          <Button className="flex items-center gap-2" asChild>
-                            <Link to={`/services/${serviceSlug}/metiers/${service.id}`}>
-                              En savoir plus <ArrowRight className="w-4 h-4" />
-                            </Link>
-                          </Button>
-                        )}
+                        <Button className="flex items-center gap-2" asChild>
+                          <Link to={`/services/${serviceSlug}/metiers/${service.id}`}>
+                            En savoir plus <ArrowRight className="w-4 h-4" />
+                          </Link>
+                        </Button>
                         <Button className="flex items-center gap-2 mt-4">
                           Demander un devis <ArrowRight className="w-4 h-4" />
                         </Button>
