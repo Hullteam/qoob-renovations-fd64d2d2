@@ -14,8 +14,15 @@ import { solsData } from './metiers/sols';
 import { plafondsData } from './metiers/plafonds';
 import { cloisonsData } from './metiers/cloisons';
 
+// Import des données des métiers de rénovation extérieure
+import { facadesData } from './metiers/facades';
+import { toituresData } from './metiers/toitures';
+import { terrassesData } from './metiers/terrasses';
+import { amenagementsExterieursData } from './metiers/amenagements-exterieurs';
+
 // Export combiné de tous les métiers
 export const metierDetailsData = [
+  // Métiers de rénovation intérieure
   cuisinierData,
   menuisierCuisinisteData,
   plombierSanitaireData,
@@ -28,5 +35,11 @@ export const metierDetailsData = [
   peintureData,
   solsData,
   plafondsData,
-  cloisonsData
+  cloisonsData,
+  
+  // Métiers de rénovation extérieure
+  facadesData,
+  toituresData,
+  terrassesData,
+  amenagementsExterieursData
 ];
