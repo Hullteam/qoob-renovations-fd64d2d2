@@ -31,8 +31,8 @@ const MetierHero = ({ serviceSlug, serviceName, title, subtitle, heroImage }: Me
         <p className="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto">
           {subtitle}
         </p>
-        <Button size="lg">
-          Demander un devis gratuit
+        <Button size="lg" asChild>
+          <Link to="/demande-devis">Demander un devis gratuit</Link>
         </Button>
       </div>
     </div>

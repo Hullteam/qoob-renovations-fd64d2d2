@@ -15,6 +15,11 @@ interface MetierNavigationProps {
 }
 
 const MetierNavigation = ({ serviceName, serviceSlug, relatedMetiers }: MetierNavigationProps) => {
+  // If there are no related metiers, don't render the component
+  if (!relatedMetiers || relatedMetiers.length === 0) {
+    return null;
+  }
+  
   return (
     <section className="py-10 px-4">
       <div className="max-w-7xl mx-auto">
