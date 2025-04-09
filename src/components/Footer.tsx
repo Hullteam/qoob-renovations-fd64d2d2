@@ -8,13 +8,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center mb-4">
               <img 
                 src="/lovable-uploads/6d22a9da-5065-4cd3-89e3-23d7b96f8307.png" 
                 alt="rénovations logo" 
                 className="h-16" 
               />
-              <span className="text-white font-serif text-lg font-semibold">rénovations</span>
             </div>
             <p className="text-warmBeige-200 mb-4">Votre partenaire de confiance pour tous vos projets de rénovation depuis 2016.</p>
             <div className="flex space-x-4">
