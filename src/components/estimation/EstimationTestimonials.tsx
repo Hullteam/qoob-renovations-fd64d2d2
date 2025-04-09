@@ -3,20 +3,20 @@ import { StarIcon } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sophie et Thomas",
-    location: "Paris",
+    name: "Sophie T.",
+    location: "Villeneuve-sur-Lot, Lot-et-Garonne",
     testimonial: "Grâce à l'estimation avant achat de qoob rénovations, nous avons pu négocier le prix de notre appartement et économiser 15 000 €. Le rapport détaillé nous a permis de planifier nos travaux sereinement.",
     rating: 5
   },
   {
     name: "Marc D.",
-    location: "Lyon",
+    location: "Nérac, Lot-et-Garonne",
     testimonial: "J'hésitais entre deux maisons et l'estimation m'a aidé à faire le bon choix. Les travaux prévus correspondaient exactement au budget estimé, sans mauvaise surprise.",
     rating: 5
   },
   {
     name: "Émilie F.",
-    location: "Bordeaux",
+    location: "Tonneins, Lot-et-Garonne",
     testimonial: "L'estimation avant achat m'a évité d'acheter un bien avec des problèmes structurels majeurs. Un service qui m'a fait économiser beaucoup d'argent et de stress.",
     rating: 5
   }

@@ -1,15 +1,15 @@
 
 const testimonials = [
   {
-    name: "Sophie et Pierre Dubois",
-    location: "Lyon",
+    name: "Sophie D.",
+    location: "Agen, Lot-et-Garonne",
     quote: "Une équipe professionnelle et attentive à nos besoins. Notre cuisine est méconnaissable, et le résultat dépasse nos espérances !",
     imageBefore: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3",
     imageAfter: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop&ixlib=rb-4.0.3",
   },
   {
-    name: "Jean-Marc Lefèvre",
-    location: "Paris",
+    name: "Jean-Marc L.",
+    location: "Marmande, Lot-et-Garonne",
     quote: "Maison Accueillante a transformé notre salon vieillot en un espace moderne et lumineux. Le respect des délais était impressionnant.",
     imageBefore: "https://images.unsplash.com/photo-1518733057094-95b53143d2a7?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3",
     imageAfter: "https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3",
