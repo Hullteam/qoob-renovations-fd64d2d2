@@ -15,13 +15,6 @@ import MetierNavigation from "@/components/metiers/MetierNavigation";
 // Import des données des métiers
 import { metierDetailsData } from "@/data/metierDetailsData";
 
-// Define the standard FAQ interface to match ServiceFAQ requirements
-interface FAQ {
-  question: string;
-  answer?: string;
-  description?: string;
-}
-
 const MetierDetail = () => {
   const { serviceSlug, metierId } = useParams();
   const metierData = metierDetailsData.find(metier => metier.id === metierId && metier.serviceSlug === serviceSlug);
@@ -36,9 +29,6 @@ const MetierDetail = () => {
       </div>
     );
   }
-
-  // We no longer need to transform FAQs since ServiceFAQ now accepts both formats
-  const standardizedFaqs = metierData.faqs;
 
   return (
     <>
@@ -80,7 +70,7 @@ const MetierDetail = () => {
           <MetierWorkProcess workProcess={metierData.workProcess} />
 
           {/* FAQ */}
-          <ServiceFAQ faqs={standardizedFaqs} />
+          <ServiceFAQ faqs={metierData.faqs} />
 
           {/* CTA */}
           <ServiceCTA title={metierData.title} />
