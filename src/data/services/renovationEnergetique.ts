@@ -1,16 +1,15 @@
-
-export const isolationData = {
-  id: "isolation",
-  slug: "isolation",
-  title: "Isolation",
-  subtitle: "Améliorez le confort et l'efficacité énergétique de votre habitat avec nos solutions d'isolation performantes",
-  metaDescription: "Services d'isolation thermique et acoustique à Paris. Solutions performantes pour murs, combles, planchers. Économies d'énergie garanties et confort optimal. Certification RGE.",
-  keywords: ["isolation thermique", "isolation acoustique", "isolation murs", "isolation combles", "économie énergie", "rénovation énergétique", "Paris", "Île-de-France"],
+export const renovationEnergetiqueData = {
+  id: "renovation-energetique",
+  slug: "renovation-energetique",
+  title: "Rénovation énergétique",
+  subtitle: "Améliorez le confort et l'efficacité énergétique de votre habitat avec nos solutions performantes",
+  metaDescription: "Services de rénovation énergétique à Paris. Solutions performantes pour murs, combles, planchers. Économies d'énergie garanties et confort optimal. Certification RGE.",
+  keywords: ["rénovation énergétique", "isolation thermique", "isolation acoustique", "économie énergie", "rénovation énergétique", "Paris", "Île-de-France"],
   heroImage: "https://images.unsplash.com/photo-1629804222897-caf61087df99?q=80&w=1080&auto=format&fit=crop",
-  presentationTitle: "L'isolation, clé du confort et des économies d'énergie",
+  presentationTitle: "La rénovation énergétique, clé du confort et des économies d'énergie",
   presentationText: [
-    "L'isolation est un investissement essentiel qui transforme profondément le confort de votre habitat tout en réduisant significativement votre empreinte écologique et vos factures énergétiques. Chez qoob rénovations, nous proposons des solutions d'isolation sur mesure, adaptées à chaque configuration et à vos objectifs spécifiques.",
-    "Notre équipe certifiée RGE (Reconnu Garant de l'Environnement) maîtrise les techniques d'isolation les plus performantes et les matériaux les plus innovants. Nous traitons tous les points sensibles de votre habitat pour éliminer les ponts thermiques et créer une enveloppe parfaitement isolée, été comme hiver."
+    "La rénovation énergétique est un investissement essentiel qui transforme profondément le confort de votre habitat tout en réduisant significativement votre empreinte écologique et vos factures énergétiques. Chez qoob rénovations, nous proposons des solutions sur mesure, adaptées à chaque configuration et à vos objectifs spécifiques.",
+    "Notre équipe certifiée RGE (Reconnu Garant de l'Environnement) maîtrise les techniques les plus performantes et les matériaux les plus innovants. Nous traitons tous les points sensibles de votre habitat pour créer une enveloppe parfaitement isolée, été comme hiver."
   ],
   presentationImage: "https://images.unsplash.com/photo-1571936773936-b71e9e0dc900?q=80&w=1080&auto=format&fit=crop",
   benefits: [

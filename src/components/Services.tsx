@@ -17,10 +17,10 @@ const serviceItems = [
     slug: "renovation-exterieure"
   },
   {
-    title: "Isolation",
+    title: "Rénovation Énergétique",
     description: "Améliorez le confort et l'efficacité énergétique de votre foyer avec nos solutions d'isolation thermique et acoustique.",
     icon: <Wrench className="w-12 h-12 text-primary mb-4" />,
-    slug: "isolation"
+    slug: "renovation-energetique"
   },
   {
     title: "Aménagement Cuisines & Salles de Bains",
