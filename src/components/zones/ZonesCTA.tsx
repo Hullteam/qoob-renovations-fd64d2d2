@@ -23,8 +23,11 @@ const ZonesCTA = () => {
         <p className="text-lg mb-4 max-w-2xl mx-auto">
           Quelle que soit votre localisation dans notre zone d'intervention, nos artisans experts sont prêts à vous accompagner dans vos projets de rénovation.
         </p>
-        <p className="text-lg mb-8 max-w-2xl mx-auto">
+        <p className="text-lg mb-4 max-w-2xl mx-auto">
           Disponibles notamment à {topCities} et dans les communes environnantes.
+        </p>
+        <p className="text-lg mb-8 max-w-2xl mx-auto">
+          <strong>Conducteur de travaux et suivi de chantier inclus</strong> dans tous nos projets.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button className="bg-white text-primary hover:bg-white/90" size="lg" asChild>

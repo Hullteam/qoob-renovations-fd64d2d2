@@ -13,6 +13,8 @@ import { Phone, Mail, Send } from 'lucide-react';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Link } from 'react-router-dom';
 import { useToast } from '@/components/ui/use-toast';
+import ProjectManagementInfo from '@/components/form/ProjectManagementInfo';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const DemandeDevis = () => {
   const { toast } = useToast();
@@ -267,7 +269,7 @@ const DemandeDevis = () => {
                 </Card>
               </div>
               
-              <div>
+              <div className="space-y-6">
                 <Card>
                   <CardHeader>
                     <CardTitle>Nous contacter</CardTitle>
@@ -280,6 +282,9 @@ const DemandeDevis = () => {
                         <p className="font-medium">Par téléphone</p>
                         <p className="text-gray-600">07 85 01 06 33</p>
                         <p className="text-sm text-gray-500">Lun-Ven: 8h30-19h00, Sam: 9h00-17h00</p>
+                        <div className="mt-2">
+                          <WhatsAppButton phoneNumber="0785010633" size="sm" />
+                        </div>
                       </div>
                     </div>
                     
@@ -315,6 +320,8 @@ const DemandeDevis = () => {
                     </div>
                   </CardContent>
                 </Card>
+                
+                <ProjectManagementInfo />
               </div>
             </div>
           </div>

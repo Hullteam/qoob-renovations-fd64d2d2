@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, ClipboardCheck } from 'lucide-react';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 const ContactInfo = () => {
@@ -30,6 +30,15 @@ const ContactInfo = () => {
             <p className="font-medium">Par email</p>
             <p className="text-gray-600">qoob.sas@gmail.com</p>
             <p className="text-sm text-gray-500">Réponse sous 24-48h</p>
+          </div>
+        </div>
+        
+        <div className="flex items-start">
+          <ClipboardCheck className="w-5 h-5 mt-1 mr-3 text-primary" />
+          <div>
+            <p className="font-medium">Gestion de projet incluse</p>
+            <p className="text-gray-600">Conducteur de travaux et OPC</p>
+            <p className="text-sm text-gray-500">Suivi de chantier professionnel inclus dans toutes nos prestations</p>
           </div>
         </div>
         

@@ -1,4 +1,6 @@
 
+import { ClipboardCheck, Calendar, FileCheck, Users } from 'lucide-react';
+
 const MetiersCoordination = () => {
   return (
     <section className="py-16 bg-white">
@@ -74,6 +76,59 @@ const MetiersCoordination = () => {
                 <span className="font-medium">Designer d'intérieur et tous corps d'état</span>: transmission des plans et exigences esthétiques à respecter par chaque intervenant.
               </li>
             </ul>
+          </div>
+
+          <div className="mb-8">
+            <h3 className="text-xl font-serif font-medium mb-4 text-warmBeige-700">Services de gestion de projet inclus</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white p-4 rounded-lg shadow-sm border border-warmBeige-100">
+                <div className="flex items-start">
+                  <ClipboardCheck className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-medium text-warmBeige-800 mb-2">Conducteur de travaux</h4>
+                    <p className="text-sm text-gray-600">
+                      Supervision technique et coordination générale du chantier, respect des plans et des normes de construction.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow-sm border border-warmBeige-100">
+                <div className="flex items-start">
+                  <Calendar className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-medium text-warmBeige-800 mb-2">Ordonnancement, Pilotage et Coordination (OPC)</h4>
+                    <p className="text-sm text-gray-600">
+                      Planification précise du calendrier d'intervention de chaque corps de métier pour optimiser les délais.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow-sm border border-warmBeige-100">
+                <div className="flex items-start">
+                  <FileCheck className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-medium text-warmBeige-800 mb-2">Suivi de chantier</h4>
+                    <p className="text-sm text-gray-600">
+                      Visites régulières, contrôle qualité, résolution des problèmes techniques et validation des étapes clés du projet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow-sm border border-warmBeige-100">
+                <div className="flex items-start">
+                  <Users className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-medium text-warmBeige-800 mb-2">Gestion des intervenants</h4>
+                    <p className="text-sm text-gray-600">
+                      Sélection d'artisans qualifiés, coordination des équipes et assurance de la bonne communication entre toutes les parties.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
