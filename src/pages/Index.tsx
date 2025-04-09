@@ -7,6 +7,7 @@ import Advantages from "@/components/Advantages";
 import Gallery from "@/components/Gallery";
 import HomePageDevisForm from "@/components/HomePageDevisForm";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <Gallery />
       <HomePageDevisForm />
       <Footer />
+      <Toaster />
     </div>
   );
 };
