@@ -1,11 +1,10 @@
-
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { metierDetailsData } from "@/data/metierDetailsData";
-import { Wrench, Book, Certificate, Ruler, Info } from "lucide-react";
+import { Wrench, Book, Award, Ruler, Info } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const MetiersRenovation = () => {
@@ -78,7 +77,7 @@ const MetiersRenovation = () => {
                 </p>
                 <div className="flex flex-wrap gap-3 justify-center">
                   <div className="bg-warmBeige-100 rounded-full px-4 py-2 text-warmBeige-800 flex items-center">
-                    <Certificate className="h-4 w-4 mr-2" />
+                    <Award className="h-4 w-4 mr-2" />
                     <span>Expertises certifiées</span>
                   </div>
                   <div className="bg-warmBeige-100 rounded-full px-4 py-2 text-warmBeige-800 flex items-center">
