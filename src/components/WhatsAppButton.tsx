@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 
 interface WhatsAppButtonProps {
   phoneNumber: string;
+  message?: string;
   variant?: "default" | "outline" | "secondary" | "ghost" | "link" | "destructive";
   className?: string;
   size?: "default" | "sm" | "lg" | "icon";
@@ -13,6 +14,7 @@ interface WhatsAppButtonProps {
 
 const WhatsAppButton = ({ 
   phoneNumber, 
+  message = "",
   variant = "default", 
   className = "", 
   size = "default",
@@ -20,7 +22,11 @@ const WhatsAppButton = ({
 }: WhatsAppButtonProps) => {
   // Formatter le numéro pour l'URL WhatsApp (enlever les espaces et ajouter le préfixe international)
   const formattedNumber = phoneNumber.replace(/\s+/g, '');
-  const whatsappUrl = `https://wa.me/${formattedNumber.startsWith('0') ? '33' + formattedNumber.substring(1) : formattedNumber}`;
+  const internationalNumber = formattedNumber.startsWith('0') ? '33' + formattedNumber.substring(1) : formattedNumber;
+  
+  // Create WhatsApp URL with message if provided
+  const encodedMessage = message ? encodeURIComponent(message) : "";
+  const whatsappUrl = `https://wa.me/${internationalNumber}${encodedMessage ? '?text=' + encodedMessage : ''}`;
 
   return (
     <Button
