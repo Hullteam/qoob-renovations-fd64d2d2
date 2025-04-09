@@ -54,7 +54,37 @@ export const departments: Department[] = [
       { name: "Penne-d'Agenais", postalCode: "47140", department: "Lot-et-Garonne" },
       { name: "Le Passage", postalCode: "47520", department: "Lot-et-Garonne" },
       { name: "Feugarolles", postalCode: "47230", department: "Lot-et-Garonne" },
-      { name: "Castillonnès", postalCode: "47330", department: "Lot-et-Garonne" }
+      { name: "Castillonnès", postalCode: "47330", department: "Lot-et-Garonne" },
+      // Ajout de communes supplémentaires autour d'Agen
+      { name: "Pont-du-Casse", postalCode: "47480", department: "Lot-et-Garonne" },
+      { name: "Estillac", postalCode: "47310", department: "Lot-et-Garonne" },
+      { name: "Roquefort", postalCode: "47310", department: "Lot-et-Garonne" },
+      { name: "Moirax", postalCode: "47310", department: "Lot-et-Garonne" },
+      { name: "Laplume", postalCode: "47310", department: "Lot-et-Garonne" },
+      { name: "Sérignac-sur-Garonne", postalCode: "47310", department: "Lot-et-Garonne" },
+      // Ajout de communes autour de Marmande
+      { name: "Sainte-Bazeille", postalCode: "47180", department: "Lot-et-Garonne" },
+      { name: "Beaupuy", postalCode: "47200", department: "Lot-et-Garonne" },
+      { name: "Virazeil", postalCode: "47200", department: "Lot-et-Garonne" },
+      { name: "Saint-Pardoux-du-Breuil", postalCode: "47200", department: "Lot-et-Garonne" },
+      { name: "Birac-sur-Trec", postalCode: "47200", department: "Lot-et-Garonne" },
+      { name: "Gontaud-de-Nogaret", postalCode: "47400", department: "Lot-et-Garonne" },
+      { name: "Escassefort", postalCode: "47350", department: "Lot-et-Garonne" },
+      // Ajout de communes autour de Villeneuve-sur-Lot
+      { name: "Bias", postalCode: "47300", department: "Lot-et-Garonne" },
+      { name: "Pujols", postalCode: "47300", department: "Lot-et-Garonne" },
+      { name: "Le Lédat", postalCode: "47300", department: "Lot-et-Garonne" },
+      { name: "Casseneuil", postalCode: "47440", department: "Lot-et-Garonne" },
+      { name: "Sainte-Colombe-de-Villeneuve", postalCode: "47300", department: "Lot-et-Garonne" },
+      { name: "Saint-Antoine-de-Ficalba", postalCode: "47340", department: "Lot-et-Garonne" },
+      // Ajout de communes autour de Nérac
+      { name: "Lavardac", postalCode: "47230", department: "Lot-et-Garonne" },
+      { name: "Barbaste", postalCode: "47230", department: "Lot-et-Garonne" },
+      { name: "Mézin", postalCode: "47170", department: "Lot-et-Garonne" },
+      { name: "Montagnac-sur-Auvignon", postalCode: "47600", department: "Lot-et-Garonne" },
+      { name: "Andiran", postalCode: "47170", department: "Lot-et-Garonne" },
+      { name: "Calignac", postalCode: "47600", department: "Lot-et-Garonne" },
+      { name: "Espiens", postalCode: "47600", department: "Lot-et-Garonne" }
     ]
   },
   {
@@ -71,7 +101,33 @@ export const departments: Department[] = [
       { name: "Castelfranc", postalCode: "46140", department: "Lot" },
       { name: "Duravel", postalCode: "46700", department: "Lot" },
       { name: "Montcuq", postalCode: "46800", department: "Lot" },
-      { name: "Lachapelle-Auzac", postalCode: "46200", department: "Lot" }
+      { name: "Lachapelle-Auzac", postalCode: "46200", department: "Lot" },
+      // Ajout de communes autour de Cahors
+      { name: "Pradines", postalCode: "46090", department: "Lot" },
+      { name: "Mercuès", postalCode: "46090", department: "Lot" },
+      { name: "Espère", postalCode: "46090", department: "Lot" },
+      { name: "Labastide-Marnhac", postalCode: "46090", department: "Lot" },
+      { name: "Le Montat", postalCode: "46090", department: "Lot" },
+      { name: "Arcambal", postalCode: "46090", department: "Lot" },
+      { name: "Flaujac-Poujols", postalCode: "46090", department: "Lot" },
+      { name: "Douelle", postalCode: "46140", department: "Lot" },
+      // Ajout de communes autour de Figeac
+      { name: "Capdenac-Gare", postalCode: "12700", department: "Aveyron" },
+      { name: "Bagnac-sur-Célé", postalCode: "46270", department: "Lot" },
+      { name: "Planioles", postalCode: "46100", department: "Lot" },
+      { name: "Camboulit", postalCode: "46100", department: "Lot" },
+      { name: "Lissac-et-Mouret", postalCode: "46100", department: "Lot" },
+      { name: "Cambes", postalCode: "46100", department: "Lot" },
+      { name: "Viazac", postalCode: "46100", department: "Lot" },
+      // Ajout de communes autour de Gourdon
+      { name: "Payrignac", postalCode: "46300", department: "Lot" },
+      { name: "Le Vigan", postalCode: "46300", department: "Lot" },
+      { name: "Saint-Cirq-Madelon", postalCode: "46300", department: "Lot" },
+      { name: "Saint-Clair", postalCode: "46300", department: "Lot" },
+      { name: "Milhac", postalCode: "46300", department: "Lot" },
+      { name: "Salviac", postalCode: "46340", department: "Lot" },
+      { name: "Souillac", postalCode: "46200", department: "Lot" },
+      { name: "Martel", postalCode: "46600", department: "Lot" }
     ]
   },
   {
@@ -81,14 +137,41 @@ export const departments: Department[] = [
     cities: [
       { name: "Bergerac", postalCode: "24100", department: "Dordogne", isMajor: true },
       { name: "Périgueux", postalCode: "24000", department: "Dordogne", isMajor: true },
+      { name: "Sarlat-la-Canéda", postalCode: "24200", department: "Dordogne", isMajor: true },
       { name: "Eymet", postalCode: "24500", department: "Dordogne" },
       { name: "Issigeac", postalCode: "24560", department: "Dordogne" },
       { name: "Lalinde", postalCode: "24150", department: "Dordogne" },
       { name: "Le Bugue", postalCode: "24260", department: "Dordogne" },
       { name: "Monpazier", postalCode: "24540", department: "Dordogne" },
-      { name: "Sarlat-la-Canéda", postalCode: "24200", department: "Dordogne", isMajor: true },
       { name: "Beaumont-du-Périgord", postalCode: "24440", department: "Dordogne" },
-      { name: "Villefranche-du-Périgord", postalCode: "24550", department: "Dordogne" }
+      { name: "Villefranche-du-Périgord", postalCode: "24550", department: "Dordogne" },
+      // Ajout de communes autour de Bergerac
+      { name: "Prigonrieux", postalCode: "24130", department: "Dordogne" },
+      { name: "Gardonne", postalCode: "24680", department: "Dordogne" },
+      { name: "Lamonzie-Saint-Martin", postalCode: "24680", department: "Dordogne" },
+      { name: "Mouleydier", postalCode: "24520", department: "Dordogne" },
+      { name: "Creysse", postalCode: "24100", department: "Dordogne" },
+      { name: "Cours-de-Pile", postalCode: "24520", department: "Dordogne" },
+      { name: "Saint-Nexans", postalCode: "24100", department: "Dordogne" },
+      { name: "Colombier", postalCode: "24560", department: "Dordogne" },
+      // Ajout de communes autour de Périgueux
+      { name: "Coulounieix-Chamiers", postalCode: "24660", department: "Dordogne" },
+      { name: "Chancelade", postalCode: "24650", department: "Dordogne" },
+      { name: "Marsac-sur-l'Isle", postalCode: "24430", department: "Dordogne" },
+      { name: "Champcevinel", postalCode: "24750", department: "Dordogne" },
+      { name: "Trélissac", postalCode: "24750", department: "Dordogne" },
+      { name: "Boulazac", postalCode: "24750", department: "Dordogne" },
+      { name: "Château-l'Évêque", postalCode: "24460", department: "Dordogne" },
+      // Ajout de communes autour de Sarlat
+      { name: "Carsac-Aillac", postalCode: "24200", department: "Dordogne" },
+      { name: "Vitrac", postalCode: "24200", department: "Dordogne" },
+      { name: "Marquay", postalCode: "24620", department: "Dordogne" },
+      { name: "Proissans", postalCode: "24200", department: "Dordogne" },
+      { name: "Sainte-Nathalène", postalCode: "24200", department: "Dordogne" },
+      { name: "Saint-Vincent-le-Paluel", postalCode: "24200", department: "Dordogne" },
+      { name: "Calviac-en-Périgord", postalCode: "24370", department: "Dordogne" },
+      { name: "Beynac-et-Cazenac", postalCode: "24220", department: "Dordogne" },
+      { name: "Domme", postalCode: "24250", department: "Dordogne" }
     ]
   },
   {
@@ -103,7 +186,27 @@ export const departments: Department[] = [
       { name: "Lauzerte", postalCode: "82110", department: "Tarn-et-Garonne" },
       { name: "Montaigu-de-Quercy", postalCode: "82150", department: "Tarn-et-Garonne" },
       { name: "Roquecor", postalCode: "82150", department: "Tarn-et-Garonne" },
-      { name: "Cazes-Mondenard", postalCode: "82110", department: "Tarn-et-Garonne" }
+      { name: "Cazes-Mondenard", postalCode: "82110", department: "Tarn-et-Garonne" },
+      // Ajout de communes autour de Montauban
+      { name: "Bressols", postalCode: "82710", department: "Tarn-et-Garonne" },
+      { name: "Montbeton", postalCode: "82290", department: "Tarn-et-Garonne" },
+      { name: "Lacourt-Saint-Pierre", postalCode: "82290", department: "Tarn-et-Garonne" },
+      { name: "Lamothe-Capdeville", postalCode: "82130", department: "Tarn-et-Garonne" },
+      { name: "Saint-Étienne-de-Tulmont", postalCode: "82410", department: "Tarn-et-Garonne" },
+      { name: "Albefeuille-Lagarde", postalCode: "82290", department: "Tarn-et-Garonne" },
+      // Ajout de communes autour de Moissac
+      { name: "Castelmayran", postalCode: "82210", department: "Tarn-et-Garonne" },
+      { name: "Saint-Nicolas-de-la-Grave", postalCode: "82210", department: "Tarn-et-Garonne" },
+      { name: "Lizac", postalCode: "82200", department: "Tarn-et-Garonne" },
+      { name: "Montesquieu", postalCode: "82200", department: "Tarn-et-Garonne" },
+      { name: "Boudou", postalCode: "82200", department: "Tarn-et-Garonne" },
+      { name: "Durfort-Lacapelette", postalCode: "82390", department: "Tarn-et-Garonne" },
+      // Ajout de communes autour de Castelsarrasin
+      { name: "Meauzac", postalCode: "82290", department: "Tarn-et-Garonne" },
+      { name: "Barry-d'Islemade", postalCode: "82290", department: "Tarn-et-Garonne" },
+      { name: "La Ville-Dieu-du-Temple", postalCode: "82290", department: "Tarn-et-Garonne" },
+      { name: "Saint-Porquier", postalCode: "82700", department: "Tarn-et-Garonne" },
+      { name: "Les Barthes", postalCode: "82100", department: "Tarn-et-Garonne" }
     ]
   },
   {
@@ -118,7 +221,50 @@ export const departments: Department[] = [
       { name: "Eauze", postalCode: "32800", department: "Gers" },
       { name: "Miradoux", postalCode: "32340", department: "Gers" },
       { name: "Saint-Clar", postalCode: "32380", department: "Gers" },
-      { name: "La Romieu", postalCode: "32480", department: "Gers" }
+      { name: "La Romieu", postalCode: "32480", department: "Gers" },
+      // Ajout de communes autour de Condom
+      { name: "Valence-sur-Baïse", postalCode: "32310", department: "Gers" },
+      { name: "Cassaigne", postalCode: "32100", department: "Gers" },
+      { name: "Larressingle", postalCode: "32100", department: "Gers" },
+      { name: "Montréal", postalCode: "32250", department: "Gers" },
+      { name: "Saint-Orens-Pouy-Petit", postalCode: "32100", department: "Gers" },
+      { name: "Béraut", postalCode: "32100", department: "Gers" },
+      { name: "Mouchan", postalCode: "32330", department: "Gers" },
+      // Ajout de communes autour d'Auch
+      { name: "Preignan", postalCode: "32810", department: "Gers" },
+      { name: "Pavie", postalCode: "32550", department: "Gers" },
+      { name: "Pessan", postalCode: "32550", department: "Gers" },
+      { name: "Duran", postalCode: "32810", department: "Gers" },
+      { name: "Castin", postalCode: "32810", department: "Gers" },
+      { name: "Roquelaure", postalCode: "32810", department: "Gers" },
+      // Ajout de communes autour de Lectoure
+      { name: "Saint-Mézard", postalCode: "32700", department: "Gers" },
+      { name: "Marsolan", postalCode: "32700", department: "Gers" },
+      { name: "Pergain-Taillac", postalCode: "32700", department: "Gers" },
+      { name: "La Sauvetat", postalCode: "32500", department: "Gers" },
+      { name: "Sainte-Mère", postalCode: "32700", department: "Gers" },
+      { name: "Terraube", postalCode: "32700", department: "Gers" }
+    ]
+  },
+  {
+    name: "Gironde",
+    code: "33",
+    description: "Notre zone d'intervention inclut également le sud-est de la Gironde, limitrophe du Lot-et-Garonne.",
+    cities: [
+      { name: "La Réole", postalCode: "33190", department: "Gironde" },
+      { name: "Langon", postalCode: "33210", department: "Gironde", isMajor: true },
+      { name: "Sainte-Foy-la-Grande", postalCode: "33220", department: "Gironde" },
+      { name: "Pellegrue", postalCode: "33790", department: "Gironde" },
+      { name: "Monségur", postalCode: "33580", department: "Gironde" },
+      { name: "Sauveterre-de-Guyenne", postalCode: "33540", department: "Gironde" },
+      // Ajout de communes autour de Langon
+      { name: "Saint-Macaire", postalCode: "33490", department: "Gironde" },
+      { name: "Toulenne", postalCode: "33210", department: "Gironde" },
+      { name: "Roaillan", postalCode: "33210", department: "Gironde" },
+      { name: "Fargues", postalCode: "33210", department: "Gironde" },
+      { name: "Saint-Pierre-d'Aurillac", postalCode: "33490", department: "Gironde" },
+      { name: "Castets-en-Dorthe", postalCode: "33210", department: "Gironde" },
+      { name: "Bazas", postalCode: "33430", department: "Gironde" }
     ]
   }
 ];
