@@ -14,11 +14,11 @@ const Navbar = () => {
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center gap-2">
               <img 
-                src="/lovable-uploads/e485f733-4f74-4a8f-b947-4a3ae077586b.png" 
-                alt="qoob rénovations logo" 
-                className="h-9" 
+                src="/lovable-uploads/6d22a9da-5065-4cd3-89e3-23d7b96f8307.png" 
+                alt="rénovations logo" 
+                className="h-20" 
               />
-              <span className="text-primary font-serif text-2xl font-bold">qoob rénovations</span>
+              <span className="text-primary font-serif text-lg font-bold">rénovations</span>
             </Link>
           </div>
           
