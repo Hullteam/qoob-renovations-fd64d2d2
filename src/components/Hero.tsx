@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -23,11 +24,15 @@ const Hero = () => {
             Confiez vos projets à nos artisans experts en rénovation
           </p>
           <div className="space-x-4">
-            <Button className="cta-button text-lg">
-              Obtenir mon Devis Gratuit
+            <Button className="cta-button text-lg" asChild>
+              <Link to="/demande-devis">
+                Obtenir mon Devis Gratuit
+              </Link>
             </Button>
-            <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg font-medium py-3 px-6 rounded-md transition-colors duration-300">
-              Découvrir nos Services
+            <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg font-medium py-3 px-6 rounded-md transition-colors duration-300" asChild>
+              <Link to="/#services">
+                Découvrir nos Services
+              </Link>
             </Button>
           </div>
         </div>

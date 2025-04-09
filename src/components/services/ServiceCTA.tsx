@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface ServiceCTAProps {
   title: string;
@@ -16,8 +17,10 @@ const ServiceCTA = ({ title }: ServiceCTAProps) => {
           Contactez-nous dès aujourd'hui pour discuter de votre projet de {title.toLowerCase()} et obtenir un devis personnalisé gratuit.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button size="lg">
-            Demander un devis gratuit
+          <Button size="lg" asChild>
+            <Link to="/demande-devis">
+              Demander un devis gratuit
+            </Link>
           </Button>
           <Button size="lg" variant="outline">
             Nous appeler : 07 85 01 06 33

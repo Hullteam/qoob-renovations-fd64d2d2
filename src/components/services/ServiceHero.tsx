@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface ServiceHeroProps {
   title: string;
@@ -23,8 +24,10 @@ const ServiceHero = ({ title, subtitle, heroImage }: ServiceHeroProps) => {
         <p className="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto">
           {subtitle}
         </p>
-        <Button size="lg">
-          Demander un devis gratuit
+        <Button size="lg" asChild>
+          <Link to="/demande-devis">
+            Demander un devis gratuit
+          </Link>
         </Button>
       </div>
     </div>
