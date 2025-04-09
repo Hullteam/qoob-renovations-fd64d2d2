@@ -8,6 +8,7 @@ import { carreleurData } from './metiers/carreleur';
 import { ebenisteMeubleData } from './metiers/ebenisteMeuble';
 import { designerInteriorData } from './metiers/designerInterior';
 import { sallesDeBainsSpecialisteData } from './metiers/sallesDeBainsSpecialiste';
+import { cuisinesSurMesureData } from './metiers/cuisinesSurMesure';
 
 // Export combiné de tous les métiers
 export const metierDetailsData = [
@@ -18,5 +19,6 @@ export const metierDetailsData = [
   carreleurData,
   ebenisteMeubleData,
   designerInteriorData,
-  sallesDeBainsSpecialisteData
+  sallesDeBainsSpecialisteData,
+  cuisinesSurMesureData
 ];
