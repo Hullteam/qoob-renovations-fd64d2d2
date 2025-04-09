@@ -56,6 +56,35 @@ export const generateMetierCityMetadata = (metierId: string, cityName: string, d
 };
 
 /**
+ * Generates combined metadata for a service and métier in a specific city 
+ */
+export const generateServiceMetierCityMetadata = (
+  serviceSlug: string, 
+  metierId: string, 
+  cityName: string, 
+  departmentName: string
+): LocationMetadata | null => {
+  const service = serviceDetailsData.find(s => s.slug === serviceSlug);
+  const metier = metierDetailsData.find(m => m.id === metierId);
+  
+  if (!service || !metier) return null;
+  
+  return {
+    title: `${metier.title} pour ${service.title} à ${cityName} (${departmentName})`,
+    description: `Nos ${metier.title.toLowerCase()} qualifiés interviennent à ${cityName} et ses environs pour tous vos projets de ${service.title.toLowerCase()}. Expertise, qualité et professionnalisme garantis.`,
+    keywords: [
+      `${metier.title.toLowerCase()} ${cityName}`,
+      `${service.title.toLowerCase()} ${cityName}`,
+      `${metier.title.toLowerCase()} ${service.title.toLowerCase()} ${departmentName}`,
+      `artisan ${metier.title.toLowerCase()} ${cityName}`,
+      `travaux ${service.title.toLowerCase()} ${cityName}`,
+      ...metier.keywords,
+      ...service.keywords
+    ]
+  };
+};
+
+/**
  * Returns the top major cities for SEO focus
  */
 export const getTopCities = (limit = 5) => {
@@ -102,5 +131,40 @@ export const generateLocalBusinessSchema = (serviceTitle: string, cityName: stri
     "telephone": "+33XXXXXXXXX",
     "areaServed": cityName,
     "priceRange": "€€-€€€"
+  };
+};
+
+/**
+ * Generates Schema.org Service JSON-LD data for SEO
+ */
+export const generateServiceSchema = (serviceTitle: string, cityName: string, metierTitle?: string) => {
+  const serviceName = metierTitle 
+    ? `${metierTitle} pour ${serviceTitle} à ${cityName}`
+    : `${serviceTitle} à ${cityName}`;
+    
+  const serviceDescription = metierTitle
+    ? `Services de ${metierTitle.toLowerCase()} pour ${serviceTitle.toLowerCase()} à ${cityName} par qoob rénovations.`
+    : `Services de ${serviceTitle.toLowerCase()} à ${cityName} par qoob rénovations.`;
+    
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": serviceTitle,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "qoob rénovations"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": cityName
+    },
+    "description": serviceDescription,
+    "offers": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": serviceName
+      }
+    }
   };
 };

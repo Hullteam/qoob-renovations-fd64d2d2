@@ -2,11 +2,14 @@
 import { Link } from "react-router-dom";
 import { serviceDetailsData } from "@/data/serviceDetailsData";
 import { majorCities } from "@/data/zonesInterventionData";
+import { metierDetailsData } from "@/data/metierDetailsData";
+import { generateServiceCityMetadata, generateMetierCityMetadata } from "@/utils/locationMetadata";
 
 const ZonesLocalServices = () => {
-  // Select top 3 cities and top 4 services for highlighting
+  // Select top cities and services for highlighting
   const topCities = majorCities.slice(0, 3);
   const topServices = serviceDetailsData.slice(0, 4);
+  const topMetiers = metierDetailsData.slice(0, 3);
   
   return (
     <section className="py-16 bg-white border-t border-warmBeige-100">
@@ -37,6 +40,23 @@ const ZonesLocalServices = () => {
                   </li>
                 ))}
               </ul>
+              
+              {/* Corps de métier section */}
+              <h4 className="font-medium mt-4 mb-2 text-warmBeige-700">Corps de métier à {city.name}</h4>
+              <ul className="space-y-2">
+                {topMetiers.map((metier) => (
+                  <li key={metier.id} className="flex items-center gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
+                    <Link 
+                      to={`/services/${metier.serviceSlug}/metiers/${metier.id}`}
+                      className="text-warmBeige-800 hover:text-primary transition-colors"
+                    >
+                      {metier.title} à {city.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              
               <p className="mt-4 text-sm text-warmBeige-600">
                 {city.postalCode} - {city.department}
               </p>
