@@ -1,9 +1,21 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import QuoteForm from './form/QuoteForm';
 import ContactInfo from './form/ContactInfo';
 
 const HomePageDevisForm = () => {
+  useEffect(() => {
+    // Handle direct navigation with hash
+    if (window.location.hash === '#contact') {
+      setTimeout(() => {
+        const element = document.getElementById('contact');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, []);
+
   return (
     <section id="contact" className="py-20 px-4 hero-pattern">
       <div className="max-w-7xl mx-auto">
@@ -27,3 +39,4 @@ const HomePageDevisForm = () => {
 };
 
 export default HomePageDevisForm;
+

@@ -1,8 +1,22 @@
-
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { scrollToElement } from "@/utils/scrollUtils";
 
 const MetiersCTA = () => {
+  const location = useLocation();
+  
+  const handleScrollToForm = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // If we're on the homepage, scroll to the form directly
+    if (location.pathname === '/') {
+      scrollToElement("contact", 100);
+    } else {
+      // Otherwise navigate to homepage with a hash to scroll to form
+      window.location.href = '/#contact';
+    }
+  };
+  
   return (
     <section className="py-16 bg-warmBeige-800 text-white">
       <div className="container mx-auto px-4 text-center">
@@ -19,10 +33,8 @@ const MetiersCTA = () => {
               Obtenir un devis détaillé
             </Link>
           </Button>
-          <Button variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-warmBeige-800" size="lg" asChild>
-            <Link to="/#contact">
-              Remplir le formulaire rapide
-            </Link>
+          <Button variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-warmBeige-800" size="lg" onClick={handleScrollToForm}>
+            Remplir le formulaire rapide
           </Button>
         </div>
         <p className="text-sm text-warmBeige-200 mt-4">

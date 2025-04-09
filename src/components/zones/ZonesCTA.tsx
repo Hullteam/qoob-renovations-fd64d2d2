@@ -2,10 +2,16 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { majorCities } from "@/data/zonesInterventionData";
+import { scrollToElement } from "@/utils/scrollUtils";
 
 const ZonesCTA = () => {
   // Get top cities to highlight in CTA
   const topCities = majorCities.slice(0, 5).map(city => city.name).join(', ');
+  
+  const handleScrollToForm = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToElement("contact", 100);
+  };
   
   return (
     <section className="py-16 bg-primary text-white">
@@ -25,10 +31,8 @@ const ZonesCTA = () => {
               Demander un Devis
             </Link>
           </Button>
-          <Button variant="outline" className="border-white text-white hover:bg-white/10" size="lg" asChild>
-            <Link to="/#contact">
-              Nous Contacter
-            </Link>
+          <Button variant="outline" className="border-white text-white hover:bg-white/10" size="lg" onClick={handleScrollToForm}>
+            Nous Contacter
           </Button>
         </div>
       </div>
@@ -37,3 +41,4 @@ const ZonesCTA = () => {
 };
 
 export default ZonesCTA;
+

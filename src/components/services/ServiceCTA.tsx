@@ -1,12 +1,26 @@
-
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { scrollToElement } from "@/utils/scrollUtils";
 
 interface ServiceCTAProps {
   title: string;
 }
 
 const ServiceCTA = ({ title }: ServiceCTAProps) => {
+  const location = useLocation();
+  
+  const handleScrollToForm = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // If we're on the homepage, scroll to the form directly
+    if (location.pathname === '/') {
+      scrollToElement("contact", 100);
+    } else {
+      // Otherwise navigate to homepage with a hash to scroll to form
+      window.location.href = '/#contact';
+    }
+  };
+  
   return (
     <section className="py-16 px-4 bg-primary/10">
       <div className="max-w-5xl mx-auto text-center">
@@ -22,7 +36,7 @@ const ServiceCTA = ({ title }: ServiceCTAProps) => {
               Demander un devis gratuit
             </Link>
           </Button>
-          <Button size="lg" variant="outline">
+          <Button size="lg" variant="outline" onClick={handleScrollToForm}>
             Nous appeler : 07 85 01 06 33
           </Button>
         </div>
