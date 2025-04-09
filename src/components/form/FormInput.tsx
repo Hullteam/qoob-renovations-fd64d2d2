@@ -12,6 +12,7 @@ interface FormInputProps {
   placeholder: string;
   required?: boolean;
   type?: string;
+  error?: string;
 }
 
 const FormInput = ({ 
@@ -22,7 +23,8 @@ const FormInput = ({
   label, 
   placeholder, 
   required = false,
-  type = "text"
+  type = "text",
+  error
 }: FormInputProps) => {
   return (
     <div className="space-y-2">
@@ -34,8 +36,12 @@ const FormInput = ({
         onChange={onChange}
         placeholder={placeholder} 
         required={required}
-        type={type} 
+        type={type}
+        className={error ? "border-red-500" : ""} 
       />
+      {error && (
+        <p className="text-red-500 text-sm mt-1">{error}</p>
+      )}
     </div>
   );
 };

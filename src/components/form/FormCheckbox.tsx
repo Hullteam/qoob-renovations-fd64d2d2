@@ -9,6 +9,7 @@ interface FormCheckboxProps {
   checked: boolean;
   onCheckedChange: (checked: boolean) => void;
   label: React.ReactNode;
+  error?: string;
 }
 
 const FormCheckbox = ({ 
@@ -16,18 +17,25 @@ const FormCheckbox = ({
   name, 
   checked, 
   onCheckedChange, 
-  label
+  label,
+  error
 }: FormCheckboxProps) => {
   return (
-    <div className="flex items-start space-x-2">
-      <Checkbox 
-        id={id} 
-        checked={checked}
-        onCheckedChange={(checked) => onCheckedChange(checked === true)}
-      />
-      <Label htmlFor={id} className="text-sm text-gray-600 font-normal cursor-pointer">
-        {label}
-      </Label>
+    <div className="space-y-1">
+      <div className="flex items-start space-x-2">
+        <Checkbox 
+          id={id} 
+          checked={checked}
+          onCheckedChange={(checked) => onCheckedChange(checked === true)}
+          className={error ? "border-red-500" : ""}
+        />
+        <Label htmlFor={id} className="text-sm text-gray-600 font-normal cursor-pointer">
+          {label}
+        </Label>
+      </div>
+      {error && (
+        <p className="text-red-500 text-sm mt-1 ml-6">{error}</p>
+      )}
     </div>
   );
 };

@@ -17,6 +17,7 @@ interface FormSelectProps {
   placeholder: string;
   options: SelectOption[];
   required?: boolean;
+  error?: string;
 }
 
 const FormSelect = ({ 
@@ -28,6 +29,7 @@ const FormSelect = ({
   placeholder, 
   options,
   required = false,
+  error
 }: FormSelectProps) => {
   return (
     <div className="space-y-2">
@@ -36,7 +38,7 @@ const FormSelect = ({
         value={value}
         onValueChange={(value) => onValueChange(value)}
       >
-        <SelectTrigger id={id}>
+        <SelectTrigger id={id} className={error ? "border-red-500" : ""}>
           <SelectValue placeholder={placeholder} />
         </SelectTrigger>
         <SelectContent>
@@ -45,6 +47,9 @@ const FormSelect = ({
           ))}
         </SelectContent>
       </Select>
+      {error && (
+        <p className="text-red-500 text-sm mt-1">{error}</p>
+      )}
     </div>
   );
 };

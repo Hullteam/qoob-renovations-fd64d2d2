@@ -9,6 +9,7 @@ import FormInput from './FormInput';
 import FormTextarea from './FormTextarea';
 import FormSelect from './FormSelect';
 import FormCheckbox from './FormCheckbox';
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const serviceOptions = [
   { value: 'renovation-interieure', label: 'Rénovation Intérieure' },
@@ -16,6 +17,16 @@ const serviceOptions = [
   { value: 'isolation', label: 'Isolation' },
   { value: 'cuisines-salles-de-bains', label: 'Aménagement Cuisines & Salles de bains' }
 ];
+
+interface FormErrors {
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  phone?: string;
+  service?: string;
+  description?: string;
+  consent?: string;
+}
 
 const QuoteForm = () => {
   const { toast } = useToast();
@@ -31,7 +42,9 @@ const QuoteForm = () => {
     consent: false,
     marketingConsent: false
   });
+  const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -39,6 +52,14 @@ const QuoteForm = () => {
       ...prev,
       [name]: value,
     }));
+    
+    // Clear error when field is modified
+    if (errors[name as keyof FormErrors]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: undefined
+      }));
+    }
   };
 
   const handleSelectChange = (name: string, value: string) => {
@@ -46,6 +67,14 @@ const QuoteForm = () => {
       ...prev,
       [name]: value,
     }));
+    
+    // Clear error when field is modified
+    if (errors[name as keyof FormErrors]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: undefined
+      }));
+    }
   };
 
   const handleCheckboxChange = (name: string, checked: boolean) => {
@@ -53,17 +82,84 @@ const QuoteForm = () => {
       ...prev,
       [name]: checked,
     }));
+    
+    // Clear error when field is modified
+    if (errors[name as keyof FormErrors]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: undefined
+      }));
+    }
+  };
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+    let isValid = true;
+    
+    // Validate first name
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = "Le prénom est requis";
+      isValid = false;
+    }
+    
+    // Validate last name
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = "Le nom est requis";
+      isValid = false;
+    }
+    
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      newErrors.email = "L'email est requis";
+      isValid = false;
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Veuillez entrer un email valide";
+      isValid = false;
+    }
+    
+    // Validate phone (basic French phone format)
+    const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Le téléphone est requis";
+      isValid = false;
+    } else if (!phoneRegex.test(formData.phone)) {
+      newErrors.phone = "Format de téléphone invalide";
+      isValid = false;
+    }
+    
+    // Validate service
+    if (!formData.service) {
+      newErrors.service = "Veuillez sélectionner un service";
+      isValid = false;
+    }
+    
+    // Validate description
+    if (!formData.description.trim()) {
+      newErrors.description = "La description du projet est requise";
+      isValid = false;
+    } else if (formData.description.trim().length < 20) {
+      newErrors.description = "Veuillez fournir une description plus détaillée (minimum 20 caractères)";
+      isValid = false;
+    }
+    
+    // Validate consent
+    if (!formData.consent) {
+      newErrors.consent = "Vous devez accepter la politique de confidentialité";
+      isValid = false;
+    }
+    
+    setErrors(newErrors);
+    return isValid;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setFormError(null);
     
-    if (!formData.consent) {
-      toast({
-        title: "Consentement requis",
-        description: "Veuillez accepter notre politique de confidentialité pour envoyer le formulaire.",
-        variant: "destructive"
-      });
+    // Validate form
+    if (!validateForm()) {
+      setFormError("Veuillez corriger les erreurs dans le formulaire");
       return;
     }
     
@@ -141,6 +237,12 @@ const QuoteForm = () => {
         <CardDescription>Partagez les détails de votre projet de rénovation</CardDescription>
       </CardHeader>
       <CardContent>
+        {formError && (
+          <Alert className="mb-6 bg-destructive/15 border-destructive text-destructive">
+            <AlertDescription>{formError}</AlertDescription>
+          </Alert>
+        )}
+        
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <FormInput 
@@ -151,6 +253,7 @@ const QuoteForm = () => {
               label="Prénom"
               placeholder="Votre prénom"
               required
+              error={errors.firstName}
             />
             <FormInput 
               id="lastName" 
@@ -160,6 +263,7 @@ const QuoteForm = () => {
               label="Nom"
               placeholder="Votre nom"
               required
+              error={errors.lastName}
             />
           </div>
           
@@ -173,6 +277,7 @@ const QuoteForm = () => {
               placeholder="votre@email.com"
               type="email"
               required
+              error={errors.email}
             />
             <FormInput 
               id="phone" 
@@ -182,6 +287,7 @@ const QuoteForm = () => {
               label="Téléphone"
               placeholder="Votre numéro de téléphone"
               required
+              error={errors.phone}
             />
           </div>
           
@@ -194,6 +300,7 @@ const QuoteForm = () => {
             placeholder="Choisissez un service"
             options={serviceOptions}
             required
+            error={errors.service}
           />
           
           <FormTextarea 
@@ -204,6 +311,7 @@ const QuoteForm = () => {
             label="Description du projet"
             placeholder="Décrivez votre projet en détail (travaux souhaités, superficie, contraintes particulières...)"
             required
+            error={errors.description}
           />
           
           <div className="space-y-4">
@@ -217,6 +325,7 @@ const QuoteForm = () => {
                   J'accepte que mes données soient traitées conformément à la <Link to="/confidentialite" className="text-primary hover:underline">politique de confidentialité</Link> de qoob rénovations. *
                 </>
               }
+              error={errors.consent}
             />
             
             <FormCheckbox 

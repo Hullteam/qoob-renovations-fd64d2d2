@@ -12,6 +12,7 @@ interface FormTextareaProps {
   placeholder: string;
   required?: boolean;
   rows?: number;
+  error?: string;
 }
 
 const FormTextarea = ({ 
@@ -22,7 +23,8 @@ const FormTextarea = ({
   label, 
   placeholder, 
   required = false,
-  rows = 4
+  rows = 4,
+  error
 }: FormTextareaProps) => {
   return (
     <div className="space-y-2">
@@ -34,8 +36,12 @@ const FormTextarea = ({
         onChange={onChange}
         placeholder={placeholder} 
         required={required}
-        rows={rows} 
+        rows={rows}
+        className={error ? "border-red-500" : ""} 
       />
+      {error && (
+        <p className="text-red-500 text-sm mt-1">{error}</p>
+      )}
     </div>
   );
 };
