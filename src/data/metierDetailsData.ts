@@ -20,6 +20,9 @@ import { toituresData } from './metiers/toitures';
 import { terrassesData } from './metiers/terrasses';
 import { amenagementsExterieursData } from './metiers/amenagements-exterieurs';
 
+// Import des données des métiers de rénovation énergétique
+import { systemesChauffageData } from './metiers/systemesChauffe';
+
 // Export combiné de tous les métiers
 export const metierDetailsData = [
   // Métiers de rénovation intérieure
@@ -41,5 +44,8 @@ export const metierDetailsData = [
   facadesData,
   toituresData,
   terrassesData,
-  amenagementsExterieursData
+  amenagementsExterieursData,
+  
+  // Métiers de rénovation énergétique
+  systemesChauffageData
 ];

@@ -1,3 +1,4 @@
+
 export const renovationEnergetiqueData = {
   id: "renovation-energetique",
   slug: "renovation-energetique",
@@ -73,6 +74,23 @@ export const renovationEnergetiqueData = {
       price: "Variable selon le type de matériau et performances"
     },
     {
+      id: "systemes-chauffage",
+      name: "Systèmes de Chauffage",
+      description: [
+        "Le choix d'un système de chauffage adapté est essentiel pour optimiser votre consommation énergétique tout en garantissant un confort thermique optimal. Notre expertise vous permet d'identifier la solution la plus performante selon votre habitat, vos besoins et votre budget.",
+        "Nous vous accompagnons dans la sélection, l'installation et la mise en service de systèmes de chauffage modernes, économiques et écologiques qui valoriseront votre patrimoine immobilier tout en réduisant significativement vos factures énergétiques."
+      ],
+      features: [
+        "Pompes à chaleur air/eau et air/air à haute efficacité énergétique",
+        "Chaudières à condensation gaz ou fioul dernière génération",
+        "Systèmes de chauffage biomasse (poêles et chaudières à bois/granulés)",
+        "Planchers chauffants basse température et radiateurs haute performance",
+        "Solutions hybrides combinant plusieurs sources d'énergie"
+      ],
+      image: "https://images.unsplash.com/photo-1536612868161-aaa27b842ff1?q=80&w=1080&auto=format&fit=crop",
+      price: "À partir de 3000€ selon le système et la superficie à chauffer"
+    },
+    {
       id: "renovation-energetique",
       name: "Rénovation Énergétique Globale",
       description: [
@@ -106,6 +124,10 @@ export const renovationEnergetiqueData = {
     {
       question: "Comment choisir entre les différents matériaux isolants ?",
       answer: "Le choix dépend de plusieurs critères : la zone à isoler, vos priorités (performance thermique, acoustique, résistance au feu, impact environnemental), les contraintes techniques de votre habitat et votre budget. Les laines minérales offrent un bon rapport qualité/prix et une bonne performance acoustique. Les isolants synthétiques sont très performants pour une faible épaisseur. Les matériaux biosourcés combinent bonnes performances et faible impact environnemental. Nous analysons votre situation spécifique pour vous recommander les matériaux les plus adaptés à votre projet."
+    },
+    {
+      question: "Quelle est la solution de chauffage la plus économique à long terme ?",
+      answer: "La solution la plus économique dépend de plusieurs facteurs : caractéristiques de votre logement, isolation existante, exposition, besoins en chauffage et eau chaude, accès aux différentes énergies. En général, les pompes à chaleur offrent le meilleur rendement et les coûts de fonctionnement les plus bas à long terme, malgré un investissement initial plus élevé. Les systèmes biomasse (bois, granulés) présentent également un excellent rapport performance/coût. Notre audit énergétique vous permettra de comparer précisément le retour sur investissement des différentes solutions envisageables pour votre situation spécifique."
     }
   ],
   testimonials: [
