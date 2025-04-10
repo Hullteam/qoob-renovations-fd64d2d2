@@ -16,6 +16,7 @@ import MentionsLegales from "./pages/MentionsLegales";
 import ConditionsGenerales from "./pages/ConditionsGenerales";
 import GestionProjet from "./pages/GestionProjet";
 import EstimationAvantAchat from "./pages/EstimationAvantAchat";
+import ExtensionsSurelevation from "./pages/ExtensionsSurelevation";
 import { Helmet } from "react-helmet";
 import CookieConsent from "./components/CookieConsent";
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/services/:serviceSlug" element={<ServiceDetail />} />
           <Route path="/services/:serviceSlug/metiers/:metierId" element={<MetierDetail />} />
           <Route path="/services/gestion-projet" element={<GestionProjet />} />
+          <Route path="/services/extensions-surelevation" element={<ExtensionsSurelevation />} />
           <Route path="/demande-devis" element={<DemandeDevis />} />
           <Route path="/zones-intervention" element={<ZonesIntervention />} />
           <Route path="/metiers-renovation" element={<MetiersRenovation />} />
