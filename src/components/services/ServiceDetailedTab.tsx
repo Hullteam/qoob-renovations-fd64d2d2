@@ -50,7 +50,7 @@ const ServiceDetailedTab = ({ service, serviceSlug }: ServiceDetailedTabProps) =
       </div>
       <div>
         <img
-          src={service.image}
+          src={service.id === "cuisines" ? "/lovable-uploads/3d71113d-25da-45bc-8af6-292776840206.png" : service.image}
           alt={service.name}
           className="w-full h-auto rounded-lg shadow-md mb-4"
         />
