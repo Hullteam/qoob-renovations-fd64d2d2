@@ -63,15 +63,15 @@ const ExtensionRegulations = () => {
               </li>
               <li className="flex items-start">
                 <CheckCircle2 className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span>Permis de construire pour extensions > 20m²</span>
+                <span>Permis de construire pour extensions {`>`} 20m²</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle2 className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span>Jusqu'à 40m² avec simple déclaration en zone urbaine (si surface totale &lt; 150m²)</span>
+                <span>Jusqu'à 40m² avec simple déclaration en zone urbaine (si surface totale {`<`} 150m²)</span>
               </li>
               <li className="flex items-start">
                 <AlertCircle className="h-5 w-5 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span>Recours à un architecte obligatoire si surface totale > 150m² après travaux</span>
+                <span>Recours à un architecte obligatoire si surface totale {`>`} 150m² après travaux</span>
               </li>
             </ul>
           </div>
@@ -207,3 +207,4 @@ const ExtensionRegulations = () => {
 };
 
 export default ExtensionRegulations;
+
