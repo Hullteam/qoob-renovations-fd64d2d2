@@ -1,5 +1,4 @@
-
-import { Home, Paintbrush, Wrench, Bath, ClipboardCheck, Search } from "lucide-react";
+import { Home, Paintbrush, Wrench, Bath, ClipboardCheck, Search, Building } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -15,6 +14,12 @@ const serviceItems = [
     description: "Donnez un nouveau visage à votre habitat avec notre expertise en façades, toitures, terrasses et aménagements extérieurs.",
     icon: <Paintbrush className="w-12 h-12 text-primary mb-4" />,
     slug: "renovation-exterieure"
+  },
+  {
+    title: "Extensions - Surélévation",
+    description: "Agrandissez votre espace de vie avec nos services d'extensions et de surélévations personnalisés selon vos besoins.",
+    icon: <Building className="w-12 h-12 text-primary mb-4" />,
+    slug: "extensions-surelevation"
   },
   {
     title: "Rénovation Énergétique",
