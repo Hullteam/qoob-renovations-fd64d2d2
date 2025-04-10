@@ -10,9 +10,9 @@ const testimonials = [
   {
     name: "Jean-Marc L.",
     location: "Marmande, Lot-et-Garonne",
-    quote: "Maison Accueillante a transformé notre salon vieillot en un espace moderne et lumineux. Le respect des délais était impressionnant.",
-    imageBefore: "https://images.unsplash.com/photo-1518733057094-95b53143d2a7?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3",
-    imageAfter: "https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3",
+    quote: "Maison Accueillante a transformé notre salle de bains vieillotte en un espace moderne et épuré. Le respect des délais était impressionnant.",
+    imageBefore: "/lovable-uploads/c0858a2e-bb8c-49a0-9773-0e35bafc8fa1.png",
+    imageAfter: "/lovable-uploads/c0858a2e-bb8c-49a0-9773-0e35bafc8fa1.png",
   },
 ];
 
