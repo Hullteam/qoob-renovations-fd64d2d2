@@ -1,62 +1,15 @@
 
 import { QuoteFormData } from "./formValidation";
 import { toast } from "@/hooks/use-toast";
+import { validateOrigin, validateCSRFToken, prepareFormWithCSRF } from "./securityUtils";
 
 /**
- * Génère un jeton CSRF unique
- */
-const generateCSRFToken = (): string => {
-  const timestamp = new Date().getTime().toString();
-  const randomPart = Math.random().toString(36).substring(2, 15);
-  return `${timestamp}-${randomPart}`;
-};
-
-/**
- * Stocke le jeton CSRF dans sessionStorage
- */
-const storeCSRFToken = (token: string): void => {
-  sessionStorage.setItem('qoob_csrf_token', token);
-};
-
-/**
- * Vérifie si le jeton CSRF est valide
- */
-const validateCSRFToken = (token: string): boolean => {
-  const storedToken = sessionStorage.getItem('qoob_csrf_token');
-  if (!storedToken || storedToken !== token) {
-    return false;
-  }
-  
-  // Vérifier que le jeton n'est pas trop ancien (30 minutes maximum)
-  const tokenTimestamp = parseInt(token.split('-')[0], 10);
-  const currentTime = new Date().getTime();
-  const tokenAge = currentTime - tokenTimestamp;
-  
-  // 30 minutes en millisecondes
-  const maxAge = 30 * 60 * 1000;
-  
-  return tokenAge <= maxAge;
-};
-
-/**
- * Prépare un formulaire avec protection CSRF
- */
-export const prepareFormWithCSRF = (): string => {
-  const csrfToken = generateCSRFToken();
-  storeCSRFToken(csrfToken);
-  return csrfToken;
-};
-
-/**
- * Submits the quote form data to the server
+ * Submits the quote form data to the server with enhanced security
  */
 export const submitQuoteForm = async (formData: QuoteFormData): Promise<boolean> => {
   try {
-    // Vérifier l'origine de la demande (protection contre les attaques CSRF)
-    const currentOrigin = window.location.origin;
-    const allowedOrigins = ['https://qoob-renovations.fr', 'https://www.qoob-renovations.fr'];
-    
-    if (!allowedOrigins.includes(currentOrigin) && process.env.NODE_ENV === 'production') {
+    // Check if origin is allowed
+    if (!validateOrigin()) {
       console.error('Security violation: Invalid origin');
       toast({
         title: "Erreur de sécurité",
@@ -66,7 +19,7 @@ export const submitQuoteForm = async (formData: QuoteFormData): Promise<boolean>
       return false;
     }
     
-    // Générer et vérifier le jeton CSRF
+    // Verify CSRF token
     const csrfToken = sessionStorage.getItem('qoob_csrf_token');
     if (!csrfToken || !validateCSRFToken(csrfToken)) {
       console.error('Security violation: Invalid CSRF token');
@@ -92,10 +45,13 @@ export const submitQuoteForm = async (formData: QuoteFormData): Promise<boolean>
     formSubmitData.append("Marketing Consent", formData.marketingConsent ? "Oui" : "Non");
     formSubmitData.append("CSRF_Token", csrfToken); // Ajouter le jeton CSRF
     
-    // Ajouter un en-tête d'origine pour une vérification côté serveur
+    // Add secure headers
     const headers = new Headers({
       'X-Requested-With': 'XMLHttpRequest',
-      'Origin': window.location.origin
+      'Origin': window.location.origin,
+      'Sec-Fetch-Site': 'same-origin',
+      'Sec-Fetch-Mode': 'cors',
+      'Sec-Fetch-Dest': 'empty'
     });
     
     // Add redirect URL back to the site after submission
@@ -114,6 +70,7 @@ export const submitQuoteForm = async (formData: QuoteFormData): Promise<boolean>
       method: "POST",
       headers: headers,
       body: formSubmitData,
+      credentials: 'same-origin'
     });
 
     if (response.ok) {
@@ -124,6 +81,7 @@ export const submitQuoteForm = async (formData: QuoteFormData): Promise<boolean>
       
       // Révoquer le jeton CSRF utilisé
       sessionStorage.removeItem('qoob_csrf_token');
+      sessionStorage.removeItem('qoob_csrf_created');
       return true;
     } else {
       throw new Error("Problème lors de l'envoi du formulaire");
@@ -144,11 +102,8 @@ export const submitQuoteForm = async (formData: QuoteFormData): Promise<boolean>
  */
 export const submitEstimationForm = async (formData: any): Promise<boolean> => {
   try {
-    // Vérifier l'origine de la demande (protection contre les attaques CSRF)
-    const currentOrigin = window.location.origin;
-    const allowedOrigins = ['https://qoob-renovations.fr', 'https://www.qoob-renovations.fr'];
-    
-    if (!allowedOrigins.includes(currentOrigin) && process.env.NODE_ENV === 'production') {
+    // Check if origin is allowed
+    if (!validateOrigin()) {
       console.error('Security violation: Invalid origin');
       toast({
         title: "Erreur de sécurité",
@@ -158,7 +113,7 @@ export const submitEstimationForm = async (formData: any): Promise<boolean> => {
       return false;
     }
     
-    // Générer et vérifier le jeton CSRF
+    // Verify CSRF token
     const csrfToken = sessionStorage.getItem('qoob_csrf_token');
     if (!csrfToken || !validateCSRFToken(csrfToken)) {
       console.error('Security violation: Invalid CSRF token');
@@ -188,10 +143,13 @@ export const submitEstimationForm = async (formData: any): Promise<boolean> => {
     formSubmitData.append("Description du projet", formData.projectDescription);
     formSubmitData.append("CSRF_Token", csrfToken); // Ajouter le jeton CSRF
     
-    // Ajouter un en-tête d'origine pour une vérification côté serveur
+    // Add secure headers
     const headers = new Headers({
       'X-Requested-With': 'XMLHttpRequest',
-      'Origin': window.location.origin
+      'Origin': window.location.origin,
+      'Sec-Fetch-Site': 'same-origin',
+      'Sec-Fetch-Mode': 'cors',
+      'Sec-Fetch-Dest': 'empty'
     });
     
     // Add redirect URL back to the site after submission
@@ -210,6 +168,7 @@ export const submitEstimationForm = async (formData: any): Promise<boolean> => {
       method: "POST",
       headers: headers,
       body: formSubmitData,
+      credentials: 'same-origin'
     });
 
     if (response.ok) {
@@ -220,6 +179,7 @@ export const submitEstimationForm = async (formData: any): Promise<boolean> => {
       
       // Révoquer le jeton CSRF utilisé
       sessionStorage.removeItem('qoob_csrf_token');
+      sessionStorage.removeItem('qoob_csrf_created');
       return true;
     } else {
       throw new Error("Problème lors de l'envoi du formulaire");
@@ -234,3 +194,8 @@ export const submitEstimationForm = async (formData: any): Promise<boolean> => {
     return false;
   }
 };
+
+// Export the function from securityUtils to be used in other components
+export { prepareFormWithCSRF };
+
+// Original functions are now removed as they are replaced with the imports from securityUtils

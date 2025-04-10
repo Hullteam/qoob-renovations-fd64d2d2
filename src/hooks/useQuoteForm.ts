@@ -26,7 +26,11 @@ export const useQuoteForm = () => {
 
   // Générer un nouveau jeton CSRF lors du chargement initial du formulaire
   useEffect(() => {
-    prepareFormWithCSRF();
+    const initForm = async () => {
+      await prepareFormWithCSRF();
+    };
+    
+    initForm();
   }, []);
 
   /**
@@ -120,7 +124,7 @@ export const useQuoteForm = () => {
       });
       
       // Générer un nouveau jeton CSRF pour une utilisation ultérieure
-      prepareFormWithCSRF();
+      await prepareFormWithCSRF();
     }
     
     setIsSubmitting(false);

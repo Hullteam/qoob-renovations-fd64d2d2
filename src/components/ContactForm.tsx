@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,7 +22,11 @@ const ContactForm = () => {
 
   // Générer un nouveau jeton CSRF lors du chargement initial du formulaire
   useEffect(() => {
-    prepareFormWithCSRF();
+    const initForm = async () => {
+      await prepareFormWithCSRF();
+    };
+    
+    initForm();
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -67,7 +70,7 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     // Simulate form submission
-    setTimeout(() => {
+    setTimeout(async () => {
       toast({
         title: "Formulaire envoyé !",
         description: "Nous vous contacterons dans les plus brefs délais.",
@@ -83,7 +86,7 @@ const ContactForm = () => {
       });
       
       // Générer un nouveau jeton CSRF pour une utilisation ultérieure
-      prepareFormWithCSRF();
+      await prepareFormWithCSRF();
     }, 1000);
   };
 
