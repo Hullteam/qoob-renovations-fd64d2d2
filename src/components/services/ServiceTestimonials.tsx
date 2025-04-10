@@ -2,11 +2,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { ThumbsUp } from "lucide-react";
 
-interface Testimonial {
-  author: string;
+export interface Testimonial {
+  author?: string;
+  name?: string;
   location: string;
-  rating: number;
-  text: string;
+  rating?: number;
+  text?: string;
+  quote?: string;
+  imageBefore?: string;
+  imageAfter?: string;
 }
 
 interface ServiceTestimonialsProps {
@@ -26,7 +30,7 @@ const ServiceTestimonials = ({ testimonials }: ServiceTestimonialsProps) => {
             <Card key={index} className="border-gray-200">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
+                  {testimonial.rating && [...Array(5)].map((_, i) => (
                     <ThumbsUp 
                       key={i} 
                       className={`w-4 h-4 ${i < testimonial.rating ? 'text-yellow-500' : 'text-gray-300'}`} 
@@ -34,10 +38,10 @@ const ServiceTestimonials = ({ testimonials }: ServiceTestimonialsProps) => {
                     />
                   ))}
                 </div>
-                <p className="italic text-gray-700 mb-4">"{testimonial.text}"</p>
+                <p className="italic text-gray-700 mb-4">{testimonial.text || testimonial.quote && `"${testimonial.quote}"`}</p>
                 <div className="flex items-center">
                   <div>
-                    <p className="font-medium">{testimonial.author}</p>
+                    <p className="font-medium">{testimonial.author || testimonial.name}</p>
                     <p className="text-sm text-gray-600">{testimonial.location}</p>
                   </div>
                 </div>

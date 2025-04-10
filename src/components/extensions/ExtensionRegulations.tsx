@@ -1,4 +1,3 @@
-
 import { AlertCircle, FileText, CheckCircle2, HelpCircle } from "lucide-react";
 import {
   Accordion,
@@ -207,4 +206,3 @@ const ExtensionRegulations = () => {
 };
 
 export default ExtensionRegulations;
-
