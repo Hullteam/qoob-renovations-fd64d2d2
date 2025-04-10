@@ -44,7 +44,7 @@ const ServicePresentation = ({
           </div>
           <div className="relative">
             <img 
-              src={presentationImage} 
+              src={"/lovable-uploads/74e30d7e-1a1c-4a99-8b0b-cbd7dbe83a21.png"} 
               alt={`${title} par qoob rénovations`} 
               className="w-full h-auto rounded-lg shadow-lg"
             />
