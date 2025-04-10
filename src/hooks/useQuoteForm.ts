@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { FormErrors, QuoteFormData, validateQuoteForm } from '@/utils/formValidation';
 import { submitQuoteForm, prepareFormWithCSRF } from '@/utils/formSubmission';
