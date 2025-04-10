@@ -1,11 +1,12 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Link } from "react-router-dom";
+import { prepareFormWithCSRF } from "@/utils/formSubmission";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -19,6 +20,11 @@ const ContactForm = () => {
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Générer un nouveau jeton CSRF lors du chargement initial du formulaire
+  useEffect(() => {
+    prepareFormWithCSRF();
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -47,6 +53,17 @@ const ContactForm = () => {
       return;
     }
     
+    // Vérifier le jeton CSRF
+    const csrfToken = sessionStorage.getItem('qoob_csrf_token');
+    if (!csrfToken) {
+      toast({
+        title: "Erreur de sécurité",
+        description: "Session invalide ou expirée. Veuillez actualiser la page et réessayer.",
+        variant: "destructive"
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
     
     // Simulate form submission
@@ -64,6 +81,9 @@ const ContactForm = () => {
         message: "",
         consent: false,
       });
+      
+      // Générer un nouveau jeton CSRF pour une utilisation ultérieure
+      prepareFormWithCSRF();
     }, 1000);
   };
 

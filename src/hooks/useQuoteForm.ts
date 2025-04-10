@@ -1,7 +1,7 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FormErrors, QuoteFormData, validateQuoteForm } from '@/utils/formValidation';
-import { submitQuoteForm } from '@/utils/formSubmission';
+import { submitQuoteForm, prepareFormWithCSRF } from '@/utils/formSubmission';
 
 /**
  * Custom hook for handling the quote form state and logic
@@ -23,6 +23,11 @@ export const useQuoteForm = () => {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
+
+  // Générer un nouveau jeton CSRF lors du chargement initial du formulaire
+  useEffect(() => {
+    prepareFormWithCSRF();
+  }, []);
 
   /**
    * Handle input field changes
@@ -113,6 +118,9 @@ export const useQuoteForm = () => {
         consent: false,
         marketingConsent: false
       });
+      
+      // Générer un nouveau jeton CSRF pour une utilisation ultérieure
+      prepareFormWithCSRF();
     }
     
     setIsSubmitting(false);
