@@ -4,14 +4,14 @@ const testimonials = [
     name: "Sophie D.",
     location: "Agen, Lot-et-Garonne",
     quote: "Une équipe professionnelle et attentive à nos besoins. Notre cuisine est méconnaissable, et le résultat dépasse nos espérances !",
-    imageBefore: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3",
+    imageBefore: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3",
     imageAfter: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop&ixlib=rb-4.0.3",
   },
   {
     name: "Jean-Marc L.",
     location: "Marmande, Lot-et-Garonne",
     quote: "Maison Accueillante a transformé notre salle de bains vieillotte en un espace moderne et épuré. Le respect des délais était impressionnant.",
-    imageBefore: "/lovable-uploads/c0858a2e-bb8c-49a0-9773-0e35bafc8fa1.png",
+    imageBefore: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3",
     imageAfter: "/lovable-uploads/c0858a2e-bb8c-49a0-9773-0e35bafc8fa1.png",
   },
 ];
