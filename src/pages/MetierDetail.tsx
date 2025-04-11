@@ -13,7 +13,7 @@ import MetierWorkProcess from "@/components/metiers/MetierWorkProcess";
 import MetierNavigation from "@/components/metiers/MetierNavigation";
 
 // Import des données des métiers
-import { metierDetailsData } from "@/data/metierDetailsData";
+import { metierDetailsData, MetierData } from "@/data/metierDetailsData";
 
 const MetierDetail = () => {
   const { serviceSlug, metierId } = useParams();

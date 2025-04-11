@@ -1,12 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronLeft } from "lucide-react";
-
-interface RelatedMetier {
-  id: string;
-  name: string;
-}
+import { RelatedMetier } from "@/types/metierTypes";
 
 interface MetierNavigationProps {
   serviceName: string;
@@ -14,39 +9,60 @@ interface MetierNavigationProps {
   relatedMetiers: RelatedMetier[];
 }
 
-const MetierNavigation = ({ serviceName, serviceSlug, relatedMetiers }: MetierNavigationProps) => {
-  // If there are no related metiers, don't render the related section
-  const hasRelatedMetiers = relatedMetiers && relatedMetiers.length > 0;
-  
+const MetierNavigation = ({
+  serviceName,
+  serviceSlug,
+  relatedMetiers,
+}: MetierNavigationProps) => {
   return (
-    <section className="py-10 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Back to service link */}
-        <div className="mb-8">
-          <Button variant="outline" className="flex items-center gap-2" asChild>
-            <Link to={`/services/${serviceSlug}`}>
-              <ChevronLeft className="h-4 w-4" /> 
-              Retour à {serviceName}
-            </Link>
-          </Button>
-        </div>
-
-        {/* Related métiers section */}
-        {hasRelatedMetiers && (
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-medium mb-4">Explorer nos autres expertises en {serviceName}</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-              {relatedMetiers.map((related, index) => (
-                <Button key={index} variant="outline" className="justify-start" asChild>
-                  <Link to={`/services/${serviceSlug}/metiers/${related.id}`}>
-                    <span>{related.name}</span>
-                    <ArrowRight className="ml-auto h-4 w-4" />
-                  </Link>
-                </Button>
-              ))}
-            </div>
+    <section className="py-12 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div>
+            <Button variant="outline" asChild>
+              <Link to={`/services/${serviceSlug}`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mr-2"
+                >
+                  <path d="m15 18-6-6 6-6"></path>
+                </svg>
+                Retour à {serviceName}
+              </Link>
+            </Button>
           </div>
-        )}
+
+          {relatedMetiers?.length > 0 && (
+            <div className="mt-6 md:mt-0">
+              <h3 className="text-center md:text-right text-warmBeige-700 mb-2">
+                Métiers connexes
+              </h3>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-end">
+                {relatedMetiers.map((metier) => (
+                  <Button
+                    key={metier.id}
+                    variant="outline"
+                    size="sm"
+                    asChild
+                    className="text-sm"
+                  >
+                    <Link to={`/services/${serviceSlug}/metiers/${metier.id}`}>
+                      {metier.name}
+                    </Link>
+                  </Button>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

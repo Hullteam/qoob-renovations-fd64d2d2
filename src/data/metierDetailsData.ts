@@ -44,6 +44,42 @@ import { chauffagisteData } from './metiers/chauffagiste';
 // Import des métiers de menuiserie & serrurerie
 import { menuisierBoisData } from './metiers/menuisierBois';
 
+// Type définition pour uniformiser les données des métiers
+export interface MetierData {
+  id: string;
+  categoryId: string;
+  serviceSlug: string;
+  serviceName: string;
+  title: string;
+  subtitle: string;
+  metaDescription: string;
+  keywords: string[];
+  heroImage: string;
+  presentationTitle: string;
+  presentationText: string[];
+  presentationImage: string;
+  keyPoints: string[];
+  expertises: {
+    title: string;
+    description: string;
+    features: string[];
+  }[];
+  workProcess: {
+    title: string;
+    description: string;
+    duration?: string;
+    step?: number;
+  }[];
+  faqs: {
+    question: string;
+    answer: string;
+  }[];
+  relatedMetiers: {
+    id: string;
+    name: string;
+  }[];
+}
+
 // Définition des catégories principales de métiers
 export const metierCategories = [
   {
@@ -108,8 +144,38 @@ export const metierCategories = [
   }
 ];
 
+// S'assurer que toutes les données de métier ont la propriété categoryId
+// et conversion des formats inconsistants si nécessaire
+const ensureMetierDataFormat = (metier: any): MetierData => {
+  // S'assurer que presentationText est toujours un tableau
+  const presentationText = Array.isArray(metier.presentationText) 
+    ? metier.presentationText 
+    : [metier.presentationText];
+  
+  // S'assurer que les expertises ont toujours le bon format
+  const expertises = metier.expertises.map((expertise: any) => ({
+    title: expertise.title,
+    description: expertise.description,
+    features: expertise.features || []
+  }));
+  
+  // S'assurer que relatedMetiers a toujours le bon format
+  const relatedMetiers = metier.relatedMetiers.map((related: any) => ({
+    id: related.id,
+    name: related.name || related.title || ""
+  }));
+  
+  return {
+    ...metier,
+    categoryId: metier.categoryId || "non-categorise",
+    presentationText,
+    expertises,
+    relatedMetiers
+  };
+};
+
 // Export combiné de tous les métiers actuellement disponibles
-export const metierDetailsData = [
+export const metierDetailsData: MetierData[] = [
   // Métiers de rénovation intérieure
   menuisierCuisinisteData,
   plombierSanitaireData,
@@ -198,15 +264,15 @@ export const metierDetailsData = [
   conducteurTravauxData,
   economisteConstructionData
   */
-];
+].map(ensureMetierDataFormat);
 
 // Fonction pour obtenir les métiers par catégorie
-export const getMetiersByCategory = (categoryId: string) => {
+export const getMetiersByCategory = (categoryId: string): MetierData[] => {
   return metierDetailsData.filter(metier => metier.categoryId === categoryId);
 };
 
 // Fonction pour obtenir tous les métiers d'une catégorie principale
-export const getAllMetiersByCategoryName = (categoryName: string) => {
+export const getAllMetiersByCategoryName = (categoryName: string): MetierData[] => {
   const category = metierCategories.find(cat => cat.name === categoryName);
   if (!category) return [];
   return metierDetailsData.filter(metier => metier.categoryId === category.id);

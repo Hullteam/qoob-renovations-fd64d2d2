@@ -6,18 +6,18 @@ export const ferrailleurData = {
   title: "Ferrailleur",
   subtitle: "Expert en armatures métalliques pour le béton armé",
   categoryId: "gros-oeuvre",
-  serviceSlug: "renovation-interieure", // Modifier selon le service approprié
-  serviceName: "Rénovation Intérieure", // Modifier selon le service approprié
+  serviceSlug: "renovation-interieure",
+  serviceName: "Rénovation Intérieure",
   metaDescription: "Découvrez l'expertise des ferrailleurs, spécialistes des armatures métalliques pour vos projets de construction en béton armé. Qualité et conformité garanties.",
   keywords: ["ferrailleur", "armature métallique", "béton armé", "ferraillage", "acier de construction", "armature béton"],
-  heroImage: "/lovable-uploads/df07af35-8496-46c5-8b42-0a017da7763e.png", // Remplacer par une image appropriée
-  presentationImage: "/lovable-uploads/6d22a9da-5065-4cd3-89e3-23d7b96f8307.png", // Remplacer par une image appropriée
+  heroImage: "/lovable-uploads/df07af35-8496-46c5-8b42-0a017da7763e.png",
+  presentationImage: "/lovable-uploads/6d22a9da-5065-4cd3-89e3-23d7b96f8307.png",
   presentationTitle: "Le rôle essentiel du ferrailleur dans la construction",
-  presentationText: `Le ferrailleur est un acteur indispensable dans la construction en béton armé. Sa mission principale consiste à façonner, assembler et poser les armatures métalliques qui renforceront le béton pour lui conférer sa résistance mécanique.
-  
-  Le travail du ferrailleur s'effectue en plusieurs étapes : lecture des plans de ferraillage, préparation des aciers (coupe, façonnage), mise en place des armatures selon les plans, et assemblage par ligature ou soudure. La précision est essentielle car la position des armatures détermine directement la résistance future du béton armé.
-  
-  Les ferrailleurs interviennent sur tous types de structures : fondations, murs, poteaux, planchers, escaliers, ou ouvrages d'art. Leur expertise garantit la solidité et la durabilité des constructions en béton armé, dans le respect des normes de construction.`,
+  presentationText: [
+    "Le ferrailleur est un acteur indispensable dans la construction en béton armé. Sa mission principale consiste à façonner, assembler et poser les armatures métalliques qui renforceront le béton pour lui conférer sa résistance mécanique.",
+    "Le travail du ferrailleur s'effectue en plusieurs étapes : lecture des plans de ferraillage, préparation des aciers (coupe, façonnage), mise en place des armatures selon les plans, et assemblage par ligature ou soudure. La précision est essentielle car la position des armatures détermine directement la résistance future du béton armé.",
+    "Les ferrailleurs interviennent sur tous types de structures : fondations, murs, poteaux, planchers, escaliers, ou ouvrages d'art. Leur expertise garantit la solidité et la durabilité des constructions en béton armé, dans le respect des normes de construction."
+  ],
   
   keyPoints: [
     "Expert en lecture de plans de ferraillage",
@@ -31,50 +31,50 @@ export const ferrailleurData = {
     {
       title: "Préparation des armatures métalliques",
       description: "Coupe, pliage et façonnage des barres d'acier selon les plans de ferraillage et les normes de construction.",
-      image: "/lovable-uploads/3d71113d-25da-45bc-8af6-292776840206.png" // Remplacer par une image appropriée
+      features: ["Découpe précise", "Cintrage", "Façonnage", "Étriers", "Cadres d'armature"]
     },
     {
       title: "Pose et assemblage de ferraillage",
       description: "Installation et fixation des armatures avant le coulage du béton, garantissant leur bon positionnement.",
-      image: "/lovable-uploads/44d77b07-c775-48de-bce4-5048c54996ba.png" // Remplacer par une image appropriée
+      features: ["Ligature au fil recuit", "Positionnement précis", "Calage", "Maintien des enrobages", "Stabilisation"]
     },
     {
       title: "Ferraillage pour ouvrages spéciaux",
       description: "Réalisation d'armatures pour structures complexes comme les escaliers, voûtes ou ouvrages d'art.",
-      image: "/lovable-uploads/8ab161d7-01e0-49f7-a854-b6795b8bd944.png" // Remplacer par une image appropriée
+      features: ["Adaptation aux formes complexes", "Densité d'armature variable", "Résistance aux efforts", "Continuité des aciers", "Détails spécifiques"]
     },
     {
       title: "Contrôle qualité des armatures",
       description: "Vérification de la conformité du ferraillage selon les plans et les normes techniques en vigueur.",
-      image: "/lovable-uploads/a0054bf8-2bc4-4d1f-ae6a-fcc96d391abc.png" // Remplacer par une image appropriée
+      features: ["Vérification des diamètres", "Espacement des barres", "Recouvrement", "Enrobage", "Conformité aux plans"]
     }
   ],
   
   workProcess: [
     {
-      step: 1,
       title: "Étude des plans de ferraillage",
-      description: "Analyse approfondie des plans fournis par le bureau d'études pour comprendre les spécifications techniques."
+      description: "Analyse approfondie des plans fournis par le bureau d'études pour comprendre les spécifications techniques.",
+      duration: "1-2 jours"
     },
     {
-      step: 2,
       title: "Préparation des aciers",
-      description: "Coupe et façonnage des barres d'acier selon les dimensions et formes requises pour chaque élément de la structure."
+      description: "Coupe et façonnage des barres d'acier selon les dimensions et formes requises pour chaque élément de la structure.",
+      duration: "2-3 jours"
     },
     {
-      step: 3,
       title: "Assemblage des armatures",
-      description: "Montage des cages d'armatures par ligature au fil de fer recuit ou par points de soudure selon les besoins."
+      description: "Montage des cages d'armatures par ligature au fil de fer recuit ou par points de soudure selon les besoins.",
+      duration: "2-4 jours"
     },
     {
-      step: 4,
       title: "Mise en place sur chantier",
-      description: "Installation des armatures dans les coffrages, avec respect rigoureux des enrobages minimaux pour protéger l'acier."
+      description: "Installation des armatures dans les coffrages, avec respect rigoureux des enrobages minimaux pour protéger l'acier.",
+      duration: "1-2 jours"
     },
     {
-      step: 5,
       title: "Contrôle avant bétonnage",
-      description: "Vérification finale du positionnement et de la stabilité des armatures avant le coulage du béton."
+      description: "Vérification finale du positionnement et de la stabilité des armatures avant le coulage du béton.",
+      duration: "1 jour"
     }
   ],
   
@@ -96,13 +96,11 @@ export const ferrailleurData = {
   relatedMetiers: [
     {
       id: "maconnerie", 
-      title: "Maçon", 
-      serviceSlug: "renovation-interieure"
+      name: "Maçon"
     },
     {
       id: "coffreur", 
-      title: "Coffreur", 
-      serviceSlug: "renovation-interieure"
+      name: "Coffreur"
     }
   ]
 };
