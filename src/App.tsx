@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ServiceDetail from "./pages/ServiceDetail";
 import MetierDetail from "./pages/MetierDetail";
+import MetierCategory from "./pages/MetierCategory";
 import DemandeDevis from "./pages/DemandeDevis";
 import ZonesIntervention from "./pages/ZonesIntervention";
 import MetiersRenovation from "./pages/MetiersRenovation";
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/demande-devis" element={<DemandeDevis />} />
           <Route path="/zones-intervention" element={<ZonesIntervention />} />
           <Route path="/metiers-renovation" element={<MetiersRenovation />} />
+          <Route path="/metiers-renovation/categories/:categoryId" element={<MetierCategory />} />
           <Route path="/estimation-avant-achat" element={<EstimationAvantAchat />} />
           
           {/* RGPD pages */}

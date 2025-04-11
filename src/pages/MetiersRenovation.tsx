@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import MetiersHero from "@/components/metiers/MetiersHero";
 import MetiersIntroduction from "@/components/metiers/MetiersIntroduction";
 import MetiersList from "@/components/metiers/MetiersList";
+import MetiersCategories from "@/components/metiers/MetiersCategories";
 import MetiersNormes from "@/components/metiers/MetiersNormes";
 import MetiersFormations from "@/components/metiers/MetiersFormations";
 import MetiersCoordination from "@/components/metiers/MetiersCoordination";
@@ -37,6 +38,9 @@ const MetiersRenovation = () => {
 
           {/* Introduction */}
           <MetiersIntroduction />
+
+          {/* Catégories de métiers */}
+          <MetiersCategories />
 
           {/* Navigation par onglets */}
           <MetiersList />

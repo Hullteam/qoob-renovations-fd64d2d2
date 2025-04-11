@@ -1,6 +1,6 @@
 
 import { Helmet } from "react-helmet";
-import { metierDetailsData } from "@/data/metierDetailsData";
+import { metierDetailsData, metierCategories } from "@/data/metierDetailsData";
 
 const MetiersSchemaOrg = () => {
   return (
@@ -39,15 +39,24 @@ const MetiersSchemaOrg = () => {
           "areaServed": "Lot-et-Garonne et départements limitrophes",
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Services de rénovation",
-            "itemListElement": metierDetailsData.map((metier, index) => ({
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": metier.title,
-                "description": metier.subtitle,
-                "url": `https://qoobrenovations.com/metiers-renovation#${metier.id}`
-              },
+            "name": "Catégories de métiers du bâtiment",
+            "itemListElement": metierCategories.map((category, index) => ({
+              "@type": "OfferCatalog",
+              "name": category.name,
+              "description": category.description,
+              "url": `https://qoobrenovations.com/metiers-renovation/categories/${category.id}`,
+              "itemListElement": metierDetailsData
+                .filter(metier => metier.categoryId === category.id)
+                .map((metier, metierIndex) => ({
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": metier.title,
+                    "description": metier.subtitle,
+                    "url": `https://qoobrenovations.com/services/${metier.serviceSlug}/metiers/${metier.id}`
+                  },
+                  "position": metierIndex + 1
+                })),
               "position": index + 1
             }))
           }

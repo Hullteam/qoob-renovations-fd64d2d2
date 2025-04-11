@@ -26,6 +26,118 @@ import { isolationThermiqueData } from './metiers/isolationThermique';
 import { isolationAcoustiqueData } from './metiers/isolationAcoustique';
 import { materiauxIsolantsData } from './metiers/materiauxIsolants';
 
+// Import des données des métiers du gros œuvre
+import { maconnerieData } from './metiers/maconnerie';
+import { coffreurData } from './metiers/coffreur';
+import { ferrailleurData } from './metiers/ferrailleur';
+import { terrassierData } from './metiers/terrassier';
+import { demolisseurData } from './metiers/demolisseur';
+
+// Import des données des métiers de charpente & couverture
+import { charpentierBoisData } from './metiers/charpentierBois';
+import { charpentierMetalliqueData } from './metiers/charpentierMetallique';
+import { couvreurData } from './metiers/couvreur';
+import { zingueurData } from './metiers/zingueur';
+import { etancheurData } from './metiers/etancheur';
+
+// Import des données des métiers de second œuvre - structure
+import { platrierPlaquisteData } from './metiers/platrierPlaquiste';
+import { poseurCloisonsData } from './metiers/poseurCloisons';
+import { monteurFauxPlafondsData } from './metiers/monteurFauxPlafonds';
+import { poseurIsolantsData } from './metiers/poseurIsolants';
+
+// Import des données des métiers de réseaux & fluides
+import { electricienDomotiqueData } from './metiers/electricienDomotique';
+import { chauffagisteData } from './metiers/chauffagiste';
+import { climaticienData } from './metiers/climaticien';
+import { installateurPacData } from './metiers/installateurPac';
+
+// Import des données des métiers de menuiserie & serrurerie
+import { menuisierBoisData } from './metiers/menuisierBois';
+import { menuisierAluData } from './metiers/menuisierAlu';
+import { poseurPortesData } from './metiers/poseurPortes';
+import { serrurierMetallierData } from './metiers/serrurierMetallier';
+
+// Import des données des métiers d'extérieur
+import { paysagisteData } from './metiers/paysagiste';
+import { poseurTerrasse } from './metiers/poseurTerrasse';
+import { poseurCloture } from './metiers/poseurCloture';
+
+// Import des données des métiers de performance énergétique
+import { diagnostiqueurData } from './metiers/diagnostiqueur';
+import { conseillerRenovationData } from './metiers/conseillerRenovation';
+import { thermicienData } from './metiers/thermicien';
+
+// Import des données des métiers de pilotage & conseil
+import { architecteData } from './metiers/architecte';
+import { maitreDoeuvreData } from './metiers/maitreDoeuvre';
+import { conducteurTravauxData } from './metiers/conducteurTravaux';
+import { economisteConstructionData } from './metiers/economisteConstruction';
+
+// Définition des catégories principales de métiers
+export const metierCategories = [
+  {
+    id: "gros-oeuvre",
+    name: "Gros œuvre",
+    icon: "Building", // Nom de l'icône Lucide
+    description: "Fondations, structures porteuses et travaux de terrassement"
+  },
+  {
+    id: "charpente-couverture",
+    name: "Charpente & Couverture",
+    icon: "Home",
+    description: "Charpentes, toitures et structures de couverture"
+  },
+  {
+    id: "second-oeuvre-structure",
+    name: "Second œuvre – Structure & cloisonnement",
+    icon: "Layers",
+    description: "Cloisons, plâtrerie et isolation des murs et plafonds"
+  },
+  {
+    id: "second-oeuvre-reseaux",
+    name: "Second œuvre – Réseaux & fluides",
+    icon: "Cable",
+    description: "Électricité, plomberie, chauffage et systèmes de ventilation"
+  },
+  {
+    id: "amenagement-interieur",
+    name: "Aménagement intérieur",
+    icon: "Sofa",
+    description: "Cuisines, salles de bains et menuiserie d'intérieur"
+  },
+  {
+    id: "finitions",
+    name: "Finitions",
+    icon: "PaintBucket",
+    description: "Carrelage, peinture, revêtements de sol et muraux"
+  },
+  {
+    id: "menuiserie-serrurerie",
+    name: "Menuiserie & serrurerie",
+    icon: "Lock",
+    description: "Menuiserie bois/alu/PVC et serrurerie métallique"
+  },
+  {
+    id: "exterieur-paysager",
+    name: "Extérieur et aménagement paysager",
+    icon: "Sprout",
+    description: "Aménagement de jardin, terrasses et accès extérieurs"
+  },
+  {
+    id: "performance-energetique",
+    name: "Performance énergétique & environnement",
+    icon: "Leaf",
+    description: "Diagnostics, audits et solutions d'efficacité énergétique"
+  },
+  {
+    id: "pilotage-conseil",
+    name: "Pilotage, conseil & maîtrise d'œuvre",
+    icon: "ClipboardList",
+    description: "Conception, coordination et suivi des projets de construction"
+  }
+];
+
 // Export combiné de tous les métiers
 export const metierDetailsData = [
   // Métiers de rénovation intérieure
@@ -53,5 +165,65 @@ export const metierDetailsData = [
   systemesChauffageData,
   isolationThermiqueData,
   isolationAcoustiqueData,
-  materiauxIsolantsData
+  materiauxIsolantsData,
+  
+  // Métiers du gros œuvre
+  maconnerieData,
+  coffreurData,
+  ferrailleurData,
+  terrassierData,
+  demolisseurData,
+  
+  // Métiers de charpente & couverture
+  charpentierBoisData,
+  charpentierMetalliqueData,
+  couvreurData,
+  zingueurData,
+  etancheurData,
+  
+  // Métiers de second œuvre - structure
+  platrierPlaquisteData,
+  poseurCloisonsData,
+  monteurFauxPlafondsData,
+  poseurIsolantsData,
+  
+  // Métiers de réseaux & fluides
+  electricienDomotiqueData,
+  chauffagisteData,
+  climaticienData,
+  installateurPacData,
+  
+  // Métiers de menuiserie & serrurerie
+  menuisierBoisData,
+  menuisierAluData,
+  poseurPortesData,
+  serrurierMetallierData,
+  
+  // Métiers d'extérieur
+  paysagisteData,
+  poseurTerrasse,
+  poseurCloture,
+  
+  // Métiers de performance énergétique
+  diagnostiqueurData,
+  conseillerRenovationData,
+  thermicienData,
+  
+  // Métiers de pilotage & conseil
+  architecteData,
+  maitreDoeuvreData,
+  conducteurTravauxData,
+  economisteConstructionData
 ];
+
+// Fonction pour obtenir les métiers par catégorie
+export const getMetiersByCategory = (categoryId: string) => {
+  return metierDetailsData.filter(metier => metier.categoryId === categoryId);
+};
+
+// Fonction pour obtenir tous les métiers d'une catégorie principale
+export const getAllMetiersByCategoryName = (categoryName: string) => {
+  const category = metierCategories.find(cat => cat.name === categoryName);
+  if (!category) return [];
+  return metierDetailsData.filter(metier => metier.categoryId === category.id);
+};
