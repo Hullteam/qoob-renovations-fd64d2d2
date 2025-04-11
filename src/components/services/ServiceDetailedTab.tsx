@@ -63,7 +63,9 @@ const ServiceDetailedTab = ({ service, serviceSlug }: ServiceDetailedTabProps) =
                       ? "/lovable-uploads/293da69a-39c6-4e51-8354-b4567195c828.png"
                       : service.id === "plafonds"
                         ? "/lovable-uploads/44d77b07-c775-48de-bce4-5048c54996ba.png"
-                        : service.image
+                        : service.id === "facades"
+                          ? "https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=1080&auto=format&fit=crop"
+                          : service.image
           }
           alt={service.name}
           className="w-full h-auto rounded-lg shadow-md mb-4"
