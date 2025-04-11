@@ -28,51 +28,6 @@ import { materiauxIsolantsData } from './metiers/materiauxIsolants';
 
 // Import des données des métiers du gros œuvre
 import { maconnerieData } from './metiers/maconnerie';
-import { coffreurData } from './metiers/coffreur';
-import { ferrailleurData } from './metiers/ferrailleur';
-import { terrassierData } from './metiers/terrassier';
-import { demolisseurData } from './metiers/demolisseur';
-
-// Import des données des métiers de charpente & couverture
-import { charpentierBoisData } from './metiers/charpentierBois';
-import { charpentierMetalliqueData } from './metiers/charpentierMetallique';
-import { couvreurData } from './metiers/couvreur';
-import { zingueurData } from './metiers/zingueur';
-import { etancheurData } from './metiers/etancheur';
-
-// Import des données des métiers de second œuvre - structure
-import { platrierPlaquisteData } from './metiers/platrierPlaquiste';
-import { poseurCloisonsData } from './metiers/poseurCloisons';
-import { monteurFauxPlafondsData } from './metiers/monteurFauxPlafonds';
-import { poseurIsolantsData } from './metiers/poseurIsolants';
-
-// Import des données des métiers de réseaux & fluides
-import { electricienDomotiqueData } from './metiers/electricienDomotique';
-import { chauffagisteData } from './metiers/chauffagiste';
-import { climaticienData } from './metiers/climaticien';
-import { installateurPacData } from './metiers/installateurPac';
-
-// Import des données des métiers de menuiserie & serrurerie
-import { menuisierBoisData } from './metiers/menuisierBois';
-import { menuisierAluData } from './metiers/menuisierAlu';
-import { poseurPortesData } from './metiers/poseurPortes';
-import { serrurierMetallierData } from './metiers/serrurierMetallier';
-
-// Import des données des métiers d'extérieur
-import { paysagisteData } from './metiers/paysagiste';
-import { poseurTerrasse } from './metiers/poseurTerrasse';
-import { poseurCloture } from './metiers/poseurCloture';
-
-// Import des données des métiers de performance énergétique
-import { diagnostiqueurData } from './metiers/diagnostiqueur';
-import { conseillerRenovationData } from './metiers/conseillerRenovation';
-import { thermicienData } from './metiers/thermicien';
-
-// Import des données des métiers de pilotage & conseil
-import { architecteData } from './metiers/architecte';
-import { maitreDoeuvreData } from './metiers/maitreDoeuvre';
-import { conducteurTravauxData } from './metiers/conducteurTravaux';
-import { economisteConstructionData } from './metiers/economisteConstruction';
 
 // Définition des catégories principales de métiers
 export const metierCategories = [
@@ -138,7 +93,7 @@ export const metierCategories = [
   }
 ];
 
-// Export combiné de tous les métiers
+// Export combiné de tous les métiers actuellement disponibles
 export const metierDetailsData = [
   // Métiers de rénovation intérieure
   menuisierCuisinisteData,
@@ -169,6 +124,11 @@ export const metierDetailsData = [
   
   // Métiers du gros œuvre
   maconnerieData,
+  
+  // Note: Les imports ci-dessous ont été commentés car les fichiers n'existent pas encore
+  // À décommenter au fur et à mesure de leur création
+  /*
+  // Métiers du gros œuvre
   coffreurData,
   ferrailleurData,
   terrassierData,
@@ -214,6 +174,7 @@ export const metierDetailsData = [
   maitreDoeuvreData,
   conducteurTravauxData,
   economisteConstructionData
+  */
 ];
 
 // Fonction pour obtenir les métiers par catégorie
