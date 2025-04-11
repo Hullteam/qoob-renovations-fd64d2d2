@@ -5,7 +5,7 @@ export const renovationInterieureData = {
   title: "Rénovation Intérieure",
   subtitle: "Transformez votre espace de vie avec nos services complets de rénovation intérieure",
   metaDescription: "Experts en rénovation intérieure à Paris. Modernisez votre habitat avec nos services de qualité : peinture, revêtements de sol, plafonds et plus encore. Devis gratuit.",
-  keywords: ["rénovation intérieure", "rénovation maison", "rénovation appartement", "peinture intérieure", "revêtement sol", "plafond", "Paris"],
+  keywords: ["rénovation intérieure", "rénovation maison", "rénovation appartement", "peinture intérieure", "revêtement sol", "plafond", "électricité", "plomberie", "Paris"],
   heroImage: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1080&auto=format&fit=crop",
   presentationTitle: "Donnez une nouvelle vie à votre intérieur",
   presentationText: [
@@ -89,6 +89,40 @@ export const renovationInterieureData = {
       ],
       image: "https://images.unsplash.com/photo-1594388892430-c11e89163885?q=80&w=1080&auto=format&fit=crop",
       price: "Sur devis selon complexité et matériaux"
+    },
+    {
+      id: "electricien",
+      name: "Électricité",
+      description: [
+        "Une installation électrique fiable et aux normes est essentielle pour la sécurité et le confort de votre habitat. Nos électriciens qualifiés réalisent tous types de travaux d'électricité, de la mise aux normes à l'installation complète.",
+        "Nous concevons des solutions adaptées à vos besoins actuels tout en anticipant vos usages futurs, avec une attention particulière à l'efficacité énergétique et à la sécurité."
+      ],
+      features: [
+        "Mise aux normes électriques (NF C 15-100)",
+        "Installation et remplacement de tableau électrique",
+        "Création de nouveaux circuits et prises de courant",
+        "Solutions d'éclairage intelligentes et économes",
+        "Installation de systèmes domotiques"
+      ],
+      image: "/lovable-uploads/a083ae87-5ddc-4b9c-b990-7a9f2d1aef4a.png",
+      price: "À partir de 650€ pour une mise aux normes simple"
+    },
+    {
+      id: "plombier-sanitaire",
+      name: "Plomberie & Sanitaires",
+      description: [
+        "La plomberie est un élément crucial de votre habitat, garantissant confort et hygiène au quotidien. Nos plombiers experts installent, rénovent et entretiennent tous vos équipements sanitaires et réseaux d'eau.",
+        "Que ce soit pour la rénovation complète d'une salle de bains, le remplacement d'une robinetterie ou la mise en place d'un système d'économie d'eau, nous vous proposons des solutions durables et de qualité."
+      ],
+      features: [
+        "Installation et remplacement de tuyauterie",
+        "Pose et raccordement d'équipements sanitaires",
+        "Détection et réparation de fuites",
+        "Installation de systèmes d'économie d'eau",
+        "Création et modification de réseaux d'alimentation et d'évacuation"
+      ],
+      image: "https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?q=80&w=1080&auto=format&fit=crop",
+      price: "À partir de 500€ pour une installation standard"
     }
   ],
   faqs: [
