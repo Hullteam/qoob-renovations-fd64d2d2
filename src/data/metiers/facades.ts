@@ -1,4 +1,3 @@
-
 export const facadesData = {
   id: "facades",
   serviceSlug: "renovation-exterieure",
@@ -13,7 +12,7 @@ export const facadesData = {
     "Le ravalement de façade est bien plus qu'une simple opération esthétique – c'est un traitement complet qui redonne vie à l'enveloppe extérieure de votre bâtiment tout en le protégeant durablement. Chez qoob rénovations, nos équipes associent expertise technique et sens du détail pour des façades qui traversent le temps.",
     "Nous privilégions une approche personnalisée, adaptée à chaque type de construction et à vos attentes esthétiques. De l'analyse préalable au choix des solutions techniques et des finitions, nous vous guidons vers le meilleur compromis entre durabilité, performance thermique et valorisation architecturale de votre patrimoine."
   ],
-  presentationImage: "https://images.unsplash.com/photo-1604769319166-010643ace337?q=80&w=1080&auto=format&fit=crop",
+  presentationImage: "/lovable-uploads/8bffa5f4-8db8-4519-84e3-02b5f6a1f759.png",
   keyPoints: [
     "Diagnostic complet de l'état de votre façade",
     "Traitement des fissures et réparation des maçonneries",
