@@ -87,7 +87,7 @@ export const renovationInterieureData = {
         "Conception et fabrication de placards et rangements intégrés",
         "Solutions d'isolation thermique et acoustique performantes"
       ],
-      image: "https://images.unsplash.com/photo-1594388892430-c11e89163885?q=80&w=1080&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1080&auto=format&fit=crop",
       price: "Sur devis selon complexité et matériaux"
     },
     {
@@ -104,7 +104,7 @@ export const renovationInterieureData = {
         "Solutions d'éclairage intelligentes et économes",
         "Installation de systèmes domotiques"
       ],
-      image: "/lovable-uploads/a083ae87-5ddc-4b9c-b990-7a9f2d1aef4a.png",
+      image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1080&auto=format&fit=crop",
       price: "À partir de 650€ pour une mise aux normes simple"
     },
     {
@@ -121,7 +121,7 @@ export const renovationInterieureData = {
         "Installation de systèmes d'économie d'eau",
         "Création et modification de réseaux d'alimentation et d'évacuation"
       ],
-      image: "https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?q=80&w=1080&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?q=80&w=1080&auto=format&fit=crop",
       price: "À partir de 500€ pour une installation standard"
     }
   ],
