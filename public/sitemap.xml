@@ -143,6 +143,36 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://qoobrenovations.com/services/renovation-interieure/metiers/carreleur</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://qoobrenovations.com/services/renovation-interieure/metiers/peinture</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://qoobrenovations.com/services/renovation-interieure/metiers/electricien</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://qoobrenovations.com/services/renovation-interieure/metiers/plombierSanitaire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://qoobrenovations.com/services/renovation-energetique/metiers/chauffagiste</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://qoobrenovations.com/services/renovation-energetique/metiers/isolationThermique</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   
   <!-- Pages légales -->
   <url>
