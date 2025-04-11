@@ -13,11 +13,11 @@ export const couvreurData = {
   heroImage: "/lovable-uploads/c0858a2e-bb8c-49a0-9773-0e35bafc8fa1.png", // Remplacer par une image appropriée
   presentationImage: "/lovable-uploads/74e30d7e-1a1c-4a99-8b0b-cbd7dbe83a21.png", // Remplacer par une image appropriée
   presentationTitle: "Le couvreur, gardien de l'étanchéité de votre toit",
-  presentationText: `Le couvreur est l'artisan spécialiste de la réalisation et de la rénovation des toitures. Son expertise est cruciale pour garantir l'étanchéité parfaite du toit, élément essentiel à la protection du bâtiment contre les intempéries.
-  
-  Ce professionnel maîtrise la pose de différents matériaux de couverture: tuiles (terre cuite, béton), ardoises, zinc, bac acier, bardeaux bitumineux ou encore membranes d'étanchéité. Il assure également l'installation et l'entretien des éléments associés comme les gouttières, descentes d'eau pluviale, solins et autres accessoires d'étanchéité.
-  
-  Le métier de couvreur requiert une grande habileté manuelle, une bonne condition physique et un sens aigu de la sécurité. Ces artisans travaillent souvent en hauteur et doivent donc parfaitement maîtriser les techniques de sécurité et les équipements de protection individuelle et collective.`,
+  presentationText: [
+    "Le couvreur est l'artisan spécialiste de la réalisation et de la rénovation des toitures. Son expertise est cruciale pour garantir l'étanchéité parfaite du toit, élément essentiel à la protection du bâtiment contre les intempéries.",
+    "Ce professionnel maîtrise la pose de différents matériaux de couverture: tuiles (terre cuite, béton), ardoises, zinc, bac acier, bardeaux bitumineux ou encore membranes d'étanchéité. Il assure également l'installation et l'entretien des éléments associés comme les gouttières, descentes d'eau pluviale, solins et autres accessoires d'étanchéité.",
+    "Le métier de couvreur requiert une grande habileté manuelle, une bonne condition physique et un sens aigu de la sécurité. Ces artisans travaillent souvent en hauteur et doivent donc parfaitement maîtriser les techniques de sécurité et les équipements de protection individuelle et collective."
+  ],
   
   keyPoints: [
     "Spécialiste des toitures et de leur étanchéité",
@@ -31,22 +31,22 @@ export const couvreurData = {
     {
       title: "Pose de couverture en tuiles",
       description: "Installation ou rénovation de toitures en tuiles terre cuite ou béton, avec respect des techniques traditionnelles.",
-      image: "/lovable-uploads/e485f733-4f74-4a8f-b947-4a3ae077586b.png" // Remplacer par une image appropriée
+      features: ["Tuiles canal", "Tuiles plates", "Tuiles mécaniques", "Travail dans les règles de l'art", "Étanchéité garantie"]
     },
     {
       title: "Couverture en ardoises",
       description: "Pose d'ardoises naturelles ou synthétiques selon les méthodes traditionnelles ou modernes.",
-      image: "/lovable-uploads/293da69a-39c6-4e51-8354-b4567195c828.png" // Remplacer par une image appropriée
+      features: ["Ardoise naturelle", "Ardoise synthétique", "Pose au crochet", "Pose clouée", "Finitions soignées"]
     },
     {
       title: "Toitures métalliques et zinc",
       description: "Réalisation de couvertures et ornements en zinc, cuivre ou autres métaux avec techniques de façonnage spécifiques.",
-      image: "/lovable-uploads/44d77b07-c775-48de-bce4-5048c54996ba.png" // Remplacer par une image appropriée
+      features: ["Zinc à tasseaux", "Zinc à joint debout", "Bac acier", "Cuivre", "Ornements et finitions"]
     },
     {
       title: "Systèmes d'évacuation des eaux",
       description: "Installation et entretien de gouttières, chéneaux et descentes pour une gestion optimale des eaux pluviales.",
-      image: "/lovable-uploads/8ab161d7-01e0-49f7-a854-b6795b8bd944.png" // Remplacer par une image appropriée
+      features: ["Gouttières zinc", "Gouttières cuivre", "Gouttières PVC", "Descentes pluviales", "Raccordements"]
     }
   ],
   
@@ -101,13 +101,11 @@ export const couvreurData = {
   relatedMetiers: [
     {
       id: "charpentierBois", 
-      title: "Charpentier bois", 
-      serviceSlug: "renovation-exterieure"
+      name: "Charpentier bois"
     },
     {
       id: "zingueur", 
-      title: "Zingueur", 
-      serviceSlug: "renovation-exterieure"
+      name: "Zingueur"
     }
   ]
 };

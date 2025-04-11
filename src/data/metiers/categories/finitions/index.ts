@@ -6,11 +6,18 @@ import { plafondsData } from "../../plafonds";
 import { cloisonsData } from "../../cloisons";
 import { carreleurData } from "../../carreleur";
 
+// Assurons-nous que chaque métier a la propriété categoryId
+const categorizePeintureData = {...peintureData, categoryId: "finitions"};
+const categorizeSolsData = {...solsData, categoryId: "finitions"};
+const categorizePlafondsData = {...plafondsData, categoryId: "finitions"};
+const categorizeCloisonsData = {...cloisonsData, categoryId: "finitions"};
+const categorizeCarreleurData = {...carreleurData, categoryId: "finitions"};
+
 // Export all trades in this category
 export const finitionsMetiers: MetierData[] = [
-  peintureData,
-  solsData,
-  plafondsData,
-  cloisonsData,
-  carreleurData
+  categorizePeintureData,
+  categorizeSolsData,
+  categorizePlafondsData,
+  categorizeCloisonsData,
+  categorizeCarreleurData
 ];
