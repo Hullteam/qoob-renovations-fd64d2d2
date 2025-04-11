@@ -1,27 +1,28 @@
 
 export const cuisinesSurMesureData = {
   id: "cuisines-sur-mesure",
+  categoryId: "amenagement-interieur",
   serviceSlug: "cuisines-salles-de-bains",
   serviceName: "Aménagement Cuisines & Salles de Bains",
   title: "Cuisines Sur Mesure",
-  subtitle: "Conception et installation de cuisines entièrement personnalisées, adaptées à votre espace et à vos besoins",
-  metaDescription: "Création de cuisines sur mesure à Paris et en Île-de-France. Nos experts conçoivent et réalisent votre cuisine personnalisée, fonctionnelle et esthétique, adaptée à vos besoins spécifiques.",
-  keywords: ["cuisine sur mesure", "conception cuisine", "aménagement cuisine", "cuisine personnalisée", "cuisine design", "installation cuisine", "Paris", "Île-de-France"],
-  heroImage: "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?q=80&w=1080&auto=format&fit=crop",
-  presentationTitle: "Des cuisines uniques, conçues pour vous",
+  subtitle: "Conception et réalisation de cuisines personnalisées adaptées à vos besoins et à votre espace",
+  metaDescription: "Experts en conception et installation de cuisines sur mesure à Paris. Plans 3D, matériaux premium, installation professionnelle pour créer la cuisine de vos rêves.",
+  keywords: ["cuisine sur mesure", "aménagement cuisine", "conception cuisine", "installation cuisine", "cuisine ergonomique", "cuisine design", "Paris", "Île-de-France"],
+  heroImage: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=1080&auto=format&fit=crop",
+  presentationTitle: "L'art de créer des cuisines fonctionnelles et esthétiques",
   presentationText: [
-    "Une cuisine sur mesure est bien plus qu'un simple ensemble de meubles et d'électroménagers - c'est un espace de vie qui doit refléter votre personnalité tout en répondant parfaitement à vos besoins quotidiens. Chez qoob rénovations, nous concevons chaque cuisine comme une pièce unique, pensée et réalisée exclusivement pour vous.",
-    "Notre approche commence par une analyse approfondie de votre espace, de vos habitudes culinaires et de vos préférences esthétiques. Nos designers travaillent ensuite en étroite collaboration avec vous pour créer une cuisine qui optimise chaque centimètre carré, tout en respectant vos contraintes budgétaires et techniques.",
-    "De la sélection des matériaux à l'agencement des zones de travail, en passant par l'intégration harmonieuse des équipements électroménagers, chaque détail est pensé pour vous offrir une cuisine à la fois belle et fonctionnelle. Nos artisans qualifiés assurent ensuite une installation impeccable, garantissant la durabilité et la qualité de votre nouvelle cuisine."
+    "La cuisine est bien plus qu'un simple lieu de préparation des repas - c'est le cœur de votre maison, un espace de convivialité où se déroulent de nombreux moments de partage. Chez qoob rénovations, nous concevons des cuisines sur mesure qui transforment cet espace en un lieu à la fois fonctionnel, ergonomique et esthétique.",
+    "Notre expertise en conception de cuisines sur mesure commence par une analyse approfondie de vos habitudes culinaires, de vos besoins en rangement et de l'espace disponible. Nous utilisons des logiciels de pointe pour créer des plans précis et des visualisations 3D qui vous permettent de vous projeter dans votre future cuisine avant même le début des travaux.",
+    "Nous sélectionnons avec soin les matériaux et les équipements, en tenant compte à la fois de leur aspect esthétique, de leur durabilité et de leur impact environnemental. Du choix des plans de travail à la sélection des électroménagers, chaque élément est pensé pour créer un ensemble cohérent et fonctionnel."
   ],
-  presentationImage: "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?q=80&w=1080&auto=format&fit=crop",
+  presentationImage: "https://images.unsplash.com/photo-1588854337115-1c67d9247e4d?q=80&w=1080&auto=format&fit=crop",
   keyPoints: [
-    "Conception 100% personnalisée selon vos besoins et votre espace",
-    "Large choix de matériaux et de finitions haut de gamme",
-    "Solutions d'aménagement optimales pour chaque configuration",
-    "Intégration intelligente des électroménagers",
-    "Fabrication française avec des matériaux durables",
-    "Installation par des artisans spécialisés"
+    "Conception personnalisée adaptée à votre espace et vos habitudes",
+    "Visualisation 3D pour projeter votre future cuisine",
+    "Large choix de matériaux premium et durables",
+    "Optimisation de l'ergonomie et des flux de circulation",
+    "Coordination complète de tous les corps de métier",
+    "Installation professionnelle par des artisans qualifiés"
   ],
   expertises: [
     {

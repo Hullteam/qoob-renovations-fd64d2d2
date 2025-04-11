@@ -28,6 +28,21 @@ import { materiauxIsolantsData } from './metiers/materiauxIsolants';
 
 // Import des données des métiers du gros œuvre
 import { maconnerieData } from './metiers/maconnerie';
+import { coffreurData } from './metiers/coffreur';
+import { ferrailleurData } from './metiers/ferrailleur';
+
+// Import des métiers de charpente & couverture
+import { couvreurData } from './metiers/couvreur';
+import { charpentierBoisData } from './metiers/charpentierBois';
+
+// Import des métiers de second œuvre - structure
+import { platrierPlaquisteData } from './metiers/platrierPlaquiste';
+
+// Import des métiers de second œuvre - réseaux et fluides
+import { chauffagisteData } from './metiers/chauffagiste';
+
+// Import des métiers de menuiserie & serrurerie
+import { menuisierBoisData } from './metiers/menuisierBois';
 
 // Définition des catégories principales de métiers
 export const metierCategories = [
@@ -124,37 +139,45 @@ export const metierDetailsData = [
   
   // Métiers du gros œuvre
   maconnerieData,
+  coffreurData,
+  ferrailleurData,
+  
+  // Métiers de charpente & couverture
+  couvreurData,
+  charpentierBoisData,
+  
+  // Métiers de second œuvre - structure
+  platrierPlaquisteData,
+  
+  // Métiers de second œuvre - réseaux et fluides
+  chauffagisteData,
+  
+  // Métiers de menuiserie & serrurerie
+  menuisierBoisData
   
   // Note: Les imports ci-dessous ont été commentés car les fichiers n'existent pas encore
   // À décommenter au fur et à mesure de leur création
   /*
   // Métiers du gros œuvre
-  coffreurData,
-  ferrailleurData,
   terrassierData,
   demolisseurData,
   
   // Métiers de charpente & couverture
-  charpentierBoisData,
   charpentierMetalliqueData,
-  couvreurData,
   zingueurData,
   etancheurData,
   
   // Métiers de second œuvre - structure
-  platrierPlaquisteData,
   poseurCloisonsData,
   monteurFauxPlafondsData,
   poseurIsolantsData,
   
   // Métiers de réseaux & fluides
   electricienDomotiqueData,
-  chauffagisteData,
   climaticienData,
   installateurPacData,
   
   // Métiers de menuiserie & serrurerie
-  menuisierBoisData,
   menuisierAluData,
   poseurPortesData,
   serrurierMetallierData,

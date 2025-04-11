@@ -1,6 +1,7 @@
 
 export const electricienData = {
   id: "electricien",
+  categoryId: "second-oeuvre-reseaux",
   serviceSlug: "cuisines-salles-de-bains",
   serviceName: "Aménagement Cuisines & Salles de Bains",
   title: "Électricien Spécialisé",
