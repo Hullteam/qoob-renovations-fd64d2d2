@@ -53,3 +53,31 @@ export const testSitemapAccessibility = async (url: string): Promise<boolean> =>
     return false;
   }
 };
+
+/**
+ * Validates if an XML string is well-formed
+ * @param xmlString The XML content to validate
+ * @returns Object with validation result and error message if applicable
+ */
+export const validateXML = (xmlString: string): { isValid: boolean; errorMessage?: string } => {
+  try {
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+    
+    // Check for parsing errors
+    const parserError = xmlDoc.getElementsByTagName("parsererror");
+    if (parserError.length > 0) {
+      return { 
+        isValid: false, 
+        errorMessage: parserError[0].textContent || "XML parsing error" 
+      };
+    }
+    
+    return { isValid: true };
+  } catch (error) {
+    return { 
+      isValid: false, 
+      errorMessage: error instanceof Error ? error.message : "Unknown XML validation error" 
+    };
+  }
+};
