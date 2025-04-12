@@ -85,12 +85,12 @@ export const validateXML = (xmlString: string): { isValid: boolean; errorMessage
 /**
  * Verifies that all URLs in the sitemap use the same domain structure
  * @param xmlString The XML content of the sitemap
- * @param expectedDomain The expected domain (e.g. "https://qoobrenovations.com")
+ * @param expectedDomain The expected domain (e.g. "https://www.qoob-renovations.fr")
  * @returns Object with validation result and inconsistent URLs if applicable
  */
 export const verifySitemapDomainConsistency = (
   xmlString: string,
-  expectedDomain: string
+  expectedDomain: string = "https://www.qoob-renovations.fr"
 ): { isConsistent: boolean; inconsistentUrls: string[] } => {
   try {
     const parser = new DOMParser();

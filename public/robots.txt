@@ -7,7 +7,7 @@ Disallow: /admin/
 Disallow: /internal/
 
 # Sitemap location - using absolute URL and relative path for redundancy
-Sitemap: https://qoobrenovations.com/sitemap.xml
+Sitemap: https://www.qoob-renovations.fr/sitemap.xml
 Sitemap: /sitemap.xml
 
 # Specific rules for major search engines

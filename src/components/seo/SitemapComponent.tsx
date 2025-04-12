@@ -11,6 +11,7 @@ const SitemapComponent = () => {
       <meta httpEquiv="x-ua-compatible" content="IE=edge" />
       <meta httpEquiv="content-type" content="application/xml; charset=UTF-8" />
       <meta name="robots" content="index, follow" />
+      <link rel="canonical" href="https://www.qoob-renovations.fr/" />
     </Helmet>
   );
 };
