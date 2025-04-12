@@ -6,9 +6,8 @@ Allow: /
 Disallow: /admin/
 Disallow: /internal/
 
-# Sitemap location - using absolute URL and relative path for redundancy
+# Sitemap location - using absolute URL only (removing relative path that caused the error)
 Sitemap: https://www.qoob-renovations.fr/sitemap.xml
-Sitemap: /sitemap.xml
 
 # Specific rules for major search engines
 User-agent: Googlebot
