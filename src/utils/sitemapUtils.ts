@@ -81,3 +81,40 @@ export const validateXML = (xmlString: string): { isValid: boolean; errorMessage
     };
   }
 };
+
+/**
+ * Verifies that all URLs in the sitemap use the same domain structure
+ * @param xmlString The XML content of the sitemap
+ * @param expectedDomain The expected domain (e.g. "https://qoobrenovations.com")
+ * @returns Object with validation result and inconsistent URLs if applicable
+ */
+export const verifySitemapDomainConsistency = (
+  xmlString: string,
+  expectedDomain: string
+): { isConsistent: boolean; inconsistentUrls: string[] } => {
+  try {
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+    
+    const urlElements = xmlDoc.getElementsByTagName("loc");
+    const inconsistentUrls: string[] = [];
+    
+    for (let i = 0; i < urlElements.length; i++) {
+      const url = urlElements[i].textContent;
+      if (url && !url.startsWith(expectedDomain)) {
+        inconsistentUrls.push(url);
+      }
+    }
+    
+    return {
+      isConsistent: inconsistentUrls.length === 0,
+      inconsistentUrls
+    };
+  } catch (error) {
+    console.error("Error verifying sitemap domain consistency:", error);
+    return {
+      isConsistent: false,
+      inconsistentUrls: ["Error processing sitemap"]
+    };
+  }
+};
