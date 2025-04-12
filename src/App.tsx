@@ -21,6 +21,7 @@ import ExtensionsSurelevation from "./pages/ExtensionsSurelevation";
 import { Helmet } from "react-helmet";
 import CookieConsent from "./components/CookieConsent";
 import ScrollToTop from "./components/ScrollToTop";
+import SitemapComponent from "./components/seo/SitemapComponent";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
       <Helmet titleTemplate="%s | qoob rénovations" defaultTitle="qoob rénovations | Experts en Rénovation d'Habitat">
         <meta name="description" content="Transformez votre habitat avec style et confort. qoob rénovations, experts en rénovation intérieure et extérieure à Paris." />
       </Helmet>
+      <SitemapComponent />
       <Toaster />
       <Sonner />
       <BrowserRouter>
