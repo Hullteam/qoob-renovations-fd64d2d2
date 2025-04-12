@@ -1,3 +1,4 @@
+
 import { Home, Paintbrush, Wrench, Bath, ClipboardCheck, Search, Building } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -52,18 +53,20 @@ const Services = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mt-12">
           {serviceItems.map((service, index) => (
-            <div key={index} className="service-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="flex flex-col items-center text-center">
+            <Link 
+              to={`/services/${service.slug}`} 
+              className="service-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 block"
+              key={index}
+            >
+              <div className="flex flex-col items-center text-center h-full">
                 {service.icon}
                 <h3 className="text-xl font-serif font-semibold text-warmBeige-800 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-5">{service.description}</p>
-                <Button variant="outline" className="mt-auto" asChild>
-                  <Link to={`/services/${service.slug}`}>
-                    En savoir plus
-                  </Link>
+                <Button variant="outline" className="mt-auto">
+                  En savoir plus
                 </Button>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         
