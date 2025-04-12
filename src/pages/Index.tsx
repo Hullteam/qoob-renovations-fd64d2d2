@@ -8,10 +8,18 @@ import Gallery from "@/components/Gallery";
 import HomePageDevisForm from "@/components/HomePageDevisForm";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import { Helmet } from "react-helmet";
+import HomePageSchema from "@/components/seo/HomePageSchema";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>qoob rénovations | Experts en Rénovation d'Habitat</title>
+        <meta name="description" content="Transformez votre habitat avec style et confort. qoob rénovations, experts en rénovation intérieure et extérieure." />
+        <link rel="canonical" href="https://www.qoob-renovations.fr/" />
+      </Helmet>
+      <HomePageSchema />
       <Navbar />
       <Hero />
       <Services />

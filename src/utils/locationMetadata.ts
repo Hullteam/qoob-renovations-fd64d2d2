@@ -113,7 +113,7 @@ export const generateLocalBusinessSchema = (serviceTitle: string, cityName: stri
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": `qoob rénovations - ${serviceTitle} à ${cityName}`,
-    "image": "https://your-website.com/logo.jpg",
+    "image": "https://www.qoob-renovations.fr/images/logo.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "987 route du Bladet",
@@ -127,8 +127,8 @@ export const generateLocalBusinessSchema = (serviceTitle: string, cityName: stri
       "latitude": "44.4019",
       "longitude": "0.6981"
     },
-    "url": `https://your-website.com/services/${serviceTitle.toLowerCase().replace(/ /g, '-')}`,
-    "telephone": "+33XXXXXXXXX",
+    "url": `https://www.qoob-renovations.fr/services/${serviceTitle.toLowerCase().replace(/ /g, '-')}`,
+    "telephone": "+33785010633",
     "areaServed": cityName,
     "priceRange": "€€-€€€"
   };
@@ -152,7 +152,16 @@ export const generateServiceSchema = (serviceTitle: string, cityName: string, me
     "serviceType": serviceTitle,
     "provider": {
       "@type": "LocalBusiness",
-      "name": "qoob rénovations"
+      "name": "qoob rénovations",
+      "url": "https://www.qoob-renovations.fr/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "987 route du Bladet",
+        "addressLocality": "Lavergne",
+        "postalCode": "47800",
+        "addressRegion": "Lot-et-Garonne",
+        "addressCountry": "FR"
+      }
     },
     "areaServed": {
       "@type": "City",

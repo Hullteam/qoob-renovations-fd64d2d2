@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 
 // Import components
 import ServiceHero from "@/components/services/ServiceHero";
@@ -30,7 +31,20 @@ const ServiceDetail = () => {
         <title>{serviceData.title} | qoob rénovations</title>
         <meta name="description" content={serviceData.metaDescription} />
         <meta name="keywords" content={serviceData.keywords.join(', ')} />
+        <link rel="canonical" href={`https://www.qoob-renovations.fr/services/${serviceSlug}`} />
+        <meta property="og:title" content={`${serviceData.title} | qoob rénovations`} />
+        <meta property="og:description" content={serviceData.metaDescription} />
+        <meta property="og:url" content={`https://www.qoob-renovations.fr/services/${serviceSlug}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={serviceData.heroImage} />
       </Helmet>
+      
+      <ServiceSchema 
+        title={serviceData.title}
+        description={serviceData.metaDescription}
+        slug={serviceSlug || ''}
+        imageUrl={serviceData.heroImage}
+      />
 
       <div className="min-h-screen flex flex-col">
         <Navbar />

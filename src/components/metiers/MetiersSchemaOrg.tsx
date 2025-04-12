@@ -11,7 +11,7 @@ const MetiersSchemaOrg = () => {
           "@type": "ProfessionalService",
           "name": "qoob rénovations - Expertise en métiers du bâtiment",
           "description": "Entreprise spécialisée dans tous les métiers de la rénovation et de la construction",
-          "url": "https://qoobrenovations.com/metiers-renovation",
+          "url": "https://www.qoob-renovations.fr/metiers-renovation",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "987 route du Bladet",
@@ -44,7 +44,7 @@ const MetiersSchemaOrg = () => {
               "@type": "OfferCatalog",
               "name": category.name,
               "description": category.description,
-              "url": `https://qoobrenovations.com/metiers-renovation/categories/${category.id}`,
+              "url": `https://www.qoob-renovations.fr/metiers-renovation/categories/${category.id}`,
               "itemListElement": metierDetailsData
                 .filter(metier => metier.categoryId === category.id)
                 .map((metier, metierIndex) => ({
@@ -53,7 +53,7 @@ const MetiersSchemaOrg = () => {
                     "@type": "Service",
                     "name": metier.title,
                     "description": metier.subtitle,
-                    "url": `https://qoobrenovations.com/services/${metier.serviceSlug}/metiers/${metier.id}`
+                    "url": `https://www.qoob-renovations.fr/services/${metier.serviceSlug}/metiers/${metier.id}`
                   },
                   "position": metierIndex + 1
                 })),
