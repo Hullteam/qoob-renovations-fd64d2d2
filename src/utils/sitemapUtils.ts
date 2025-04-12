@@ -118,3 +118,23 @@ export const verifySitemapDomainConsistency = (
     };
   }
 };
+
+/**
+ * Creates a properly formatted XML declaration string for a sitemap
+ * @returns A properly formatted XML declaration
+ */
+export const createXMLDeclaration = (): string => {
+  return '<?xml version="1.0" encoding="UTF-8"?>';
+};
+
+/**
+ * Generates a complete sitemap XML structure
+ * @param urlEntries Array of URL entry strings created with createSitemapUrlEntry
+ * @returns Complete sitemap XML string
+ */
+export const generateCompleteSitemap = (urlEntries: string[]): string => {
+  return `${createXMLDeclaration()}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlEntries.join('\n')}
+</urlset>`;
+};

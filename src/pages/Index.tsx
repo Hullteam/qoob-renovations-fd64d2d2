@@ -18,7 +18,7 @@ const Index = () => {
         <title>qoob rénovations | Experts en Rénovation d'Habitat</title>
         <meta name="description" content="Transformez votre habitat avec style et confort. qoob rénovations, experts en rénovation intérieure et extérieure." />
         <link rel="canonical" href="https://www.qoob-renovations.fr/" />
-        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <link rel="sitemap" type="application/xml" href="https://www.qoob-renovations.fr/sitemap.xml" />
       </Helmet>
       <HomePageSchema />
       <Navbar />
