@@ -1,3 +1,4 @@
+
 /**
  * Formats a date in the ISO format required for sitemaps
  * @param date Date to format
@@ -21,18 +22,19 @@ export const createSitemapUrlEntry = (
   changeFreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' = 'monthly',
   lastMod?: Date
 ): string => {
-  let entry = `<url>
-  <loc>${url}</loc>`;
+  let entry = `
+  <url>
+    <loc>${url}</loc>`;
   
   if (lastMod) {
     entry += `
-  <lastmod>${formatSitemapDate(lastMod)}</lastmod>`;
+    <lastmod>${formatSitemapDate(lastMod)}</lastmod>`;
   }
   
   entry += `
-  <changefreq>${changeFreq}</changefreq>
-  <priority>${priority.toFixed(1)}</priority>
-</url>`;
+    <changefreq>${changeFreq}</changefreq>
+    <priority>${priority.toFixed(1)}</priority>
+  </url>`;
   
   return entry;
 };
@@ -50,36 +52,6 @@ export const testSitemapAccessibility = async (url: string): Promise<boolean> =>
     console.error('Error testing sitemap accessibility:', error);
     return false;
   }
-};
-
-/**
- * Creates a properly formatted XML declaration string for a sitemap
- * @returns A properly formatted XML declaration
- */
-export const createXMLDeclaration = (): string => {
-  return '<?xml version="1.0" encoding="UTF-8"?>';
-};
-
-/**
- * Generates a complete sitemap XML structure with minimal formatting
- * @param urlEntries Array of URL entry strings created with createSitemapUrlEntry
- * @returns Complete sitemap XML string
- */
-export const generateMinimalSitemap = (urlEntries: string[]): string => {
-  // Create a minimal sitemap with no extra whitespace or formatting
-  return `${createXMLDeclaration()}<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urlEntries.join('')}</urlset>`;
-};
-
-/**
- * Generates a complete sitemap XML structure
- * @param urlEntries Array of URL entry strings created with createSitemapUrlEntry
- * @returns Complete sitemap XML string
- */
-export const generateCompleteSitemap = (urlEntries: string[]): string => {
-  return `${createXMLDeclaration()}
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urlEntries.join('\n')}
-</urlset>`;
 };
 
 /**
@@ -145,4 +117,24 @@ export const verifySitemapDomainConsistency = (
       inconsistentUrls: ["Error processing sitemap"]
     };
   }
+};
+
+/**
+ * Creates a properly formatted XML declaration string for a sitemap
+ * @returns A properly formatted XML declaration
+ */
+export const createXMLDeclaration = (): string => {
+  return '<?xml version="1.0" encoding="UTF-8"?>';
+};
+
+/**
+ * Generates a complete sitemap XML structure
+ * @param urlEntries Array of URL entry strings created with createSitemapUrlEntry
+ * @returns Complete sitemap XML string
+ */
+export const generateCompleteSitemap = (urlEntries: string[]): string => {
+  return `${createXMLDeclaration()}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlEntries.join('\n')}
+</urlset>`;
 };

@@ -1,54 +1,193 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://www.qoob-renovations.fr/</loc>
-<changefreq>weekly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://www.qoob-renovations.fr/demande-devis</loc>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://www.qoob-renovations.fr/zones-intervention</loc>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.qoob-renovations.fr/metiers-renovation</loc>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.qoob-renovations.fr/confidentialite</loc>
-<changefreq>yearly</changefreq>
-<priority>0.3</priority>
-</url>
-<url>
-<loc>https://www.qoob-renovations.fr/mentions-legales</loc>
-<changefreq>yearly</changefreq>
-<priority>0.3</priority>
-</url>
-<url>
-<loc>https://www.qoob-renovations.fr/conditions-generales</loc>
-<changefreq>yearly</changefreq>
-<priority>0.3</priority>
-</url>
-<url>
-<loc>https://www.qoob-renovations.fr/services/gestion-projet</loc>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://www.qoob-renovations.fr/services/extensions-surelevation</loc>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://www.qoob-renovations.fr/estimation-avant-achat</loc>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
+  <!-- Pages principales -->
+  <url>
+    <loc>https://www.qoob-renovations.fr/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/demande-devis</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/zones-intervention</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/metiers-renovation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/estimation-avant-achat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Services -->
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-interieure</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-exterieure</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-energetique</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/cuisines-salles-de-bains</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/extensions-surelevation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/gestion-projet</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Catégories de métiers -->
+  <url>
+    <loc>https://www.qoob-renovations.fr/metiers-renovation/categories/gros-oeuvre</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/metiers-renovation/categories/charpente-couverture</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/metiers-renovation/categories/second-oeuvre-structure</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/metiers-renovation/categories/second-oeuvre-reseaux</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/metiers-renovation/categories/amenagement-interieur</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/metiers-renovation/categories/finitions</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/metiers-renovation/categories/menuiserie-serrurerie</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/metiers-renovation/categories/exterieur-paysager</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/metiers-renovation/categories/performance-energetique</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/metiers-renovation/categories/pilotage-conseil</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Métiers spécifiques -->
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-interieure/metiers/maconnerie</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-interieure/metiers/coffreur</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-interieure/metiers/ferrailleur</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-exterieure/metiers/couvreur</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-exterieure/metiers/charpentierBois</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-interieure/metiers/platrierPlaquiste</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-interieure/metiers/carreleur</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-interieure/metiers/peinture</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-interieure/metiers/electricien</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-interieure/metiers/plombier-sanitaire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-energetique/metiers/chauffagiste</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/services/renovation-energetique/metiers/isolationThermique</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Pages légales -->
+  <url>
+    <loc>https://www.qoob-renovations.fr/confidentialite</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/mentions-legales</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.qoob-renovations.fr/conditions-generales</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
