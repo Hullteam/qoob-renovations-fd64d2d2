@@ -15,3 +15,13 @@ export const scrollToElement = (elementId: string, offset: number = 0) => {
   }
 };
 
+/**
+ * Scrolls to the top of the page
+ * @param behavior Scroll behavior (smooth or instant)
+ */
+export const scrollToTop = (behavior: ScrollBehavior = 'smooth') => {
+  window.scrollTo({
+    top: 0,
+    behavior
+  });
+};

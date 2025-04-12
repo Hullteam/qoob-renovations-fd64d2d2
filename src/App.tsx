@@ -20,6 +20,7 @@ import EstimationAvantAchat from "./pages/EstimationAvantAchat";
 import ExtensionsSurelevation from "./pages/ExtensionsSurelevation";
 import { Helmet } from "react-helmet";
 import CookieConsent from "./components/CookieConsent";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <CookieConsent />
         <Routes>
           {/* Main routes */}
